@@ -1,0 +1,5 @@
+?package(wildbob):needs="X11" \
+  section="Applications/System/Package Management" \
+  title="wildbob Package Manager" \
+  icon="/usr/share/wildbob/pixmaps/wildbob_32x32.xpm"\
+  command="x-terminal-emulator -e wildbob-pkexec"

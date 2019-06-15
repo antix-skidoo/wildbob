@@ -3,15 +3,15 @@
 SUBDIRS = hicolor
 
 appicondir = $(datadir)/pixmaps
-appicon_DATA = synaptic.png 
+appicon_DATA = wildbob.png 
 
-buttondir =  $(datadir)/synaptic/gtkbuilder
+buttondir =  $(datadir)/wildbob/gtkbuilder
 button_DATA = update_small.png \
 	      upgrade_small.png \
 	      distupgrade_small.png\
               proceed_small.png \
-	      synaptic_mini.xpm \
-	      synaptic.xpm \
+	      wildbob_mini.xpm \
+	      wildbob.xpm \
 	      pref_vpaned.xpm \
 	      pref_hpaned.xpm \
 	      stock_filter-data-by-criteria.png\
@@ -19,12 +19,12 @@ button_DATA = update_small.png \
 	      stock_menu_about.png \
 	      stock_help-book.png
 
-fetchstatusdir = $(datadir)/synaptic/pixmaps
+fetchstatusdir = $(datadir)/wildbob/pixmaps
 fetchstatus_DATA = green.png \
 		   yellow.png \
 		   red.png
 
-abouticondir = $(datadir)/synaptic/gtkbuilder
+abouticondir = $(datadir)/wildbob/gtkbuilder
 abouticon_DATA = deb.png \
 		 cnc.png \
 		 logo.png
@@ -58,7 +58,7 @@ EXTRA_DIST=\
 	upgradeM.xpm\
 	up.xpm\
 	down.xpm\
-	synaptic_mini.xpm\
+	wildbob_mini.xpm\
 	stock_filter-data-by-criteria.png\
 	stock_filter-navigator.png\
 	$(appicon_DATA) \

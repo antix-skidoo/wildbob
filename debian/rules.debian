@@ -42,8 +42,8 @@ install-stamp: build
 	dh_testroot
 	dh_clean -k
 	#dh_installdirs
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/synaptic
-	cp debian/synaptic_32x32.xpm $(CURDIR)/debian/synaptic/usr/share/synaptic/pixmaps
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/wildbob
+	cp debian/wildbob_32x32.xpm $(CURDIR)/debian/wildbob/usr/share/wildbob/pixmaps
 
 
 #install-debtags: install-debtags-stamp
@@ -51,64 +51,35 @@ install-stamp: build
 #	dh_testdir 
 #	dh_testroot
 #	dh_clean -k
-	#dh_installdirs -psynaptic-debtags
-#	$(MAKE) install DESTDIR=$(CURDIR)/debian/synaptic-debtags
-#	cp debian/synaptic_32x32.xpm $(CURDIR)/debian/synaptic-debtags/usr/share/synaptic/pixmaps
+	#dh_installdirs -pwildbob-debtags
+#	$(MAKE) install DESTDIR=$(CURDIR)/debian/wildbob-debtags
+#	cp debian/wildbob_32x32.xpm $(CURDIR)/debian/wildbob-debtags/usr/share/wildbob/pixmaps
 
 # Build architecture-independent files here.
 binary-indep: build install
 # We have nothing to do here
 
 # Build architecture-dependent files here.
-binary-arch: build install synaptic 
+binary-arch: build install wildbob 
 
 
-synaptic: build
-	dh_testdir -psynaptic
-	dh_testroot -psynaptic
-	dh_installdocs -psynaptic
-	dh_scrollkeeper -psynaptic
-	dh_installman -psynaptic man/synaptic.es.8 man/synaptic.fr.8 man/synaptic.hr.8 man/synaptic.ja.8 man/synaptic.pt_BR.8 man/synaptic.ru.8 man/synaptic.tr.8
-	dh_installmenu -psynaptic
-	dh_installchangelogs ChangeLog -psynaptic
-	dh_link -psynaptic
-	dh_strip -psynaptic
-	dh_compress -psynaptic
-	dh_fixperms -psynaptic
-	dh_installdeb -psynaptic
-	dh_shlibdeps -psynaptic
-	dh_gencontrol -psynaptic
-	dh_md5sums -psynaptic
-	dh_builddeb -psynaptic
-
-#synaptic-debtags: install-debtags
-#	dh_testdir -psynaptic-debtags
-#	dh_testroot -psynaptic-debtags
-#	dh_installdocs -psynaptic-debtags 
-	#TODO README README.debtags NEWS debian/NEWS.Debian
-#	dh_scrollkeeper -psynaptic-debtags
-#	dh_installman -psynaptic-debtags man/synaptic.es.8 man/synaptic.fr.8 man/synaptic.tr.8 man/synaptic.pt_BR.8
-#	dh_installmenu -psynaptic-debtags
-#	dh_installchangelogs ChangeLog -psynaptic-debtags
-#	dh_link -psynaptic-debtags
-#	dh_strip -psynaptic-debtags
-#	dh_compress -psynaptic-debtags
-#	dh_fixperms -psynaptic-debtags
-#	dh_installdeb -psynaptic-debtags
-#	dh_shlibdeps -psynaptic-debtags
-#	dh_gencontrol -psynaptic-debtags
-#	dh_md5sums -psynaptic-debtags
-#	dh_builddeb -psynaptic-debtags
-
-patch: patch-stamp
-patch-stamp:
-	dpatch apply-all
-	touch patch-stamp
-
-unpatch:
-	dpatch deapply-all
-	rm -rf patch-stamp debian/patched
-
+wildbob: build
+	dh_testdir -pwildbob
+	dh_testroot -pwildbob
+	dh_installdocs -pwildbob
+	dh_scrollkeeper -pwildbob
+	dh_installman -pwildbob man/wildbob.es.8
+	dh_installmenu -pwildbob
+	dh_installchangelogs ChangeLog -pwildbob
+	dh_link -pwildbob
+	dh_strip -pwildbob
+	dh_compress -pwildbob
+	dh_fixperms -pwildbob
+	dh_installdeb -pwildbob
+	dh_shlibdeps -pwildbob
+	dh_gencontrol -pwildbob
+	dh_md5sums -pwildbob
+	dh_builddeb -pwildbob
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install

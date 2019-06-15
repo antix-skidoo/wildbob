@@ -1,0 +1,44 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH WILDBOB 8 "Jun 15, 2019"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+wildbob \- graphical management of software packages
+.SH SYNOPSIS
+\fBwildbob\fP [options]
+.br
+.SH DESCRIPTION
+wildbob is a frontend for the apt package managent system.
+It allows you to perform all actions of the command line tool
+apt-get in a graphical environemnt. This includes installing,
+upgrading, downgrading  and removing of single packages or
+even upgrading your whole system.
+.PP
+A manual with detailed instructions can be found in the help
+menu of wildbob.
+
+.SH OPTIONS
+wildbob accepts all of the standard Gtk+ toolkit command line
+options as well as the following:
+.TP
+\fB-f\fR, \fB\-\-filter-file\fR=\fIfilename\fR
+specify an alternative filter settings file
+.TP
+\fB-i\fR, \fB\-\-initial-filter\fR=\fIint\fR
+apply the filter with number \fIint\fR at startup
+.TP
+\fB-o\fR, \fB\-\-option\fR=\fIoption\fR
+set an internal option (experts only)

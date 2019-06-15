@@ -1,4 +1,4 @@
-Changelog of the Synaptic manual
+Changelog of the synap tic manual
 
 0.1.1 -> 0.1.2:
  - Wording: Package list -> package information
@@ -6,7 +6,7 @@ Changelog of the Synaptic manual
 
 0.1 -> 0.1.1:
 
- - Updated manual to the current version of synaptic 0.53
+ - Updated manual to the current version of synap tic 0.53
  - Reflect changes in the user interface:
     * Replaced "Refresh" package list by "Reload"
     * Replaced "Find" by "Search"

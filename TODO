@@ -9,7 +9,7 @@ Misc:
 
  - preferences: HIG instant apply only(fast enough for e.g. pkglist changes?)
  - human readable repositories (ubuntu bug #1347)
- - proxy username/password does not work with synaptic preferences 
+ - proxy username/password does not work with synap tic preferences 
    (add apt PROXY_USER PROXY_PASSWORD style variables into a special
     expoert dialog in preferences)
  - > I've a question: I want to install a package and it suggestes some
@@ -22,7 +22,7 @@ Misc:
    >it. 
  - Scroll-bug (Eric Freyens, 25.10.2004)
  - add "pause download" feature (possible with the fetchers?)
- - integrate apt-get.org/fedoratracker.org into synaptic (savannah bug
+ - integrate apt-get.org/fedoratracker.org into synap tic (savannah bug
    #10544), a "server list" similar to amule (or gnutella, etc).
  - Mail von Vidar Haar (9.Aug.2004): neues summary layout/
    check for diskspace before downloading/executing
@@ -47,14 +47,14 @@ User-Mode:
 ----------
  - split into user and root mode. User mode does all the changes and for
    the final installation runs (with gksu or libgksu): 
-   # synaptic --set-selection --non-interactive --hide-main-window --dont-write-any-config
+   # synap tic --set-selection --non-interactive --hide-main-window --dont-write-any-config
    ( --dont-write-any-config needs to be implemented)
    -> MOST infrastructure is there. 
       Problems: * set-version is not in selection file
-                * all settings are in in $USER/.synaptic (use
+                * all settings are in in $USER/.synap tic (use
                   --preserve-env?)
 		* proxy settings and stuff needs to be preserved/passed 
-		  "run-as-root synaptic"
+		  "run-as-root synap tic"
    root is needed for:
       - update: could be solved by making the /var/lib/apt/lists/ dir
                 group writeable for a desktop-group 
@@ -72,7 +72,7 @@ Misc:
  - network proxy detection if gnome/kde is installed/run (can be
    solved with user-mode?!?)
  - re-enable "default remove action" in the preferences window
- - > > (synaptic:24143): Gtk-CRITICAL **: file gtkwidget.c: line 1827
+ - > > (synap tic:24143): Gtk-CRITICAL **: file gtkwidget.c: line 1827
    > > (gtk_widget_hide): assertion `GTK_IS_WIDGET (widget)' failed
    auf RPM
  - search in name+provides in search-dialog
@@ -107,7 +107,7 @@ Unsorted:
  - Please add hyperlink support in package info for example BTS entry
  - Please allow users to delete default filters and add an option to
    restore in prefs (or make them not deletable at all)
- - "crash handler" that automatically save the selections on a synaptic
+ - "crash handler" that automatically save the selections on a synap tic
    segfault (and present a dialog to reread them on the next start)
  - copy desktop file to the KDE menu - $KDEPREFIX/applnk/Settingsmenu
    "kde-config --prefix"
@@ -116,7 +116,7 @@ Unsorted:
    (see policy.cc:pkgPolicy::pkgPolicy())
 
 Configure:
-   - allways give the correct path in the synaptic.desktop file
+   - allways give the correct path in the synap tic.desktop file
      (currently hardcoded)
 
 GUI:
@@ -125,7 +125,7 @@ GUI:
      you to the package
    - add native debconf reconfigure frontend using the cmdpipe interface
      to debconf (cool!)
-   - try to get synaptic into base-config
+   - try to get synap tic into base-config
    - add something that lets the user see if a certain package is already
      in the cache
    - add reduced view? (always ignore this package)
@@ -135,7 +135,7 @@ GUI:
    - add a sources.list wizard for debian (like base-config)?
 
 Filter:
-   - add "immutable" filters that can be configured via /etc/synaptic/filters
+   - add "immutable" filters that can be configured via /etc/synap tic/filters
    - dependencies of selected package
    - dependents of selected package
 
@@ -144,7 +144,7 @@ General:
      track what pkgs where installed to fullfill some dependencies
      (and have the option to remove them again automatically)
      [might be enough to use "remove with dependencies" ?]
-   - make deporhan a native synaptic filter (should be easy)
+   - make deporhan a native synap tic filter (should be easy)
    - implement raptoptions save/restore for getFlags/setFlags [not needed?]
 
 Done: 

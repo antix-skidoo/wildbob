@@ -19,8 +19,8 @@ int main(int argc, char **argv)
    lister->setView(PACKAGE_VIEW_SEARCH);
    OpProgress progress;
 
-   _config->Set("Debug::Synaptic::View","true");
+   _config->Set("Debug::Wildbob::View","true");
    unsigned long now = clock();
-   lister->searchView()->setSearch("synaptic",  RPatternPackageFilter::Description, "synaptic", progress);
+   lister->searchView()->setSearch("wildbob",  RPatternPackageFilter::Description, "wildbob", progress);
    cerr << "searching: " << float(clock()-now)/CLOCKS_PER_SEC << endl;
 }

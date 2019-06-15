@@ -1,4 +1,4 @@
-htmldir = $(datadir)/synaptic/html
+htmldir = $(datadir)/wildbob/html
 html_DATA = *.html
 
 htmlfiguresdir = $(htmldir)/figures

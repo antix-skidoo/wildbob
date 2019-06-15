@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-import synaptic_common
+import wildbob_common
 import sys
 
-class TextProgress(synaptic_common.SwigOpProgress):
+class TextProgress(wildbob_common.SwigOpProgress):
     def UpdateStatus(self, p):
         print "\r%.2f          " %(p),
     def Done(self):
@@ -11,7 +11,7 @@ class TextProgress(synaptic_common.SwigOpProgress):
     def Update(self):
         print "?",
 
-class TextAcquireProgress(synaptic_common.SwigAcquireStatus):
+class TextAcquireProgress(wildbob_common.SwigAcquireStatus):
     def UpdatePulse(self, FetchedBytes, CurrentCPS, CurrentItems):
         print "Pulse: fetchedB %i, cps %s, currentItems %i" % (FetchedBytes, CurrentCPS, CurrentItems)
     def Start(self):
@@ -21,7 +21,7 @@ class TextAcquireProgress(synaptic_common.SwigAcquireStatus):
     def Fetched(self, size, resume):
         print "Fetched: %i %i" %(size,resume)
 
-class TextInstallProgress(synaptic_common.SwigInstallProgress):
+class TextInstallProgress(wildbob_common.SwigInstallProgress):
     def startUpdate(self):
         print "startUpdate"
     def finishUpdate(self):
@@ -32,10 +32,10 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 # FIXME: wrap this somewhere
-_error = synaptic_common._GetErrorObj()
-synaptic_common.RInitSystem()
+_error = wildbob_common._GetErrorObj()
+wildbob_common.RInitSystem()
 
-lister = synaptic_common.RPackageLister()
+lister = wildbob_common.RPackageLister()
 t = TextProgress()
 lister.setProgressMeter(t)
 
@@ -52,8 +52,8 @@ if pkg == None:
 pkg.setReInstall(True)
 pkg.setInstall()
 
-#aProgress = synaptic_common.SwigAcquireStatus()
-#iProgress = synaptic_common.SwigInstallProgress()
+#aProgress = wildbob_common.SwigAcquireStatus()
+#iProgress = wildbob_common.SwigInstallProgress()
 aProgress = TextAcquireProgress()
 iProgress = TextInstallProgress()
 lister.commitChanges(aProgress,iProgress)

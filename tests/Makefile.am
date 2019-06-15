@@ -5,7 +5,7 @@ INCLUDES= -I${top_srcdir}/common -I${top_srcdir}/gtk \
 noinst_PROGRAMS = test_rpackage test_rpackageview test_gtkpkglist test_rpackagefilter
 
 LDADD = \
-	${top_builddir}/common/libsynaptic.a\
+	${top_builddir}/common/libwildbob.a\
 	-lapt-pkg -lX11 @RPM_LIBS@ @DEB_LIBS@ \
 	@GTK_LIBS@ @VTE_LIBS@ @LP_LIBS@\
 	-lpthread $(LIBEPT_LIBS)

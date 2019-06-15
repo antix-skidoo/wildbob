@@ -1,5 +1,5 @@
 figdir = figures
-docname = synaptic
+docname = wildbob
 lang = C
 entities = gpl.xml
 include $(top_srcdir)/xmldocs.make

@@ -11,13 +11,13 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="41.25"
    inkscape:export-xdpi="41.25"
-   inkscape:export-filename="/home/josue/Desktop/package-downgrade.png"
+   inkscape:export-filename="package-downgrade.png"
    width="48px"
    height="48px"
    id="svg11300"
    sodipodi:version="0.32"
    inkscape:version="0.43"
-   sodipodi:docbase="/home/josue/Desktop/synaptic-icons/scalable"
+   sodipodi:docbase="wildbob-icons/scalable"
    sodipodi:docname="package-downgrade.svg">
   <defs
      id="defs3">
@@ -1224,7 +1224,7 @@
        sodipodi:ry="2.2223356"
        d="M 36.769553 44.565483 A 6.5659914 2.2223356 0 1 1  23.637570,44.565483 A 6.5659914 2.2223356 0 1 1  36.769553 44.565483 z"
        transform="matrix(2.460049,0.000000,0.000000,2.460049,-49.40946,-67.96374)"
-       inkscape:export-filename="/home/josue/Desktop/synaptic/path8660.png"
+       inkscape:export-filename="wildbob/path8660.png"
        inkscape:export-xdpi="42.48"
        inkscape:export-ydpi="42.48" />
     <rect
@@ -1236,7 +1236,7 @@
        width="40.061924"
        id="rect11518"
        style="opacity:1.0000000;color:#000000;fill:url(#radialGradient1366);fill-opacity:1.0000000;fill-rule:evenodd;stroke:#4e9a16;stroke-width:1.0000000;stroke-linecap:butt;stroke-linejoin:bevel;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:10.000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
-       inkscape:export-filename="/home/josue/Desktop/synaptic/path8660.png"
+       inkscape:export-filename="wildbob/path8660.png"
        inkscape:export-xdpi="42.48"
        inkscape:export-ydpi="42.48" />
     <rect
@@ -1248,7 +1248,7 @@
        y="4.7060070"
        rx="4.2426391"
        ry="4.2426391"
-       inkscape:export-filename="/home/josue/Desktop/synaptic/path8660.png"
+       inkscape:export-filename="wildbob/path8660.png"
        inkscape:export-xdpi="42.48"
        inkscape:export-ydpi="42.48" />
     <g
@@ -1271,7 +1271,7 @@
              d="M 8.4788596,43.378997 C 48.504668,44.700137 42.178824,10.638178 21.35883,10.842278 L 21.35883,1.4668675 L 4.7103484,16.053447 L 21.35883,31.350977 C 21.35883,31.350977 21.35883,21.682597 21.35883,21.682597 C 35.42194,21.096627 39.536358,43.115177 8.4788596,43.378997 z "
              id="path1432"
              sodipodi:nodetypes="ccccccc"
-             inkscape:export-filename="/home/josue/Desktop/synaptic/path8660.png"
+             inkscape:export-filename="wildbob/path8660.png"
              inkscape:export-xdpi="42.48"
              inkscape:export-ydpi="42.48" />
           <path
@@ -1279,7 +1279,7 @@
              id="path2177"
              d="M 29.9287,37.660147 C 41.651799,31.58052 38.116492,11.432117 20.34512,11.894587 L 20.34512,3.7954957 C 20.34512,3.7954957 6.2973814,16.059217 6.2973814,16.059217 L 20.34512,29.003245 C 20.34512,29.003245 20.34512,20.725607 20.34512,20.725607 C 35.18497,20.377337 34.50503,33.483207 29.9287,37.660147 z "
              style="opacity:0.69886361;color:#000000;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient6038);stroke-width:0.9999997;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:block;overflow:visible"
-             inkscape:export-filename="/home/josue/Desktop/synaptic/path8660.png"
+             inkscape:export-filename="wildbob/path8660.png"
              inkscape:export-xdpi="42.48"
              inkscape:export-ydpi="42.48" />
           <path
@@ -1287,7 +1287,7 @@
              id="path3389"
              d="M 28.208582,38.869762 C 39.850977,33.292264 38.635821,15.903145 25.442457,12.9719 C 16.6193,15.886384 18.638977,21.49547 13.623017,22.179439 L 19.806975,27.67348 C 19.823118,24.779458 19.888172,20.204939 19.888172,20.204939 C 34.51653,19.550205 37.166881,33.641881 28.208582,38.869762 z "
              style="opacity:0.69886361;color:#000000;fill:url(#linearGradient6040);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.9999997;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:block;overflow:visible"
-             inkscape:export-filename="/home/josue/Desktop/synaptic/path8660.png"
+             inkscape:export-filename="wildbob/path8660.png"
              inkscape:export-xdpi="42.48"
              inkscape:export-ydpi="42.48" />
         </g>

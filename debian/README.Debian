@@ -1,10 +1,10 @@
-synaptic for Debian
+wildbob for Debian
 -------------------
 
 This is a graphical frontend for apt.
 
-If you want to use the "orphan" filter, you need deborphan. It's 
-"Recommended" in the control file, but not a dependency (as synaptic works
+If you want to use the "orphan" filter, you need deborphan which is
+"Recommended" in the control file, but is not a dependency (wildbob works
 perfectly well without it).
 
- -- Michael Vogt <mvo@debian.org>, Thu Feb 17 15:10:01 2005
+ -- skidoo <email@redact.ed>  Sat, 15 Jun 2019 11:11:11 +1100

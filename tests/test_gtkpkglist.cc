@@ -22,7 +22,7 @@ int main(int argc, char **argv)
    pkgInitConfig(*_config);
    pkgInitSystem(*_config, _system);
    
-   _config->Set("Debug::Synaptic::View", true);
+   _config->Set("Debug::Wildbob::View", true);
    
    RPackageLister *lister = new RPackageLister();
    lister->openCache();

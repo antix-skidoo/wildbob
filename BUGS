@@ -1,4 +1,4 @@
-* "<,>" charackters in section of a pkg make the pkgsection view fail
+* "<,>" characters in section of a pkg make the pkgsection view fail
 
 * the intro dialog is non-modal but blocks interface
 
@@ -6,7 +6,7 @@
   RPackageLister::{read,write}Selections()
 
 > I think there is a bug (debian-specific ?):
->   In preferences I told Synaptic to completely remove packages
+>   In preferences I told Synap tic to completely remove packages
 > including configuration files, but when the removal or installation of a
 > package marks another package to be removed, the configuration files are
 > always left on the system (residual config). Marking a package for

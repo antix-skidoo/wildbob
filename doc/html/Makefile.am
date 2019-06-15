@@ -1,1 +1,1 @@
-SUBDIRS=C es sv
+SUBDIRS=C
