@@ -1,10 +1,7 @@
 /* rconfiguration.h
  *
  * Copyright (c) 2000, 2001 Conectiva S/A
- *               2002 Michael Vogt <mvo@debian.org>
- *
- * Author: Alfredo K. Kojima <kojima@conectiva.com.br>
- *         Michael Vogt <mvo@debian.org>
+ * Author: Alfredo K. Kojima
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -47,7 +44,7 @@ bool RPackageOptionsFile(ifstream &in);
 // get the default conf dir
 string RConfDir();
 
-// this needs to be a safe tmp dir (like /root/.synaptic/tmp) to store
+// this needs to be a safe tmp dir (like /root/.wildbob/tmp) to store
 // small files like changelogs or pinfiles (preferences)
 string RTmpDir();
 

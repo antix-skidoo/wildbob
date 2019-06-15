@@ -4,7 +4,7 @@
   <requires lib="gtk+" version="3.0"/>
   <object class="GtkWindow" id="window_rginstall_progress_msgs">
     <property name="border_width">6</property>
-    <property name="title" translatable="yes">Package Manager output</property>
+    <property name="title" translatable="no">Package Manager output</property>
     <property name="type">GTK_WINDOW_TOPLEVEL</property>
     <property name="window_position">GTK_WIN_POS_NONE</property>
     <property name="modal">True</property>
@@ -28,7 +28,7 @@
             <child>
               <object class="GtkLabel" id="">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">Extra output was generated during Package Manager operation</property>
+                <property name="label" translatable="no">Extra output was generated during Package Manager operation</property>
                 <property name="use_underline">False</property>
                 <property name="use_markup">True</property>
                 <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -95,7 +95,7 @@
                 <property name="visible">True</property>
                 <property name="can_default">True</property>
                 <property name="can_focus">True</property>
-                <property name="label" translatable="yes">_Close</property>
+                <property name="label" translatable="no">_Close</property>
                 <property name="use_underline">True</property>
                 <property name="relief">GTK_RELIEF_NORMAL</property>
                 <signal handler="on_close_clicked" last_modification_time="Wed, 26 Feb 2003 17:57:42 GMT" name="clicked"/>

@@ -23,7 +23,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button1">
-                <property name="label" translatable="yes">_Cancel</property>
+                <property name="label" translatable="no">_Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -88,7 +88,7 @@
                   <object class="GtkLabel" id="label_secondary">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">&lt;span weight="bold" size="larger"&gt;Enter a label for this CD-Rom&lt;/span&gt;
+                    <property name="label" translatable="no">&lt;span weight="bold" size="larger"&gt;Enter a label for this CD-Rom&lt;/span&gt;
 
 The label will be used if you want to install packages from this CD-Rom. It is recommended to also write the label on the CD-Rom to easily find it again.
 </property>
@@ -111,7 +111,7 @@ The label will be used if you want to install packages from this CD-Rom. It is r
                       <object class="GtkLabel" id="label1">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Label:</property>
+                        <property name="label" translatable="no">Label:</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>

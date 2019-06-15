@@ -34,7 +34,7 @@
 #include <HandleMaker.h>
 #include <TagCollection.h>
 
-#include "gsynaptic.h"
+#include "gwildbob.h"
 #include "rpackagelister.h"
 #include "rcacheactor.h"
 #include "rpackagelistactor.h"

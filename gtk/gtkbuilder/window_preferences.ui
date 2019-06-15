@@ -63,7 +63,7 @@
   </object>
   <object class="GtkWindow" id="window_preferences">
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Preferences</property>
+    <property name="title" translatable="no">Preferences</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
     <property name="window_position">center</property>
@@ -96,7 +96,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;b&gt;Appearance&lt;/b&gt;</property>
+                        <property name="label" translatable="no">&lt;b&gt;Appearance&lt;/b&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -114,7 +114,7 @@
                           <object class="GtkLabel" id="label72">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">    </property>
+                            <property name="label" translatable="no">    </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -130,7 +130,7 @@
                             <property name="spacing">6</property>
                             <child>
                               <object class="GtkCheckButton" id="check_show_all_pkg_info">
-                                <property name="label" translatable="yes">Show package properties in the main window</property>
+                                <property name="label" translatable="no">Show package properties in the main window</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -177,7 +177,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;b&gt;Marking Changes&lt;/b&gt;</property>
+                        <property name="label" translatable="no">&lt;b&gt;Marking Changes&lt;/b&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -195,7 +195,7 @@
                           <object class="GtkLabel" id="label74">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">    </property>
+                            <property name="label" translatable="no">    </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -212,7 +212,7 @@
                             <property name="spacing">6</property>
                             <child>
                               <object class="GtkCheckButton" id="check_ask_related">
-                                <property name="label" translatable="yes">Ask to confirm changes that also affect other packages</property>
+                                <property name="label" translatable="no">Ask to confirm changes that also affect other packages</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -229,7 +229,7 @@
                             </child>
                             <child>
                               <object class="GtkCheckButton" id="check_recommends">
-                                <property name="label" translatable="yes">Consider recommended packages as dependencies</property>
+                                <property name="label" translatable="no">Consider recommended packages as dependencies</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -246,7 +246,7 @@
                             </child>
                             <child>
                               <object class="GtkCheckButton" id="check_oneclick">
-                                <property name="label" translatable="yes">Clicking on the status icon marks the most likely action</property>
+                                <property name="label" translatable="no">Clicking on the status icon marks the most likely action</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -274,7 +274,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">Removal of packages:</property>
+                                    <property name="label" translatable="no">Removal of packages:</property>
                                     <property name="use_underline">True</property>
                                   </object>
                                   <packing>
@@ -300,7 +300,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">System upgrade:</property>
+                                    <property name="label" translatable="no">System upgrade:</property>
                                   </object>
                                   <packing>
                                     <property name="top_attach">1</property>
@@ -314,7 +314,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">Number of undo operations:</property>
+                                    <property name="label" translatable="no">Number of undo operations:</property>
                                   </object>
                                   <packing>
                                     <property name="top_attach">3</property>
@@ -345,7 +345,7 @@
                                       <object class="GtkLabel" id="label137">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="label" translatable="yes"> </property>
+                                        <property name="label" translatable="no"> </property>
                                       </object>
                                       <packing>
                                         <property name="expand">True</property>
@@ -368,7 +368,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">Reloading outdated package information:</property>
+                                    <property name="label" translatable="no">Reloading outdated package information:</property>
                                   </object>
                                   <packing>
                                     <property name="top_attach">2</property>
@@ -442,7 +442,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;b&gt;Applying Changes&lt;/b&gt;</property>
+                        <property name="label" translatable="no">&lt;b&gt;Applying Changes&lt;/b&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -460,7 +460,7 @@
                           <object class="GtkLabel" id="label161">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">    </property>
+                            <property name="label" translatable="no">    </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -475,7 +475,7 @@
                             <property name="can_focus">False</property>
                             <child>
                               <object class="GtkCheckButton" id="check_terminal">
-                                <property name="label" translatable="yes">Apply changes in a terminal window</property>
+                                <property name="label" translatable="no">Apply changes in a terminal window</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -492,7 +492,7 @@
                             </child>
                             <child>
                               <object class="GtkCheckButton" id="check_ask_quit">
-                                <property name="label" translatable="yes">Ask to quit after the changes have been applied successfully</property>
+                                <property name="label" translatable="no">Ask to quit after the changes have been applied successfully</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -537,7 +537,7 @@
               <object class="GtkLabel" id="label50">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">General</property>
+                <property name="label" translatable="no">General</property>
                 <property name="justify">center</property>
               </object>
               <packing>
@@ -562,7 +562,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;b&gt;Columns&lt;/b&gt;</property>
+                        <property name="label" translatable="no">&lt;b&gt;Columns&lt;/b&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -581,7 +581,7 @@
                           <object class="GtkLabel" id="label158">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">    </property>
+                            <property name="label" translatable="no">    </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -624,7 +624,7 @@
                                 <property name="spacing">6</property>
                                 <child>
                                   <object class="GtkButton" id="button_column_up">
-                                    <property name="label" translatable="yes">Move _Up</property>
+                                    <property name="label" translatable="no">Move _Up</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
@@ -640,7 +640,7 @@
                                 </child>
                                 <child>
                                   <object class="GtkButton" id="button_column_down">
-                                    <property name="label" translatable="yes">Move D_own</property>
+                                    <property name="label" translatable="no">Move D_own</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
@@ -693,7 +693,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;b&gt;Fonts&lt;/b&gt;</property>
+                        <property name="label" translatable="no">&lt;b&gt;Fonts&lt;/b&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -711,7 +711,7 @@
                           <object class="GtkLabel" id="label148">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">    </property>
+                            <property name="label" translatable="no">    </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -729,7 +729,7 @@
                             <property name="row_spacing">6</property>
                             <child>
                               <object class="GtkCheckButton" id="checkbutton_user_font">
-                                <property name="label" translatable="yes">Use custom application font</property>
+                                <property name="label" translatable="no">Use custom application font</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -745,7 +745,7 @@
                             </child>
                             <child>
                               <object class="GtkCheckButton" id="checkbutton_user_terminal_font">
-                                <property name="label" translatable="yes">Use custom terminal font</property>
+                                <property name="label" translatable="no">Use custom terminal font</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -795,7 +795,7 @@
                                           <object class="GtkLabel" id="label150">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">A_pplication Font</property>
+                                            <property name="label" translatable="no">A_pplication Font</property>
                                             <property name="use_underline">True</property>
                                           </object>
                                           <packing>
@@ -849,7 +849,7 @@
                                           <object class="GtkLabel" id="label151">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">_Terminal Font</property>
+                                            <property name="label" translatable="no">_Terminal Font</property>
                                             <property name="use_underline">True</property>
                                           </object>
                                           <packing>
@@ -902,7 +902,7 @@
               <object class="GtkLabel" id="label118">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Columns and Fonts</property>
+                <property name="label" translatable="no">Columns and Fonts</property>
               </object>
               <packing>
                 <property name="position">1</property>
@@ -927,7 +927,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;b&gt;Colors&lt;/b&gt;</property>
+                        <property name="label" translatable="no">&lt;b&gt;Colors&lt;/b&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -945,7 +945,7 @@
                           <object class="GtkLabel" id="label87">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">    </property>
+                            <property name="label" translatable="no">    </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -961,7 +961,7 @@
                             <property name="spacing">6</property>
                             <child>
                               <object class="GtkCheckButton" id="check_use_colors">
-                                <property name="label" translatable="yes">Color packages by their status</property>
+                                <property name="label" translatable="no">Color packages by their status</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -1003,7 +1003,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Marked for installation:</property>
+                                            <property name="label" translatable="no">Marked for installation:</property>
                                           </object>
                                           <packing>
                                             <property name="expand">False</property>
@@ -1013,7 +1013,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button_install_color">
-                                            <property name="label" translatable="yes">Color</property>
+                                            <property name="label" translatable="no">Color</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1043,7 +1043,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Marked for removal:</property>
+                                            <property name="label" translatable="no">Marked for removal:</property>
                                           </object>
                                           <packing>
                                             <property name="expand">False</property>
@@ -1053,7 +1053,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button_remove_color">
-                                            <property name="label" translatable="yes">Color</property>
+                                            <property name="label" translatable="no">Color</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1085,7 +1085,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Marked for complete removal:</property>
+                                            <property name="label" translatable="no">Marked for complete removal:</property>
                                             <property name="justify">center</property>
                                           </object>
                                           <packing>
@@ -1096,7 +1096,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button_purge_color">
-                                            <property name="label" translatable="yes">Color</property>
+                                            <property name="label" translatable="no">Color</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1130,7 +1130,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Upgradable:</property>
+                                            <property name="label" translatable="no">Upgradable:</property>
                                             <property name="justify">center</property>
                                           </object>
                                           <packing>
@@ -1141,7 +1141,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button_installed-outdated_color">
-                                            <property name="label" translatable="yes">Color</property>
+                                            <property name="label" translatable="no">Color</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1173,7 +1173,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Marked for reinstallation:</property>
+                                            <property name="label" translatable="no">Marked for reinstallation:</property>
                                           </object>
                                           <packing>
                                             <property name="expand">False</property>
@@ -1183,7 +1183,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button_reinstall_color">
-                                            <property name="label" translatable="yes">Color</property>
+                                            <property name="label" translatable="no">Color</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1215,7 +1215,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Marked for upgrade:</property>
+                                            <property name="label" translatable="no">Marked for upgrade:</property>
                                             <property name="justify">center</property>
                                           </object>
                                           <packing>
@@ -1226,7 +1226,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button_upgrade_color">
-                                            <property name="label" translatable="yes">Color</property>
+                                            <property name="label" translatable="no">Color</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1260,7 +1260,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Not installed:</property>
+                                            <property name="label" translatable="no">Not installed:</property>
                                             <property name="justify">center</property>
                                           </object>
                                           <packing>
@@ -1271,7 +1271,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button_available_color">
-                                            <property name="label" translatable="yes">Color</property>
+                                            <property name="label" translatable="no">Color</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1303,7 +1303,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Not installed (locked):</property>
+                                            <property name="label" translatable="no">Not installed (locked):</property>
                                           </object>
                                           <packing>
                                             <property name="expand">False</property>
@@ -1313,7 +1313,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button_available-locked_color">
-                                            <property name="label" translatable="yes">Color</property>
+                                            <property name="label" translatable="no">Color</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1347,7 +1347,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Installed (locked):</property>
+                                            <property name="label" translatable="no">Installed (locked):</property>
                                             <property name="justify">center</property>
                                           </object>
                                           <packing>
@@ -1358,7 +1358,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button_installed-locked_color">
-                                            <property name="label" translatable="yes">Color</property>
+                                            <property name="label" translatable="no">Color</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1392,7 +1392,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Installed:</property>
+                                            <property name="label" translatable="no">Installed:</property>
                                             <property name="justify">center</property>
                                           </object>
                                           <packing>
@@ -1403,7 +1403,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button_installed-updated_color">
-                                            <property name="label" translatable="yes">Color</property>
+                                            <property name="label" translatable="no">Color</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1435,7 +1435,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">New in repository:</property>
+                                            <property name="label" translatable="no">New in repository:</property>
                                             <property name="justify">center</property>
                                           </object>
                                           <packing>
@@ -1446,7 +1446,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button_new_color">
-                                            <property name="label" translatable="yes">Color</property>
+                                            <property name="label" translatable="no">Color</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1477,7 +1477,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Marked for downgrade:</property>
+                                            <property name="label" translatable="no">Marked for downgrade:</property>
                                             <property name="justify">center</property>
                                           </object>
                                           <packing>
@@ -1488,7 +1488,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button_downgrade_color">
-                                            <property name="label" translatable="yes">Color</property>
+                                            <property name="label" translatable="no">Color</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1522,7 +1522,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Broken:</property>
+                                            <property name="label" translatable="no">Broken:</property>
                                             <property name="justify">center</property>
                                           </object>
                                           <packing>
@@ -1533,7 +1533,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button_broken_color">
-                                            <property name="label" translatable="yes">Color</property>
+                                            <property name="label" translatable="no">Color</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1599,7 +1599,7 @@
               <object class="GtkLabel" id="label61">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Colors</property>
+                <property name="label" translatable="no">Colors</property>
                 <property name="justify">center</property>
               </object>
               <packing>
@@ -1625,7 +1625,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;b&gt;Temporary Files&lt;/b&gt;</property>
+                        <property name="label" translatable="no">&lt;b&gt;Temporary Files&lt;/b&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -1643,7 +1643,7 @@
                           <object class="GtkLabel" id="label110">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">    </property>
+                            <property name="label" translatable="no">    </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -1659,7 +1659,7 @@
                             <property name="spacing">6</property>
                             <child>
                               <object class="GtkRadioButton" id="radio_cache_leave">
-                                <property name="label" translatable="yes">_Leave all downloaded packages in the cache</property>
+                                <property name="label" translatable="no">_Leave all downloaded packages in the cache</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -1676,7 +1676,7 @@
                             </child>
                             <child>
                               <object class="GtkRadioButton" id="radio_cache_del_after">
-                                <property name="label" translatable="yes">_Delete downloaded packages after installation</property>
+                                <property name="label" translatable="no">_Delete downloaded packages after installation</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -1693,7 +1693,7 @@
                             </child>
                             <child>
                               <object class="GtkRadioButton" id="radio_cache_del_obsolete">
-                                <property name="label" translatable="yes">_Only delete packages which are no longer available</property>
+                                <property name="label" translatable="no">_Only delete packages which are no longer available</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -1715,11 +1715,11 @@
                                 <property name="can_focus">False</property>
                                 <child>
                                   <object class="GtkButton" id="button_clean_cache">
-                                    <property name="label" translatable="yes">_Delete Cached Package Files</property>
+                                    <property name="label" translatable="no">_Delete Cached Package Files</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
-                                    <property name="tooltip_text" translatable="yes">Delete all cache package files now.</property>
+                                    <property name="tooltip_text" translatable="no">Delete all cache package files now.</property>
                                     <property name="use_underline">True</property>
                                     <signal name="clicked" handler="on_button_clean_cache_clicked" swapped="no"/>
                                   </object>
@@ -1771,7 +1771,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;b&gt;History files&lt;/b&gt;</property>
+                        <property name="label" translatable="no">&lt;b&gt;History files&lt;/b&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -1789,7 +1789,7 @@
                           <object class="GtkLabel" id="label167">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">    </property>
+                            <property name="label" translatable="no">    </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -1805,7 +1805,7 @@
                             <property name="spacing">6</property>
                             <child>
                               <object class="GtkRadioButton" id="radio_keep_history">
-                                <property name="label" translatable="yes">_Keep history</property>
+                                <property name="label" translatable="no">_Keep history</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -1827,7 +1827,7 @@
                                 <property name="spacing">6</property>
                                 <child>
                                   <object class="GtkRadioButton" id="radio_delete_history">
-                                    <property name="label" translatable="yes">Delete _History files older than:</property>
+                                    <property name="label" translatable="no">Delete _History files older than:</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
@@ -1859,7 +1859,7 @@
                                   <object class="GtkLabel" id="label168">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="label" translatable="yes">days</property>
+                                    <property name="label" translatable="no">days</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -1905,7 +1905,7 @@
               <object class="GtkLabel" id="label51">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Files</property>
+                <property name="label" translatable="no">Files</property>
                 <property name="justify">center</property>
               </object>
               <packing>
@@ -1925,7 +1925,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">&lt;b&gt;Proxy Server&lt;/b&gt;</property>
+                    <property name="label" translatable="no">&lt;b&gt;Proxy Server&lt;/b&gt;</property>
                     <property name="use_markup">True</property>
                   </object>
                   <packing>
@@ -1943,7 +1943,7 @@
                       <object class="GtkLabel" id="label134">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">    </property>
+                        <property name="label" translatable="no">    </property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -1959,7 +1959,7 @@
                         <property name="spacing">6</property>
                         <child>
                           <object class="GtkRadioButton" id="radio_no_proxy">
-                            <property name="label" translatable="yes">Direct connection to the Internet</property>
+                            <property name="label" translatable="no">Direct connection to the Internet</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
@@ -1976,7 +1976,7 @@
                         </child>
                         <child>
                           <object class="GtkRadioButton" id="radio_use_proxy">
-                            <property name="label" translatable="yes">Manual proxy configuration</property>
+                            <property name="label" translatable="no">Manual proxy configuration</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
@@ -2001,7 +2001,7 @@
                               <object class="GtkLabel" id="label126">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">    </property>
+                                <property name="label" translatable="no">    </property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -2033,7 +2033,7 @@
                                       <object class="GtkEntry" id="entry_http_proxy">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="tooltip_text" translatable="yes">IP address or host name of the http proxy server</property>
+                                        <property name="tooltip_text" translatable="no">IP address or host name of the http proxy server</property>
                                         <signal name="changed" handler="on_entry_http_proxy_changed" swapped="no"/>
                                       </object>
                                       <packing>
@@ -2053,7 +2053,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Port: </property>
+                                            <property name="label" translatable="no">Port: </property>
                                           </object>
                                           <packing>
                                             <property name="expand">False</property>
@@ -2065,7 +2065,7 @@
                                           <object class="GtkSpinButton" id="spinbutton_http_port">
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
-                                            <property name="tooltip_text" translatable="yes">Port number of the http proxy server</property>
+                                            <property name="tooltip_text" translatable="no">Port number of the http proxy server</property>
                                             <property name="adjustment">adjustment3</property>
                                             <property name="climb_rate">1</property>
                                           </object>
@@ -2098,7 +2098,7 @@
                                       <object class="GtkEntry" id="entry_ftp_proxy">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="tooltip_text" translatable="yes">IP address or host name of the ftp proxy server</property>
+                                        <property name="tooltip_text" translatable="no">IP address or host name of the ftp proxy server</property>
                                       </object>
                                       <packing>
                                         <property name="expand">True</property>
@@ -2117,7 +2117,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes">Port: </property>
+                                            <property name="label" translatable="no">Port: </property>
                                           </object>
                                           <packing>
                                             <property name="expand">False</property>
@@ -2129,7 +2129,7 @@
                                           <object class="GtkSpinButton" id="spinbutton_ftp_port">
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
-                                            <property name="tooltip_text" translatable="yes">Port number of the ftp proxy server</property>
+                                            <property name="tooltip_text" translatable="no">Port number of the ftp proxy server</property>
                                             <property name="adjustment">adjustment4</property>
                                             <property name="climb_rate">1</property>
                                           </object>
@@ -2160,7 +2160,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">No proxy for: </property>
+                                    <property name="label" translatable="no">No proxy for: </property>
                                   </object>
                                   <packing>
                                     <property name="top_attach">2</property>
@@ -2174,7 +2174,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">FTP proxy: </property>
+                                    <property name="label" translatable="no">FTP proxy: </property>
                                   </object>
                                   <packing>
                                     <property name="top_attach">1</property>
@@ -2188,7 +2188,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">HTTP proxy: </property>
+                                    <property name="label" translatable="no">HTTP proxy: </property>
                                   </object>
                                   <packing>
                                     <property name="x_options">GTK_FILL</property>
@@ -2199,7 +2199,7 @@
                                   <object class="GtkEntry" id="entry_no_proxy">
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="tooltip_text" translatable="yes">Comma separated list of hosts and domains that will not be contacted through the proxy (e.g. localhost, 192.168.1.231, .net)</property>
+                                    <property name="tooltip_text" translatable="no">Comma separated list of hosts and domains that will not be contacted through the proxy (e.g. localhost, 192.168.1.231, .net)</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">1</property>
@@ -2211,7 +2211,7 @@
                                 </child>
                                 <child>
                                   <object class="GtkButton" id="button_authentication">
-                                    <property name="label" translatable="yes">Authentication</property>
+                                    <property name="label" translatable="no">Authentication</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
@@ -2263,7 +2263,7 @@
               <object class="GtkLabel" id="label145">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Network</property>
+                <property name="label" translatable="no">Network</property>
               </object>
               <packing>
                 <property name="position">4</property>
@@ -2303,7 +2303,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;span size="large" weight="bold"&gt;These settings affect the core of your system. Consider any changes carefully.&lt;/span&gt;</property>
+                        <property name="label" translatable="no">&lt;span size="large" weight="bold"&gt;These settings affect the core of your system. Consider any changes carefully.&lt;/span&gt;</property>
                         <property name="use_markup">True</property>
                         <property name="wrap">True</property>
                       </object>
@@ -2331,7 +2331,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;b&gt;Package upgrade behavior (default distribution)&lt;/b&gt;</property>
+                        <property name="label" translatable="no">&lt;b&gt;Package upgrade behavior (default distribution)&lt;/b&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -2349,7 +2349,7 @@
                           <object class="GtkLabel" id="label143">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">    </property>
+                            <property name="label" translatable="no">    </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -2365,7 +2365,7 @@
                             <property name="spacing">12</property>
                             <child>
                               <object class="GtkRadioButton" id="radiobutton_ignore">
-                                <property name="label" translatable="yes">Always prefer the highest version</property>
+                                <property name="label" translatable="no">Always prefer the highest version</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -2382,7 +2382,7 @@
                             </child>
                             <child>
                               <object class="GtkRadioButton" id="radiobutton_now">
-                                <property name="label" translatable="yes">Always prefer the installed version</property>
+                                <property name="label" translatable="no">Always prefer the installed version</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -2405,7 +2405,7 @@
                                 <property name="can_focus">False</property>
                                 <child>
                                   <object class="GtkRadioButton" id="radiobutton_distro">
-                                    <property name="label" translatable="yes">Prefer versions from: </property>
+                                    <property name="label" translatable="no">Prefer versions from: </property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
@@ -2470,7 +2470,7 @@
               <object class="GtkLabel" id="label138">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Distribution</property>
+                <property name="label" translatable="no">Distribution</property>
               </object>
               <packing>
                 <property name="position">5</property>
@@ -2494,7 +2494,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="apply">
-                <property name="label" translatable="yes">_Apply</property>
+                <property name="label" translatable="no">_Apply</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -2510,7 +2510,7 @@
             </child>
             <child>
               <object class="GtkButton" id="close">
-                <property name="label" translatable="yes">_Cancel</property>
+                <property name="label" translatable="no">_Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -2526,7 +2526,7 @@
             </child>
             <child>
               <object class="GtkButton" id="ok">
-                <property name="label" translatable="yes">_OK</property>
+                <property name="label" translatable="no">_OK</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>

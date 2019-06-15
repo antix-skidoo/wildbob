@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_INIT(configure.in)
 
-AM_INIT_AUTOMAKE(synaptic, 0.84.6)
+AM_INIT_AUTOMAKE(wildbob, 0.84.7)
 AM_CONFIG_HEADER(config.h)
 AM_MAINTAINER_MODE
 
@@ -18,12 +18,12 @@ dnl generated with: cd po;for i in $(ls *.po); do echo -n "${i%%.po} "; done
 dnl i18n
 ALL_LINGUAS="es"
 AM_GLIB_GNU_GETTEXT
-GETTEXT_PACKAGE=synaptic
+GETTEXT_PACKAGE=wildbob
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE",[description])
 AC_PROG_INTLTOOL([0.23])
-synapticlocaledir='${prefix}/${DATADIRNAME}/locale'
-AC_SUBST(synapticlocaledir)
+wildboblocaledir='${prefix}/${DATADIRNAME}/locale'
+AC_SUBST(wildboblocaledir)
      
 
 dnl we build for gtk3 by default now
@@ -106,7 +106,7 @@ AC_CHECK_HEADERS(unistd.h libintl.h iconv.h)
 AC_LANG([C++])
 # bail out if we don't have apts headers
 AC_CHECK_HEADER(apt-pkg/configuration.h, [],
- AC_ERROR([You need the apt-pkg headers installed to compile synaptic.]))
+ AC_ERROR([You need the apt-pkg headers installed to compile wildbob.]))
 
 # if metaindex is there we use a apt with authentication support
 AC_CHECK_HEADER(apt-pkg/metaindex.h,
@@ -172,11 +172,6 @@ AC_ARG_WITH(launchpad-integration,
          AC_SUBST(LP_CFLAGS)
          AC_SUBST(LP_LIBS)
 	]
-)
-
-AC_ARG_WITH(pkg-hold, 
-	[  --with-pkg-hold   build with experimental package "hold" feature],
-        AC_DEFINE(SYNAPTIC_PKG_HOLD, 1, [build with package pin feature] )
 )
 
 AC_ARG_WITH(gtk-disable-deprecated,

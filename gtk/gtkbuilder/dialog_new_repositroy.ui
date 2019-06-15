@@ -42,7 +42,7 @@
                   <object class="GtkLabel" id="label1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Enter the complete APT line of the repository that you want to add&lt;/b&gt;&lt;/big&gt;
+                    <property name="label" translatable="no">&lt;big&gt;&lt;b&gt;Enter the complete APT line of the repository that you want to add&lt;/b&gt;&lt;/big&gt;
 
 The APT line contains the type, location and content of a repository, for example &lt;i&gt;"deb http://ftp.debian.org sarge main"&lt;/i&gt;. You can find a detailed description of the syntax in the documentation.</property>
                     <property name="use_markup">True</property>
@@ -65,7 +65,7 @@ The APT line contains the type, location and content of a repository, for exampl
                       <object class="GtkLabel" id="label2">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">APT line:</property>
+                        <property name="label" translatable="no">APT line:</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -116,7 +116,7 @@ The APT line contains the type, location and content of a repository, for exampl
                 <property name="layout_style">start</property>
                 <child>
                   <object class="GtkButton" id="button_help">
-                    <property name="label" translatable="yes">_Help</property>
+                    <property name="label" translatable="no">_Help</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="can_default">True</property>
@@ -143,7 +143,7 @@ The APT line contains the type, location and content of a repository, for exampl
                 <property name="layout_style">start</property>
                 <child>
                   <object class="GtkButton" id="button_cancel">
-                    <property name="label" translatable="yes">_Cancel</property>
+                    <property name="label" translatable="no">_Cancel</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="can_default">True</property>
@@ -189,7 +189,7 @@ The APT line contains the type, location and content of a repository, for exampl
                               <object class="GtkLabel" id="label3">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">_Add Repository</property>
+                                <property name="label" translatable="no">_Add Repository</property>
                                 <property name="use_underline">True</property>
                               </object>
                               <packing>

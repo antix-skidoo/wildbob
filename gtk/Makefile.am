@@ -5,20 +5,20 @@ INCLUDES= -I${top_srcdir}/common \
 	-I${top_srcdir}/pixmaps  \
 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
 	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
-	-DSYNAPTIC_GTKBUILDERDIR=\""$(datadir)/synaptic/gtkbuilder/"\" \
-	-DSYNAPTIC_PIXMAPDIR=\""$(datadir)/synaptic/pixmaps/"\" \
+	-DWILDBOB_GTKBUILDERDIR=\""$(datadir)/wildbob/gtkbuilder/"\" \
+	-DWILDBOB_PIXMAPDIR=\""$(datadir)/wildbob/pixmaps/"\" \
 	@GTK_CFLAGS@ \
 	@VTE_CFLAGS@ \
 	@LP_CFLAGS@ \
 	@GTK_DISABLE_DEPRECATED@ \
 	$(LIBEPT_CFLAGS)
 
-sbin_PROGRAMS = synaptic 
+sbin_PROGRAMS = wildbob 
 
-#synaptic_LDFLAGS= --export-dynamic
+#wildbob_LDFLAGS= --export-dynamic
 
-synaptic_LDADD = \
-	${top_builddir}/common/libsynaptic.a\
+wildbob_LDADD = \
+	${top_builddir}/common/libwildbob.a\
 	-lapt-pkg -lX11 @RPM_LIBS@ @DEB_LIBS@ \
 	@GTK_LIBS@ \
 	@VTE_LIBS@ @LP_LIBS@\
@@ -26,9 +26,9 @@ synaptic_LDADD = \
 	-lpthread \
 	$(LIBEPT_LIBS)
 
-synaptic_SOURCES= \
-	gsynaptic.cc\
-	gsynaptic.h\
+wildbob_SOURCES= \
+	gwildbob.cc\
+	gwildbob.h\
 	gtkpkglist.cc\
 	gtkpkglist.h\
 	gtk3compat.h\

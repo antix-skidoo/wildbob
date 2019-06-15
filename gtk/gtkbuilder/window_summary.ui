@@ -20,12 +20,12 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_cancel">
-                <property name="label" translatable="yes">_Cancel</property>
+                <property name="label" translatable="no">_Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
                 <property name="receives_default">False</property>
-                <property name="tooltip_text" translatable="yes">Return to the main screen</property>
+                <property name="tooltip_text" translatable="no">Return to the main screen</property>
                 <property name="use_underline">True</property>
                 <signal name="clicked" handler="on_cancelbutton1_clicked" swapped="no"/>
               </object>
@@ -37,14 +37,14 @@
             </child>
             <child>
               <object class="GtkButton" id="button_execute">
-                <property name="label" translatable="yes">_Apply</property>
+                <property name="label" translatable="no">_Apply</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="has_focus">True</property>
                 <property name="can_default">True</property>
                 <property name="has_default">True</property>
                 <property name="receives_default">False</property>
-                <property name="tooltip_text" translatable="yes">Apply all marked changes</property>
+                <property name="tooltip_text" translatable="no">Apply all marked changes</property>
                 <property name="use_underline">True</property>
                 <signal name="clicked" handler="on_button_execute_clicked" swapped="no"/>
               </object>
@@ -101,7 +101,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;span weight="bold" size="large"&gt;Apply the following changes?&lt;/span&gt;</property>
+                        <property name="label" translatable="no">&lt;span weight="bold" size="large"&gt;Apply the following changes?&lt;/span&gt;</property>
                         <property name="use_markup">True</property>
                         <property name="wrap">True</property>
                       </object>
@@ -116,7 +116,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">This is your last opportunity to look through the list of marked changes before they are applied.</property>
+                        <property name="label" translatable="no">This is your last opportunity to look through the list of marked changes before they are applied.</property>
                         <property name="wrap">True</property>
                       </object>
                       <packing>
@@ -211,7 +211,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">&lt;b&gt;Summary&lt;/b&gt;</property>
+                                    <property name="label" translatable="no">&lt;b&gt;Summary&lt;/b&gt;</property>
                                     <property name="use_markup">True</property>
                                   </object>
                                   <packing>
@@ -229,7 +229,7 @@
                                       <object class="GtkLabel" id="label_spacer6">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="label" translatable="yes">    </property>
+                                        <property name="label" translatable="no">    </property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -249,7 +249,7 @@
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
                                             <property name="yalign">0</property>
-                                            <property name="label" translatable="yes">    </property>
+                                            <property name="label" translatable="no">    </property>
                                             <property name="use_markup">True</property>
                                           </object>
                                           <packing>
@@ -264,7 +264,7 @@
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
                                             <property name="yalign">0</property>
-                                            <property name="label" translatable="yes">    </property>
+                                            <property name="label" translatable="no">    </property>
                                             <property name="use_markup">True</property>
                                           </object>
                                           <packing>
@@ -308,7 +308,7 @@
                             <property name="can_focus">False</property>
                             <child>
                               <object class="GtkToggleButton" id="togglebutton_details">
-                                <property name="label" translatable="yes">_Show Details</property>
+                                <property name="label" translatable="no">_Show Details</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -324,7 +324,7 @@
                               <object class="GtkLabel" id="label7">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes"> </property>
+                                <property name="label" translatable="no"> </property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -355,11 +355,11 @@
                         <property name="spacing">6</property>
                         <child>
                           <object class="GtkCheckButton" id="checkbutton_download_only">
-                            <property name="label" translatable="yes">_Download package files only</property>
+                            <property name="label" translatable="no">_Download package files only</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="tooltip_text" translatable="yes">The package files will be downloaded, but not installed</property>
+                            <property name="tooltip_text" translatable="no">The package files will be downloaded, but not installed</property>
                             <property name="use_underline">True</property>
                             <property name="xalign">0.5</property>
                             <property name="draw_indicator">True</property>
@@ -372,10 +372,10 @@
                         </child>
                         <child>
                           <object class="GtkCheckButton" id="checkbutton_check_signatures">
-                            <property name="label" translatable="yes">_Verify package signatures</property>
+                            <property name="label" translatable="no">_Verify package signatures</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="tooltip_text" translatable="yes">Vendors sign their packages to verify the origin and integrity of the packages. Disabling the verification is a security risk.</property>
+                            <property name="tooltip_text" translatable="no">Vendors sign their packages to verify the origin and integrity of the packages. Disabling the verification is a security risk.</property>
                             <property name="use_underline">True</property>
                             <property name="xalign">0.5</property>
                             <property name="draw_indicator">True</property>

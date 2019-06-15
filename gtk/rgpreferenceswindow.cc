@@ -35,7 +35,7 @@
 #include "rconfiguration.h"
 #include "rgpreferenceswindow.h"
 #include "rguserdialog.h"
-#include "gsynaptic.h"
+#include "gwildbob.h"
 #include "rgpackagestatus.h"
 #include "gtk3compat.h"
 
@@ -138,16 +138,16 @@ void RGPreferencesWindow::applyProxySettings()
       firstRun = false;
    }
 
-   bool useProxy = _config->FindB("Synaptic::useProxy", false);
+   bool useProxy = _config->FindB("Wildbob::useProxy", false);
    // now set the stuff for apt
    if (useProxy) {
-      http = _config->Find("Synaptic::httpProxy", "");
-      httpPort = _config->FindI("Synaptic::httpProxyPort", 3128);
-      ftp = _config->Find("Synaptic::ftpProxy", "");
-      ftpPort = _config->FindI("Synaptic::ftpProxyPort", 3128);
-      noProxy = _config->Find("Synaptic::noProxy", "");
-      httpUser = _config->Find("Synaptic::httpProxyUser", "");
-      httpPass = _config->Find("Synaptic::httpProxyPass", "");
+      http = _config->Find("Wildbob::httpProxy", "");
+      httpPort = _config->FindI("Wildbob::httpProxyPort", 3128);
+      ftp = _config->Find("Wildbob::ftpProxy", "");
+      ftpPort = _config->FindI("Wildbob::ftpProxyPort", 3128);
+      noProxy = _config->Find("Wildbob::noProxy", "");
+      httpUser = _config->Find("Wildbob::httpProxyUser", "");
+      httpPass = _config->Find("Wildbob::httpProxyPass", "");
 
       if(!http.empty()) {
 	 unsetenv("http_proxy");
@@ -198,7 +198,7 @@ void RGPreferencesWindow::saveGeneral()
 
    // show package properties in main window
    newval = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(_optionShowAllPkgInfoInMain));
-   _config->Set("Synaptic::ShowAllPkgInfoInMain", newval ? "true" : "false");
+   _config->Set("Wildbob::ShowAllPkgInfoInMain", newval ? "true" : "false");
    // apply the changes
    GtkWidget *notebook = GTK_WIDGET(gtk_builder_get_object
                                     (_mainWin->getGtkBuilder(),
@@ -220,7 +220,7 @@ void RGPreferencesWindow::saveGeneral()
 
    // Ask to confirm changes also affecting other packages
    newval = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(_optionAskRelated));
-   _config->Set("Synaptic::AskRelated", newval ? "true" : "false");
+   _config->Set("Wildbob::AskRelated", newval ? "true" : "false");
 
    // Consider recommended packages as dependencies
    newval = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(_optionCheckRecom));
@@ -228,36 +228,36 @@ void RGPreferencesWindow::saveGeneral()
 
    // Clicking on the status icon marks the most likely action
    newval = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(_optionOneClick));
-   _config->Set("Synaptic::OneClickOnStatusActions", newval ? "true" : "false");
+   _config->Set("Wildbob::OneClickOnStatusActions", newval ? "true" : "false");
 
    // Removal of packages: 
    int delAction = gtk_combo_box_get_active(GTK_COMBO_BOX(_comboRemovalAction));
    // ugly :( but we need this +2 because RGPkgAction starts with 
    //         "keep","install"
    delAction += 2;
-   _config->Set("Synaptic::delAction", delAction);
+   _config->Set("Wildbob::delAction", delAction);
 
    // System upgrade:
    // upgrade type, (ask=-1,normal=0,dist-upgrade=1)
    i = gtk_combo_box_get_active(GTK_COMBO_BOX(_comboUpgradeMethod));
-   _config->Set("Synaptic::upgradeType", i - 1);
+   _config->Set("Wildbob::upgradeType", i - 1);
 
    // package list update date check
    i = gtk_combo_box_get_active(GTK_COMBO_BOX(_comboUpdateAsk));
-   _config->Set("Synaptic::update::type", i);
+   _config->Set("Wildbob::update::type", i);
    
 
    // Number of undo operations:
    int maxUndo = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(_maxUndoE));
-   _config->Set("Synaptic::undoStackSize", maxUndo);
+   _config->Set("Wildbob::undoStackSize", maxUndo);
 
    // Apply changes in a terminal window
    newval = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(_optionUseTerminal));
-   _config->Set("Synaptic::UseTerminal", newval ? "true" : "false");
+   _config->Set("Wildbob::UseTerminal", newval ? "true" : "false");
 
    // Ask to quit after the changes have been applied successfully
    newval = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(_optionAskQuit));
-   _config->Set("Synaptic::AskQuitOnProceed", newval ? "true" : "false");
+   _config->Set("Wildbob::AskQuitOnProceed", newval ? "true" : "false");
 
 }
 
@@ -267,12 +267,12 @@ void RGPreferencesWindow::saveColumnsAndFonts()
 
    // Use custom application font
    newval = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(gtk_builder_get_object(_builder, "checkbutton_user_font")));
-   _config->Set("Synaptic::useUserFont", newval);
+   _config->Set("Wildbob::useUserFont", newval);
 
    GValue value = { 0, };
    g_value_init(&value, G_TYPE_STRING);
    if (newval) {
-      g_value_set_string(&value, _config->Find("Synaptic::FontName").c_str());
+      g_value_set_string(&value, _config->Find("Wildbob::FontName").c_str());
       g_object_set_property(G_OBJECT(gtk_settings_get_default()),
                             "gtk-font-name", &value);
    } else {
@@ -285,7 +285,7 @@ void RGPreferencesWindow::saveColumnsAndFonts()
    g_value_unset(&value);
 
    newval = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(gtk_builder_get_object(_builder, "checkbutton_user_terminal_font")));
-   _config->Set("Synaptic::useUserTerminalFont", newval);
+   _config->Set("Wildbob::useUserTerminalFont", newval);
    
 
    // treeviewstuff 
@@ -303,13 +303,13 @@ void RGPreferencesWindow::saveColumnsAndFonts()
 			  -1);
 
       // pos
-      config_name = g_strdup_printf("Synaptic::%sColumnPos",column_name);
+      config_name = g_strdup_printf("Wildbob::%sColumnPos",column_name);
       _config->Set(config_name, i);
       //cout << column_name << " : " << i << endl;
       g_free(config_name);
       
       // visible
-      config_name = g_strdup_printf("Synaptic::%sColumnVisible",column_name);
+      config_name = g_strdup_printf("Wildbob::%sColumnVisible",column_name);
       _config->Set(config_name, visible);
       g_free(config_name);
 
@@ -327,7 +327,7 @@ void RGPreferencesWindow::saveColors()
    // save the colors
    RGPackageStatus::pkgStatus.saveColors();
    newval = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(_optionUseStatusColors));
-   _config->Set("Synaptic::UseStatusColors", newval ? "true" : "false");
+   _config->Set("Wildbob::UseStatusColors", newval ? "true" : "false");
 }
 
 void RGPreferencesWindow::saveFiles()
@@ -336,18 +336,18 @@ void RGPreferencesWindow::saveFiles()
 
    // cache
    newval = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(_cacheClean));
-   _config->Set("Synaptic::CleanCache", newval ? "true" : "false");
+   _config->Set("Wildbob::CleanCache", newval ? "true" : "false");
    newval = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(_cacheAutoClean));
-   _config->Set("Synaptic::AutoCleanCache", newval ? "true" : "false");
+   _config->Set("Wildbob::AutoCleanCache", newval ? "true" : "false");
 
    // history
    newval = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(_delHistory));
    if(!newval) {
-      _config->Set("Synaptic::delHistory", -1);
+      _config->Set("Wildbob::delHistory", -1);
       return;
    }
    int delHistory= gtk_spin_button_get_value(GTK_SPIN_BUTTON(_spinDelHistory));
-   _config->Set("Synaptic::delHistory", delHistory);
+   _config->Set("Wildbob::delHistory", delHistory);
    _lister->cleanCommitLog();
 }
 
@@ -359,24 +359,24 @@ void RGPreferencesWindow::saveNetwork()
    int httpPort, ftpPort;
 
    useProxy = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(_useProxy));
-   _config->Set("Synaptic::useProxy", useProxy);
+   _config->Set("Wildbob::useProxy", useProxy);
    // http
    http = gtk_entry_get_text(
       GTK_ENTRY(gtk_builder_get_object(_builder, "entry_http_proxy")));
-   _config->Set("Synaptic::httpProxy", http);
+   _config->Set("Wildbob::httpProxy", http);
    httpPort = (int) gtk_spin_button_get_value(
       GTK_SPIN_BUTTON(gtk_builder_get_object(_builder,"spinbutton_http_port")));
-   _config->Set("Synaptic::httpProxyPort", httpPort);
+   _config->Set("Wildbob::httpProxyPort", httpPort);
    // ftp
    ftp = gtk_entry_get_text(
       GTK_ENTRY(gtk_builder_get_object(_builder, "entry_ftp_proxy")));
-   _config->Set("Synaptic::ftpProxy", ftp);
+   _config->Set("Wildbob::ftpProxy", ftp);
    ftpPort = (int) gtk_spin_button_get_value(
       GTK_SPIN_BUTTON(gtk_builder_get_object(_builder,"spinbutton_ftp_port")));
-   _config->Set("Synaptic::ftpProxyPort", ftpPort);
+   _config->Set("Wildbob::ftpProxyPort", ftpPort);
    noProxy = gtk_entry_get_text(
       GTK_ENTRY(gtk_builder_get_object(_builder, "entry_no_proxy")));
-   _config->Set("Synaptic::noProxy", noProxy);
+   _config->Set("Wildbob::noProxy", noProxy);
 
    applyProxySettings();
 }
@@ -385,10 +385,10 @@ void RGPreferencesWindow::saveDistribution()
 {
    if (_defaultDistro.empty()) {
       _config->Clear("APT::Default-Release");
-      _config->Clear("Synaptic::DefaultDistro");
+      _config->Clear("Wildbob::DefaultDistro");
    } else {
       _config->Set("APT::Default-Release", _defaultDistro);
-      _config->Set("Synaptic::DefaultDistro", _defaultDistro);
+      _config->Set("Wildbob::DefaultDistro", _defaultDistro);
    }
 }
 
@@ -443,11 +443,11 @@ void RGPreferencesWindow::changeFontAction(GtkWidget *self, void *data)
    
    switch (GPOINTER_TO_INT(data)) {
       case FONT_DEFAULT:
-         propName = "Synaptic::FontName";
+         propName = "Wildbob::FontName";
 	      fontName = "sans 10";
          break;
       case FONT_TERMINAL:
-         propName = "Synaptic::TerminalFontName";
+         propName = "Wildbob::TerminalFontName";
 	      fontName = "monospace 10";
          break;
       default:
@@ -501,11 +501,11 @@ void RGPreferencesWindow::readGeneral()
 {
    // Allow regular expressions in searches and filters
    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(_optionShowAllPkgInfoInMain),
-                                _config->FindB("Synaptic::ShowAllPkgInfoInMain", false));
+                                _config->FindB("Wildbob::ShowAllPkgInfoInMain", false));
 
    // Ask to confirm changes also affecting other packages
    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(_optionAskRelated),
-                                _config->FindB("Synaptic::AskRelated", true));
+                                _config->FindB("Wildbob::AskRelated", true));
 
    // Consider recommended packages as dependencies
    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(_optionCheckRecom),
@@ -514,11 +514,11 @@ void RGPreferencesWindow::readGeneral()
 
    // Clicking on the status icon marks the most likely action
    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(_optionOneClick),
-                                _config->FindB("Synaptic::OneClickOnStatusActions",
+                                _config->FindB("Wildbob::OneClickOnStatusActions",
                                                false));
 
    // Removal of packages: 
-   int delAction = _config->FindI("Synaptic::delAction", PKG_DELETE);
+   int delAction = _config->FindI("Wildbob::delAction", PKG_DELETE);
    // now set the combobox
    // ugly :( but we need this -2 because RGPkgAction starts with 
    //         "keep","install"
@@ -527,10 +527,10 @@ void RGPreferencesWindow::readGeneral()
 
    // System upgrade:
    // upgradeType (ask=-1,normal=0,dist-upgrade=1)
-   int i = _config->FindI("Synaptic::upgradeType", 1);
+   int i = _config->FindI("Wildbob::upgradeType", 1);
    gtk_combo_box_set_active(GTK_COMBO_BOX(_comboUpgradeMethod), i + 1);
 
-   i = _config->FindI("Synaptic::update::type", 0);
+   i = _config->FindI("Wildbob::update::type", 0);
    gtk_combo_box_set_active(GTK_COMBO_BOX(_comboUpdateAsk), i);
 
 
@@ -542,7 +542,7 @@ void RGPreferencesWindow::readGeneral()
    int UndoStackSize = 20;
 #endif
    gtk_spin_button_set_value(GTK_SPIN_BUTTON(_maxUndoE),
-                             _config->FindI("Synaptic::undoStackSize",
+                             _config->FindI("Wildbob::undoStackSize",
                                             UndoStackSize));
 
    
@@ -550,7 +550,7 @@ void RGPreferencesWindow::readGeneral()
    bool UseTerminal = false;
 #ifndef HAVE_TERMINAL
    gtk_widget_set_sensitive(GTK_WIDGET(_optionUseTerminal), false);
-   _config->Set("Synaptic::UseTerminal", false);
+   _config->Set("Wildbob::UseTerminal", false);
 #else
 #ifndef HAVE_RPM 
 #ifndef WITH_DPKG_STATUSFD
@@ -559,23 +559,23 @@ void RGPreferencesWindow::readGeneral()
 #endif
 #endif
    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(_optionUseTerminal),
-                                _config->FindB("Synaptic::UseTerminal",
+                                _config->FindB("Wildbob::UseTerminal",
                                                UseTerminal));
 
    // Ask to quit after the changes have been applied successfully
    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(_optionAskQuit),
-                                _config->FindB("Synaptic::AskQuitOnProceed",
+                                _config->FindB("Wildbob::AskQuitOnProceed",
                                                false));
 }
 
 void RGPreferencesWindow::readColumnsAndFonts()
 {
    // font stuff
-   bool b = _config->FindB("Synaptic::useUserFont", false);
+   bool b = _config->FindB("Wildbob::useUserFont", false);
    gtk_toggle_button_set_active(
       GTK_TOGGLE_BUTTON(gtk_builder_get_object(_builder,
                                              "checkbutton_user_font")), b);
-   b = _config->FindB("Synaptic::useUserTerminalFont", false);
+   b = _config->FindB("Wildbob::useUserTerminalFont", false);
    gtk_toggle_button_set_active(
       GTK_TOGGLE_BUTTON(gtk_builder_get_object(_builder,
                                              "checkbutton_user_terminal_font")), b);
@@ -592,7 +592,7 @@ void RGPreferencesWindow::readColors()
 
    // Color packages by their status
    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(_optionUseStatusColors),
-                                _config->FindB("Synaptic::UseStatusColors",
+                                _config->FindB("Wildbob::UseStatusColors",
                                                true));
 
    // color buttons
@@ -628,8 +628,8 @@ void RGPreferencesWindow::readColors()
 void RGPreferencesWindow::readFiles()
 {
    // <b>Temporary Files</b>
-   bool postClean = _config->FindB("Synaptic::CleanCache", false);
-   bool postAutoClean = _config->FindB("Synaptic::AutoCleanCache", true);
+   bool postClean = _config->FindB("Wildbob::CleanCache", false);
+   bool postAutoClean = _config->FindB("Wildbob::AutoCleanCache", true);
 
    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(_cacheClean), postClean);
    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(_cacheAutoClean), 
@@ -643,7 +643,7 @@ void RGPreferencesWindow::readFiles()
       gtk_button_clicked(GTK_BUTTON(_cacheLeave));
 
    // history
-   int delHistory = _config->FindI("Synaptic::delHistory", -1);
+   int delHistory = _config->FindI("Wildbob::delHistory", -1);
    if(delHistory < 0) 
       gtk_button_clicked(GTK_BUTTON(_keepHistory));
    else {
@@ -656,28 +656,28 @@ void RGPreferencesWindow::readFiles()
 void RGPreferencesWindow::readNetwork()
 {
    // proxy stuff
-   bool useProxy = _config->FindB("Synaptic::useProxy", false);
+   bool useProxy = _config->FindB("Wildbob::useProxy", false);
    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(gtk_builder_get_object
                                                   (_builder,"radio_no_proxy")),
                                                   !useProxy);
    gtk_widget_set_sensitive(GTK_WIDGET(gtk_builder_get_object
                             (_builder, "table_proxy")),
                             useProxy);
-   string str = _config->Find("Synaptic::httpProxy", "");
+   string str = _config->Find("Wildbob::httpProxy", "");
    gtk_entry_set_text(GTK_ENTRY(gtk_builder_get_object
                                 (_builder, "entry_http_proxy")), str.c_str());
-   int i = _config->FindI("Synaptic::httpProxyPort", 3128);
+   int i = _config->FindI("Wildbob::httpProxyPort", 3128);
    gtk_spin_button_set_value(GTK_SPIN_BUTTON
                              (gtk_builder_get_object
                               (_builder, "spinbutton_http_port")), i);
 
-   str = _config->Find("Synaptic::ftpProxy", "");
+   str = _config->Find("Wildbob::ftpProxy", "");
    gtk_entry_set_text(
       GTK_ENTRY(gtk_builder_get_object(_builder, "entry_ftp_proxy")), str.c_str());
-   i = _config->FindI("Synaptic::ftpProxyPort", 3128);
+   i = _config->FindI("Wildbob::ftpProxyPort", 3128);
    gtk_spin_button_set_value(
       GTK_SPIN_BUTTON(gtk_builder_get_object(_builder, "spinbutton_ftp_port")), i);
-   str = _config->Find("Synaptic::noProxy", "");
+   str = _config->Find("Wildbob::noProxy", "");
    gtk_entry_set_text(GTK_ENTRY(gtk_builder_get_object(_builder,
                                                        "entry_no_proxy")),
                       str.c_str());
@@ -691,7 +691,7 @@ void RGPreferencesWindow::readDistribution()
    _blockAction = true;
 
    int distroMatch = 0;
-   string defaultDistro = _config->Find("Synaptic::DefaultDistro", "");
+   string defaultDistro = _config->Find("Wildbob::DefaultDistro", "");
    vector<string> archives = _lister->getPolicyArchives();
   
    // setup the toggle buttons
@@ -797,12 +797,12 @@ void RGPreferencesWindow::readTreeViewValues()
    column_struct c;
    for(int i=0;column_names[i] != NULL; i++) {
       // pos
-      name = g_strdup_printf("Synaptic::%sColumnPos",column_names[i]);
+      name = g_strdup_printf("Wildbob::%sColumnPos",column_names[i]);
       pos = _config->FindI(name, i);
       g_free(name);
       
       // visible
-      name = g_strdup_printf("Synaptic::%sColumnVisible",column_names[i]);
+      name = g_strdup_printf("Wildbob::%sColumnVisible",column_names[i]);
       c.visible = _config->FindB(name, column_visible_defaults[i]);
       c.name = column_names[i];
       c.visible_name = column_visible_names[i];
@@ -820,7 +820,7 @@ void RGPreferencesWindow::readTreeViewValues()
    if(corrupt) {
       cerr << "seting column order to default" << endl;
       for(int i=0;column_names[i] != NULL; i++) {
-	 name = g_strdup_printf("Synaptic::%sColumnPos",column_names[i]);
+	 name = g_strdup_printf("Wildbob::%sColumnPos",column_names[i]);
 	 _config->Set(name, i);
 	 c.visible = column_visible_defaults[i];
 	 c.name = column_names[i];
@@ -1123,7 +1123,7 @@ RGPreferencesWindow::RGPreferencesWindow(RGWindow *win,
 		       "the chosen distribution."));
    gtk_widget_set_tooltip_text(GTK_WIDGET(gtk_builder_get_object
                                    (_builder,"radiobutton_ignore")),
-			_("Let synaptic pick the best version for you. "
+			_("Let wildbob pick the best version for you. "
 			"If unsure use this option. "));
 
 
@@ -1132,7 +1132,7 @@ RGPreferencesWindow::RGPreferencesWindow(RGWindow *win,
    GtkWidget *w = GTK_WIDGET(gtk_builder_get_object(_builder,
                                                     "menuitem_purge"));
    gtk_widget_hide(w);
-   int delAction = _config->FindI("Synaptic::delAction", PKG_DELETE);
+   int delAction = _config->FindI("Wildbob::delAction", PKG_DELETE);
    // purge not available 
    if (delAction == PKG_PURGE)
       delAction = PKG_DELETE;
@@ -1259,9 +1259,9 @@ RGPreferencesWindow::buttonAuthenticationClicked(GtkWidget *self, void *data)
    GtkWidget *entry_pass = GTK_WIDGET(gtk_builder_get_object(dia_xml,"entry_password"));
 
    // now set the values
-   string now_user =  _config->Find("Synaptic::httpProxyUser","");
+   string now_user =  _config->Find("Wildbob::httpProxyUser","");
    gtk_entry_set_text(GTK_ENTRY(entry_user), now_user.c_str());
-   string now_pass =   _config->Find("Synaptic::httpProxyPass","");
+   string now_pass =   _config->Find("Wildbob::httpProxyPass","");
    gtk_entry_set_text(GTK_ENTRY(entry_pass), now_pass.c_str());
 
    int res = dia.run();
@@ -1274,8 +1274,8 @@ RGPreferencesWindow::buttonAuthenticationClicked(GtkWidget *self, void *data)
    const gchar *pass = gtk_entry_get_text(GTK_ENTRY(entry_pass));
    
    // write out the configuration   
-   _config->Set("Synaptic::httpProxyUser",user);
-   _config->Set("Synaptic::httpProxyPass",pass);
+   _config->Set("Wildbob::httpProxyUser",user);
+   _config->Set("Wildbob::httpProxyPass",pass);
 }
 
 // vim:ts=3:sw=3:et

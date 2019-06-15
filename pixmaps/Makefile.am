@@ -43,7 +43,6 @@ EXTRA_DIST=\
 	find.xpm\
 	fixbroken.xpm\
 	heldM.xpm\
-	holdM.xpm \
 	installM.xpm\
 	keepM.xpm \
 	logo.xpm\

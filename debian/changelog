@@ -1,4 +1,4 @@
-wildbob (0.84.6.0) unstable; urgency=medium
+wildbob (0.84.7) unstable; urgency=medium
 
   * removed debian+ubuntu patches
   * removed Recommends: zenity
@@ -9,5 +9,8 @@ wildbob (0.84.6.0) unstable; urgency=medium
      about the operating system environment, and sends it to bug trackers
      in a standardized form.)
   * remove WINGS -related files
+  * remove "Lock" (aka pkg hold) functionality. This feature held only
+      experimental status. Use of apt-mark hold is recommended instead.
+  * TODO:   heldM.xpm
 
  -- skidoo <email@redact.ed>  Sat, 15 Jun 2019 11:11:11 +1100

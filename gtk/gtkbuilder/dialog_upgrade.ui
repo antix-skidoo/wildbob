@@ -21,7 +21,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button1">
-                <property name="label" translatable="yes">_Cancel</property>
+                <property name="label" translatable="no">_Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -36,7 +36,7 @@
             </child>
             <child>
               <object class="GtkButton" id="cancelbutton1">
-                <property name="label" translatable="yes">_Default Upgrade</property>
+                <property name="label" translatable="no">_Default Upgrade</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -51,7 +51,7 @@
             </child>
             <child>
               <object class="GtkButton" id="okbutton1">
-                <property name="label" translatable="yes">_Smart Upgrade</property>
+                <property name="label" translatable="no">_Smart Upgrade</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -103,7 +103,7 @@
                   <object class="GtkLabel" id="label1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">&lt;b&gt;&lt;big&gt;Mark upgrades in a smart way?&lt;/big&gt;&lt;/b&gt;
+                    <property name="label" translatable="no">&lt;b&gt;&lt;big&gt;Mark upgrades in a smart way?&lt;/big&gt;&lt;/b&gt;
 
 The default upgrade method skips upgrades that would introduce conflicts or require installation of additional packages.
 
@@ -122,11 +122,11 @@ The smart upgrade (dist-upgrade) attempts to resolve conflicts and to fulfil all
                 </child>
                 <child>
                   <object class="GtkCheckButton" id="checkbutton_remember">
-                    <property name="label" translatable="yes">Remember my answer for future upgrades</property>
+                    <property name="label" translatable="no">Remember my answer for future upgrades</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="tooltip_text" translatable="yes">This behavior can be changed in the preferences later.</property>
+                    <property name="tooltip_text" translatable="no">This behavior can be changed in the preferences later.</property>
                     <property name="use_underline">True</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>

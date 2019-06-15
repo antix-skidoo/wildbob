@@ -4,7 +4,7 @@
   <object class="GtkWindow" id="window_install_progress">
     <property name="visible">False</property>
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">window2</property>
+    <property name="title" translatable="no">window2</property>
     <child>
       <object class="GtkFrame" id="frame7">
         <property name="visible">True</property>
@@ -19,7 +19,7 @@
               <object class="GtkLabel" id="label46">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">libzvt is here</property>
+                <property name="label" translatable="no">libzvt is here</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -34,7 +34,7 @@
                 <property name="can_focus">False</property>
                 <child>
                   <object class="GtkCheckButton" id="checkbutton3">
-                    <property name="label" translatable="yes">close dialog after dpkg is finished</property>
+                    <property name="label" translatable="no">close dialog after dpkg is finished</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
@@ -52,7 +52,7 @@
                   <object class="GtkLabel" id="label45">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">dpkg is running</property>
+                    <property name="label" translatable="no">dpkg is running</property>
                   </object>
                   <packing>
                     <property name="expand">True</property>

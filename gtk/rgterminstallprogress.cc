@@ -32,7 +32,7 @@
 #include "rgmainwindow.h"
 #include "rguserdialog.h"
 #include "rconfiguration.h"
-#include "gsynaptic.h"
+#include "gwildbob.h"
 
 #include <X11/Xlib.h>
 #include <iostream>
@@ -72,8 +72,8 @@ RGTermInstallProgress::RGTermInstallProgress(RGMainWindow *main)
    vte_terminal_set_scrollback_lines(VTE_TERMINAL(_term), 10000);
 
    const char *s;
-   if(_config->FindB("Synaptic::useUserTerminalFont")) {
-      s = _config->Find("Synaptic::TerminalFontName").c_str();
+   if(_config->FindB("Wildbob::useUserTerminalFont")) {
+      s = _config->Find("Wildbob::TerminalFontName").c_str();
    } else {
       s = "monospace 10";
    }
@@ -91,7 +91,7 @@ RGTermInstallProgress::RGTermInstallProgress(RGMainWindow *main)
                                                  "checkbutton_close_after_pm"));
    assert(_closeOnF);
    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(_closeOnF), 
-				_config->FindB("Synaptic::closeZvt", false));
+				_config->FindB("Wildbob::closeZvt", false));
 
    _statusL = GTK_WIDGET(gtk_builder_get_object(_builder, "label_status"));
    _closeB = GTK_WIDGET(gtk_builder_get_object(_builder, "button_close"));
@@ -155,7 +155,7 @@ void RGTermInstallProgress::finishUpdate()
    RGFlushInterface();
    _updateFinished = true;
 
-   _config->Set("Synaptic::closeZvt", 
+   _config->Set("Wildbob::closeZvt", 
 		gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(_closeOnF))
 		? "true" : "false");
    
@@ -233,7 +233,7 @@ RGTermInstallProgress::start(pkgPackageManager *pm,
    int master;
    _child_id = forkpty(&master, NULL, NULL, NULL);
    if (_child_id < 0) {
-      cerr << "Internal Error: impossible to fork children. Synaptics is going to stop. Please report." << endl;
+      cerr << "Internal Error: impossible to fork children. Wildbob will now stop. Please report." << endl;
       cerr << "errorcode: " << errno << endl;
       exit(1);
    } else if (_child_id == 0) {

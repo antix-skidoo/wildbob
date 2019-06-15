@@ -1,4 +1,4 @@
-/* gsynaptic.h
+/* gwildbob.h
  * 
  * Copyright (c) 2001 Alfredo K. Kojima
  * 
@@ -20,8 +20,8 @@
  * USA
  */
 
-#ifndef GSYNAPTIC_H
-#define GSYNAPTIC_H
+#ifndef GWILDBOB_H
+#define GWILDBOB_H
 
 
 #endif

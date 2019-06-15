@@ -21,7 +21,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="okbutton1">
-                <property name="label" translatable="yes">_Cancel</property>
+                <property name="label" translatable="no">_Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -68,7 +68,7 @@
                           <object class="GtkLabel" id="label23">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">_Reload</property>
+                            <property name="label" translatable="no">_Reload</property>
                             <property name="use_underline">True</property>
                           </object>
                           <packing>
@@ -125,7 +125,7 @@
                   <object class="GtkLabel" id="label24">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">&lt;span weight="bold" size="larger"&gt;Your package information is out of date&lt;/span&gt;
+                    <property name="label" translatable="no">&lt;span weight="bold" size="larger"&gt;Your package information is out of date&lt;/span&gt;
 
 Your package information is older than 48 hours. There could be important security updates available. It is recommended to reload the package information regularly.</property>
                     <property name="use_markup">True</property>
@@ -140,7 +140,7 @@ Your package information is older than 48 hours. There could be important securi
                 </child>
                 <child>
                   <object class="GtkCheckButton" id="checkbutton_remember">
-                    <property name="label" translatable="yes">Remember the answer</property>
+                    <property name="label" translatable="no">Remember the answer</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>

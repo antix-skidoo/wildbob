@@ -1,10 +1,8 @@
 /* rconfiguration.cc
  *
  * Copyright (c) 2000-2003 Conectiva S/A
- *               2002 Michael Vogt <mvo@debian.org>
  *
- * Author: Alfredo K. Kojima <kojima@conectiva.com.br>
- *         Michael Vogt <mvo@debian.org>
+ * Author: Alfredo K. Kojima 
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -67,7 +65,7 @@ static void dumpToFile(const Configuration::Item *Top, ostream &out,
       }
 
       if (pad.empty())
-         break;                 // dump only synaptic section
+         break;                 // dump only wildbob section
 
       Top = Top->Next;
    }
@@ -77,7 +75,7 @@ static void dumpToFile(const Configuration::Item *Top, ostream &out,
 
 bool RWriteConfigFile(Configuration &Conf)
 {
-   const Configuration::Item *Synaptic;
+   const Configuration::Item *Wildbob;
 
    // when running non-interactivly don't save any config (there should be no 
    // need)
@@ -88,7 +86,7 @@ bool RWriteConfigFile(Configuration &Conf)
    // to config of apt if we run as root
    if (getuid() == 0) {
       string aptConfPath = _config->FindDir("Dir::Etc::parts", "/etc/apt/apt.conf.d/")
-                         + "99synaptic";
+                         + "99wildbob";
 
       int old_umask = umask(0022);
       ofstream aptfile(aptConfPath.c_str(), ios::out);
@@ -104,10 +102,10 @@ bool RWriteConfigFile(Configuration &Conf)
       }
       umask(old_umask);
    }
-   // and backup Install-Recommends to config of synaptic
-   _config->Set("Synaptic::Install-Recommends",
+   // and backup Install-Recommends to config of wildbob
+   _config->Set("Wildbob::Install-Recommends",
                 _config->FindB("APT::Install-Recommends",
-                _config->FindB("Synaptic::Install-Recommends",
+                _config->FindB("Wildbob::Install-Recommends",
                 false)));
 
    ofstream cfile(ConfigFilePath.c_str(), ios::out);
@@ -116,13 +114,13 @@ bool RWriteConfigFile(Configuration &Conf)
                            _("ERROR: couldn't open %s for writing"),
                            ConfigFilePath.c_str());
 
-   Synaptic = Conf.Tree(0);
-   while (Synaptic) {
-      if (Synaptic->Tag == "Synaptic")
+   Wildbob = Conf.Tree(0);
+   while (Wildbob) {
+      if (Wildbob->Tag == "Wildbob")
          break;
-      Synaptic = Synaptic->Next;
+      Wildbob = Wildbob->Next;
    }
-   dumpToFile(Synaptic, cfile, "");
+   dumpToFile(Wildbob, cfile, "");
 
    cfile.close();
 
@@ -141,8 +139,8 @@ static bool checkConfigDir(string &path)
                            _
                            ("ERROR: Could not get password entry for superuser"));
    }
-   path = string(pwd->pw_dir) + "/.synaptic";
-   //path = "/etc/synaptic";
+   path = string(pwd->pw_dir) + "/.wildbob";
+   //path = "/etc/wildbob";
 
    if (stat(path.c_str(), &stbuf) < 0) {
       if (mkdir(path.c_str(), 0700) < 0) {
@@ -168,7 +166,7 @@ string RConfDir()
 string RStateDir()
 {
    struct stat stbuf;
-   static string stateDir = string(SYNAPTICSTATEDIR);
+   static string stateDir = string(WILDBOBSTATEDIR);
    if (stat(stateDir.c_str(), &stbuf) < 0) {
       if (mkdir(stateDir.c_str(), 0755) < 0) {
 	 _error->Errno("mkdir",
@@ -224,7 +222,7 @@ bool RInitConfiguration(string confFileName)
    if (!pkgInitConfig(*_config))
       return false;
 
-   _config->Set("Program", "synaptic");
+   _config->Set("Program", "wildbob");
 
    if (!pkgInitSystem(*_config, _system))
       return false;
@@ -240,15 +238,15 @@ bool RInitConfiguration(string confFileName)
    }
 
    // read Install-Recommends, preferably from APT:: if we run as root
-   // or from Synaptic:: otherwise
+   // or from Wildbob:: otherwise
    if(getuid() == 0) {
       _config->Set("APT::Install-Recommends",
                    _config->FindB("APT::Install-Recommends",
-                   _config->FindB("Synaptic::Install-Recommends",
+                   _config->FindB("Wildbob::Install-Recommends",
                    false)));
    } else {
       _config->Set("APT::Install-Recommends",
-                   _config->FindB("Synaptic::Install-Recommends",
+                   _config->FindB("Wildbob::Install-Recommends",
                    _config->FindB("APT::Install-Recommends",
                    false)));
    }

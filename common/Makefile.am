@@ -1,13 +1,13 @@
 
 
-noinst_LIBRARIES = libsynaptic.a
+noinst_LIBRARIES = libwildbob.a
 
 INCLUDES = -I/usr/include/apt-pkg @RPM_HDRS@ @DEB_HDRS@ \
 	$(LIBEPT_CFLAGS) \
-	-DSYNAPTICLOCALEDIR=\""$(synapticlocaledir)"\" \
-	-DSYNAPTICSTATEDIR=\""$(localstatedir)"\"
+	-DWILDBOBLOCALEDIR=\""$(wildboblocaledir)"\" \
+	-DWILDBOBSTATEDIR=\""$(localstatedir)"\"
 
-libsynaptic_a_SOURCES =\
+libwildbob_a_SOURCES =\
 	pkg_acqfile.cc\
 	pkg_acqfile.h\
 	rconfiguration.cc\

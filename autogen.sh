@@ -6,7 +6,7 @@ REQUIRED_AUTOMAKE_VERSION=1.7
 srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
 
-PKG_NAME="synaptic"
+PKG_NAME="wildbob"
 
 (test -f $srcdir/configure.in \
   && test -f $srcdir/ChangeLog \

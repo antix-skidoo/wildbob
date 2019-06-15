@@ -1,11 +1,7 @@
 /* rpackagestatus.cc - wrapper for accessing packagestatus information
  * 
  * Copyright (c) 2000-2003 Conectiva S/A 
- *               2002-2008 Michael Vogt <mvo@debian.org>
- * 
- * Author: Alfredo K. Kojima <kojima@conectiva.com.br>
- *         Michael Vogt <mvo@debian.org>
- * 
+ * Author: Alfredo K. Kojima 
  * Portions Taken from Gnome APT
  *   Copyright (C) 1998 Havoc Pennington <hp@pobox.com>
  * 
@@ -64,12 +60,12 @@ void RPackageStatus::init()
 
 
    // check for unsupported stuff
-   if(_config->FindB("Synaptic::mark-unsupported", true)) {
+   if(_config->FindB("Wildbob::mark-unsupported", true)) {
       string s, labels, origin, components;
       markUnsupported = true;
 
       // read supported labels
-      labels = _config->Find("Synaptic::supported-label", "Debian Debian-Security");
+      labels = _config->Find("Wildbob::supported-label", "Debian Debian-Security");
       stringstream sst1(labels);
       while(!sst1.eof()) {
 	 sst1 >> s;
@@ -77,7 +73,7 @@ void RPackageStatus::init()
       }
 
       // read supported origins
-      origin = _config->Find("Synaptic::supported-origins", "Debian");
+      origin = _config->Find("Wildbob::supported-origins", "Debian");
       stringstream sst2(origin);
       while(!sst2.eof()) {
 	 sst2 >> s;
@@ -85,7 +81,7 @@ void RPackageStatus::init()
       }
       
       // read supported components
-      components = _config->Find("Synaptic::supported-components", "main updates/main");
+      components = _config->Find("Wildbob::supported-components", "main updates/main");
       stringstream sst3(components);
       while(!sst3.eof()) {
 	 sst3 >> s;
@@ -185,7 +181,7 @@ bool RPackageStatus::maintenanceEndTime(RPackage *pkg, struct tm *res)
    pkgTagSection sec;
    time_t release_date = -1;
 
-   string distro = _config->Find("Synaptic::supported-label");
+   string distro = _config->Find("Wildbob::supported-label");
    string releaseFile = pkg->getReleaseFileForOrigin(distro, release);
    if(!FileExists(releaseFile)) {
       // happens e.g. when there is no release file and is harmless
@@ -209,7 +205,7 @@ bool RPackageStatus::maintenanceEndTime(RPackage *pkg, struct tm *res)
    // now calculate the time until there is support
    gmtime_r(&release_date, res);
    
-   const int support_time =_config->FindI("Synaptic::supported-month", 0);
+   const int support_time =_config->FindI("Wildbob::supported-month", 0);
    if (support_time <= 0)
       return false;
 

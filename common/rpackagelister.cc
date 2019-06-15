@@ -1,11 +1,8 @@
 /* rpackagelister.cc - package cache and list manipulation
  * 
- * Copyright (c) 2000-2003 Conectiva S/A 
- *               2002-2004 Michael Vogt <mvo@debian.org>
+ * Copyright (c) 2000-2003
  * 
- * Author: Alfredo K. Kojima <kojima@conectiva.com.br>
- *         Michael Vogt <mvo@debian.org>
- * 
+ * Author: Alfredo K. Kojima 
  * Portions Taken from apt-get
  *   Copyright (C) Jason Gunthorpe
  *
@@ -87,7 +84,7 @@ RPackageLister::RPackageLister()
 
    _searchData.pattern = NULL;
    _searchData.isRegex = false;
-   _viewMode = _config->FindI("Synaptic::ViewMode", 0);
+   _viewMode = _config->FindI("Wildbob::ViewMode", 0);
    _updating = true;
    _sortMode = LIST_SORT_DEFAULT;
 
@@ -115,7 +112,7 @@ RPackageLister::RPackageLister()
 
    cleanCommitLog();
 #if 0
-   string Recommends = _config->Find("Synaptic::RecommendsFile",
+   string Recommends = _config->Find("Wildbob::RecommendsFile",
                                      "/etc/apt/metadata");
    if (FileExists(Recommends))
       _actors.push_back(new RCacheActorRecommends(this, Recommends));
@@ -135,7 +132,7 @@ void RPackageLister::setView(unsigned int index)
 {
    // only save this config if it is not a search
    if(index != PACKAGE_VIEW_SEARCH)
-      _config->Set("Synaptic::ViewMode", index);
+      _config->Set("Wildbob::ViewMode", index);
 
    if(index < _views.size())
       _selectedView = _views[index];
@@ -158,7 +155,7 @@ vector<string> RPackageLister::getSubViews()
 
 bool RPackageLister::setSubView(string newSubView)
 {
-   if(_config->FindB("Debug::Synaptic::View",false))
+   if(_config->FindB("Debug::Wildbob::View",false))
       ioprintf(clog, "RPackageLister::setSubView(): newSubView '%s'\n", 
 	       newSubView.size() > 0 ? newSubView.c_str() : "(empty)");
 
@@ -169,7 +166,7 @@ bool RPackageLister::setSubView(string newSubView)
 
    notifyChange(NULL);
 
-   if(_config->FindB("Debug::Synaptic::View",false))
+   if(_config->FindB("Debug::Wildbob::View",false))
       ioprintf(clog, "/RPackageLister::setSubView(): newSubView '%s'\n", 
 	       newSubView.size() > 0 ? newSubView.c_str() : "(empty)");
 
@@ -198,7 +195,7 @@ void RPackageLister::notifyPreChange(RPackage *pkg)
 
 void RPackageLister::notifyPostChange(RPackage *pkg)
 {
-   if(_config->FindB("Debug::Synaptic::View",false))
+   if(_config->FindB("Debug::Wildbob::View",false))
       ioprintf(clog, "RPackageLister::notifyPostChange(): '%s'\n",
 	       pkg == NULL ? "NULL" : pkg->name());
 
@@ -299,7 +296,7 @@ bool RPackageLister::openCache()
 {
    static bool firstRun = true;
 
-   if(_config->FindB("Debug::Synaptic::View",false))
+   if(_config->FindB("Debug::Wildbob::View",false))
       clog << "RPackageLister::openCache()" << endl;
 
    // Flush old errors
@@ -359,7 +356,7 @@ bool RPackageLister::openCache()
    string pkgName;
    int count = 0;
 
-   bool showAllMultiArch = _config->FindB("Synaptic::ShowAllMultiArch", false);
+   bool showAllMultiArch = _config->FindB("Wildbob::ShowAllMultiArch", false);
 
    _installedCount = 0;
 
@@ -440,13 +437,13 @@ bool RPackageLister::xapianIndexNeedsUpdate()
 {
    struct stat buf;
    
-   if(_config->FindB("Debug::Synaptic::Xapian",false))
+   if(_config->FindB("Debug::Wildbob::Xapian",false))
       std::cerr << "xapainIndexNeedsUpdate()" << std::endl;
 
    // check the xapian index
    if(FileExists("/usr/sbin/update-apt-xapian-index") && 
       (!_xapianDatabase )) {
-      if(_config->FindB("Debug::Synaptic::Xapian",false))
+      if(_config->FindB("Debug::Wildbob::Xapian",false))
 	 std::cerr << "xapain index not build yet" << std::endl;
       return true;
    } 
@@ -455,7 +452,7 @@ bool RPackageLister::xapianIndexNeedsUpdate()
    // because we use u-a-x-i --update
    stat(_config->FindFile("Dir::Cache::pkgcache").c_str(), &buf);
    if(ept::axi::timestamp() < buf.st_mtime) {
-      if(_config->FindB("Debug::Synaptic::Xapian",false))
+      if(_config->FindB("Debug::Wildbob::Xapian",false))
 	 std::cerr << "xapian outdated " 
 		   << buf.st_mtime - ept::axi::timestamp()  << std::endl;
       return true;
@@ -547,7 +544,7 @@ bool RPackageLister::upgrade()
    }
 #ifdef WITH_LUA
    _lua->SetDepCache(_cache->deps());
-   _lua->RunScripts("Scripts::Synaptic::Upgrade", false);
+   _lua->RunScripts("Scripts::Wildbob::Upgrade", false);
    _lua->ResetCaches();
 #endif
 
@@ -566,7 +563,7 @@ bool RPackageLister::distUpgrade()
    }
 #ifdef WITH_LUA
    _lua->SetDepCache(_cache->deps());
-   _lua->RunScripts("Scripts::Synaptic::DistUpgrade", false);
+   _lua->RunScripts("Scripts::Wildbob::DistUpgrade", false);
    _lua->ResetCaches();
 #endif
 
@@ -582,7 +579,7 @@ void RPackageLister::reapplyFilter()
    if (_updating)
       return;
 
-   if(_config->FindB("Debug::Synaptic::View",false))
+   if(_config->FindB("Debug::Wildbob::View",false))
       clog << "RPackageLister::reapplyFilter()" << endl;
 
    _selectedView->refresh();
@@ -682,7 +679,7 @@ void RPackageLister::sortPackages(vector<RPackage *> &packages,
    if (packages.empty())
       return;
 
-   if(_config->FindB("Debug::Synaptic::View",false))
+   if(_config->FindB("Debug::Wildbob::View",false))
       clog << "RPackageLister::sortPackages(): " << packages.size() << endl;
 
    /* Always sort by name to have packages ordered inside another sort 
@@ -776,7 +773,7 @@ int RPackageLister::findPackage(const char *pattern)
 
    _searchData.pattern = strdup(pattern);
 
-   if (!_config->FindB("Synaptic::UseRegexp", false) ||
+   if (!_config->FindB("Wildbob::UseRegexp", false) ||
        regcomp(&_searchData.regex, pattern, REG_EXTENDED | REG_ICASE) != 0) {
       _searchData.isRegex = false;
    } else {
@@ -936,9 +933,9 @@ void RPackageLister::saveUndoState(pkgState &state)
    redoStack.clear();
 
 #ifdef HAVE_RPM
-   unsigned int maxStackSize = _config->FindI("Synaptic::undoStackSize", 3);
+   unsigned int maxStackSize = _config->FindI("Wildbob::undoStackSize", 3);
 #else
-   unsigned int maxStackSize = _config->FindI("Synaptic::undoStackSize", 20);
+   unsigned int maxStackSize = _config->FindI("Wildbob::undoStackSize", 20);
 #endif
    while (undoStack.size() > maxStackSize)
       undoStack.pop_back();
@@ -1410,7 +1407,7 @@ bool RPackageLister::commitChanges(pkgAcquireStatus *status,
    if (!lockPackageCache(lock))
       return false;
 
-   if(_config->FindB("Synaptic::Log::Changes",true))
+   if(_config->FindB("Wildbob::Log::Changes",true))
       makeCommitLog();
 
    pkgAcquire fetcher(status);
@@ -1549,7 +1546,7 @@ bool RPackageLister::commitChanges(pkgAcquireStatus *status,
    // erase downloaded packages
    cleanPackageCache();
 
-   if(_config->FindB("Synaptic::Log::Changes",true))
+   if(_config->FindB("Wildbob::Log::Changes",true))
       writeCommitLog();
 
    delete rPM;
@@ -1580,7 +1577,7 @@ void RPackageLister::writeCommitLog()
 
 void RPackageLister::cleanCommitLog()
 {
-   int maxKeep = _config->FindI("Synaptic::delHistory", -1);
+   int maxKeep = _config->FindI("Wildbob::delHistory", -1);
    //cout << "RPackageLister::cleanCommitLog(): " << maxKeep << endl;
    if(maxKeep < 0)
       return;
@@ -1727,14 +1724,14 @@ bool RPackageLister::cleanPackageCache(bool forceClean)
 {
    FileFd lock;
 
-   if (_config->FindB("Synaptic::CleanCache", false) || forceClean) {
+   if (_config->FindB("Wildbob::CleanCache", false) || forceClean) {
 
       lockPackageCache(lock);
 
       pkgAcquire Fetcher;
       Fetcher.Clean(_config->FindDir("Dir::Cache::archives"));
       Fetcher.Clean(_config->FindDir("Dir::Cache::archives") + "partial/");
-   } else if (_config->FindB("Synaptic::AutoCleanCache", false)) {
+   } else if (_config->FindB("Wildbob::AutoCleanCache", false)) {
 
       lockPackageCache(lock);
 
@@ -1877,7 +1874,7 @@ bool RPackageLister::readSelections(istream &in)
       }
 #ifdef WITH_LUA
       _lua->SetDepCache(_cache->deps());
-      _lua->RunScripts("Scripts::Synaptic::ReadSelections", false);
+      _lua->RunScripts("Scripts::Wildbob::ReadSelections", false);
       _lua->ResetCaches();
 #endif
       _progMeter->Done();
@@ -1979,7 +1976,7 @@ bool RPackageLister::xapianSearch(string unsplitSearchString)
 {
    //std::cerr << "RPackageLister::xapianSearch()" << std::endl;
    static const int defaultQualityCutoff = 15;
-   int qualityCutoff = _config->FindI("Synaptic::Xapian::qualityCutoff", 
+   int qualityCutoff = _config->FindI("Wildbob::Xapian::qualityCutoff", 
                                       defaultQualityCutoff);
     if (ept::axi::timestamp() == 0) 
         return false;
@@ -2019,7 +2016,7 @@ bool RPackageLister::xapianSearch(string unsplitSearchString)
          pos+=1;
       }
 
-      if(_config->FindB("Debug::Synaptic::Xapian",false)) 
+      if(_config->FindB("Debug::Wildbob::Xapian",false)) 
          std::cerr << "searching for : " << unsplitSearchString << std::endl;
       
       // Build the query
@@ -2033,7 +2030,7 @@ bool RPackageLister::xapianSearch(string unsplitSearchString)
       enquire.set_query(query);
       Xapian::MSet matches = enquire.get_mset(0, maxItems);
 
-      if(_config->FindB("Debug::Synaptic::Xapian",false)) {
+      if(_config->FindB("Debug::Wildbob::Xapian",false)) {
          cerr << "enquire: " << enquire.get_description() << endl;
          cerr << "matches estimated: " << matches.get_matches_estimated() << " results found" << endl;
       }
@@ -2060,7 +2057,7 @@ bool RPackageLister::xapianSearch(string unsplitSearchString)
             break;
          }
    
-         if(_config->FindB("Debug::Synaptic::Xapian",false)) 
+         if(_config->FindB("Debug::Wildbob::Xapian",false)) 
             cerr << i.get_rank() + 1 << ": " << i.get_percent() << "% docid=" << *i << "	[" << i.get_document().get_data() << "]" << endl;
          _viewPackages.push_back(pkg);
          }

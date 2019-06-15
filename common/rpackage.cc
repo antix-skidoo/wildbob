@@ -1,10 +1,7 @@
 /* rpackage.cc - wrapper for accessing package information
  *
  * Copyright (c) 2000-2003 Conectiva S/A
- *               2002-2013 Michael Vogt <mvo@debian.org>
- *
- * Author: Alfredo K. Kojima <kojima@conectiva.com.br>
- *         Michael Vogt <mvo@debian.org>
+ * Author: Alfredo K. Kojima 
  *
  * Portions Taken from Gnome APT
  *   Copyright (C) 1998 Havoc Pennington <hp@pobox.com>
@@ -891,7 +888,7 @@ void RPackage::setInstall()
 #ifdef WITH_LUA
    _lua->SetDepCache(_depcache);
    _lua->SetGlobal("package", ((pkgCache::Package *) * _package));
-   _lua->RunScripts("Scripts::Synaptic::SetInstall", true);
+   _lua->RunScripts("Scripts::Wildbob::SetInstall", true);
    _lua->ResetGlobals();
    _lua->ResetCaches();
 #endif
@@ -1098,7 +1095,7 @@ void RPackage::setPinned(bool flag)
       else
 	 out << "Pin: version " << " 0.0 " << endl;
       out << "Pin-Priority: "
-         << _config->FindI("Synaptic::DefaultPinPriority", 1001)
+         << _config->FindI("Wildbob::DefaultPinPriority", 1001)
          << endl << endl;
    } else {
       // delete package from pinning file
@@ -1425,9 +1422,9 @@ static char *parseDescription(string descr)
       descrBuffer = new char[descrBufferSize];
    }
 #ifdef HAVE_RPM
-   int parser = _config->FindI("Synaptic::descriptionParser", NO_PARSER);
+   int parser = _config->FindI("Wildbob::descriptionParser", NO_PARSER);
 #else
-   int parser = _config->FindI("Synaptic::descriptionParser", DEB_PARSER);
+   int parser = _config->FindI("Wildbob::descriptionParser", DEB_PARSER);
 #endif
    switch (parser) {
       case DEB_PARSER:

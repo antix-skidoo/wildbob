@@ -2,7 +2,7 @@
  * 
  * Copyright (c) 2000-2003 Conectiva S/A 
  * 
- * Author: Alfredo K. Kojima <kojima@conectiva.com.br>
+ * Author: Alfredo K. Kojima
  *
  * This program is free software; you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 

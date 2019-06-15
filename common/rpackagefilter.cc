@@ -1,10 +1,7 @@
 /* rpackagefilter.cc - filters for package listing
  * 
  * Copyright (c) 2000-2003 Conectiva S/A 
- *               2002,2003 Michael Vogt <mvo@debian.org>
- * 
- * Author: Alfredo K. Kojima <kojima@conectiva.com.br>
- *         Michael Vogt <mvo@debian.org>
+ * Author: Alfredo K. Kojima 
  *
  * This program is free software; you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
@@ -331,11 +328,11 @@ bool RPatternPackageFilter::filterComponent(Pattern pat, RPackage *pkg)
 bool RPatternPackageFilter::filter(RPackage *pkg)
 {
    bool found;
-   //   bool and_mode = _config->FindB("Synaptic::Filters::andMode", true);
+   //   bool and_mode = _config->FindB("Wildbob::Filters::andMode", true);
    bool globalfound = and_mode;
-   bool useregexp = _config->FindB("Synaptic::UseRegexp", false);
+   bool useregexp = _config->FindB("Wildbob::UseRegexp", false);
 
-   bool debug = _config->FindB("Debug::Synaptic::Filters", false);
+   bool debug = _config->FindB("Debug::Wildbob::Filters", false);
 
    if (_patterns.size() == 0)
       return true;
@@ -787,7 +784,7 @@ bool RReducedViewPackageFilter::read(Configuration &conf, string key)
 {
    _enabled = conf.FindB(key + "::enabled");
    if (_enabled == true) {
-      string FileName = _config->Find("Synaptic::ReducedViewFile",
+      string FileName = _config->Find("Wildbob::ReducedViewFile",
                                       "/etc/apt/metadata");
       if (FileExists(FileName))
          addFile(FileName);
@@ -920,7 +917,7 @@ bool RFilter::write(ofstream &out)
    //cout <<"writing filter: \""<<name<<"\""<<endl;
 
    if (name.empty()) {
-      if (getenv("DEBUG_SYNAPTIC"))
+      if (getenv("DEBUG_WILDBOB"))
          abort();
 
       name = "?";

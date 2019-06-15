@@ -1,11 +1,9 @@
 /* rinstallprogress.h
  *
  * Copyright (c) 2000, 2001 Conectiva S/A
- *                     2002 Michael Vogt
  *
- * Author: Alfredo K. Kojima <kojima@conectiva.com.br>
- *         Michael Vogt <mvo@debian.org>
- *
+ * Author: Alfredo K. Kojima
+ * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of the

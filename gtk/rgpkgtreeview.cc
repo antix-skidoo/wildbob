@@ -35,8 +35,8 @@ void setupTreeView(GtkWidget *treeview)
    gtk_tree_selection_set_mode(selection, GTK_SELECTION_MULTIPLE);
 
    /* Status(pixmap) column */
-   pos = _config->FindI("Synaptic::statusColumnPos", 0);
-   visible = _config->FindI("Synaptic::statusColumnVisible", true);
+   pos = _config->FindI("Wildbob::statusColumnPos", 0);
+   visible = _config->FindI("Wildbob::statusColumnVisible", true);
    if(visible) {
       renderer = gtk_cell_renderer_pixbuf_new();
       // TRANSLATORS: Column header for the column "Status" in the package list
@@ -51,8 +51,8 @@ void setupTreeView(GtkWidget *treeview)
    }
 
    /* supported(pixmap) column */
-   pos = _config->FindI("Synaptic::supportedColumnPos", 1);
-   visible = _config->FindI("Synaptic::supportedColumnVisible", true);
+   pos = _config->FindI("Wildbob::supportedColumnPos", 1);
+   visible = _config->FindI("Wildbob::supportedColumnVisible", true);
    if(visible) {
       renderer = gtk_cell_renderer_pixbuf_new();
       column = gtk_tree_view_column_new_with_attributes(" ", renderer,
@@ -68,8 +68,8 @@ void setupTreeView(GtkWidget *treeview)
 
 
    /* Package name */
-   pos = _config->FindI("Synaptic::nameColumnPos", 2);
-   visible = _config->FindI("Synaptic::nameColumnVisible", true);
+   pos = _config->FindI("Wildbob::nameColumnPos", 2);
+   visible = _config->FindI("Wildbob::nameColumnVisible", true);
    if (visible) {
       renderer = gtk_cell_renderer_text_new();
       gtk_cell_renderer_text_set_fixed_height_from_font(GTK_CELL_RENDERER_TEXT
@@ -90,8 +90,8 @@ void setupTreeView(GtkWidget *treeview)
    }
 
    // section 
-   pos = _config->FindI("Synaptic::sectionColumnPos", 2);
-   visible = _config->FindI("Synaptic::sectionColumnVisible", false);
+   pos = _config->FindI("Wildbob::sectionColumnPos", 2);
+   visible = _config->FindI("Wildbob::sectionColumnVisible", false);
    if (visible) {
       renderer = gtk_cell_renderer_text_new();
       gtk_cell_renderer_text_set_fixed_height_from_font(GTK_CELL_RENDERER_TEXT
@@ -111,8 +111,8 @@ void setupTreeView(GtkWidget *treeview)
    }
 
    // component
-   pos = _config->FindI("Synaptic::componentColumnPos", 3);
-   visible = _config->FindI("Synaptic::componentColumnVisible", false);
+   pos = _config->FindI("Wildbob::componentColumnPos", 3);
+   visible = _config->FindI("Wildbob::componentColumnVisible", false);
    if (visible) {
       renderer = gtk_cell_renderer_text_new();
       gtk_cell_renderer_text_set_fixed_height_from_font(GTK_CELL_RENDERER_TEXT
@@ -133,8 +133,8 @@ void setupTreeView(GtkWidget *treeview)
 
 
    /* Installed Version */
-   pos = _config->FindI("Synaptic::instVerColumnPos", 4);
-   visible = _config->FindI("Synaptic::instVerColumnVisible", true);
+   pos = _config->FindI("Wildbob::instVerColumnPos", 4);
+   visible = _config->FindI("Wildbob::instVerColumnVisible", true);
    if (visible) {
       renderer = gtk_cell_renderer_text_new();
       gtk_cell_renderer_text_set_fixed_height_from_font(GTK_CELL_RENDERER_TEXT
@@ -154,8 +154,8 @@ void setupTreeView(GtkWidget *treeview)
    }
 
    /* Available Version */
-   pos = _config->FindI("Synaptic::availVerColumnPos", 5);
-   visible = _config->FindI("Synaptic::availVerColumnVisible", true);
+   pos = _config->FindI("Wildbob::availVerColumnPos", 5);
+   visible = _config->FindI("Wildbob::availVerColumnVisible", true);
    if (visible) {
       renderer = gtk_cell_renderer_text_new();
       gtk_cell_renderer_text_set_fixed_height_from_font(GTK_CELL_RENDERER_TEXT
@@ -174,8 +174,8 @@ void setupTreeView(GtkWidget *treeview)
       gtk_tree_view_column_set_resizable(column, TRUE);
    }
    // installed size
-   pos = _config->FindI("Synaptic::instSizeColumnPos", 6);
-   visible = _config->FindI("Synaptic::instSizeColumnVisible", false);
+   pos = _config->FindI("Wildbob::instSizeColumnPos", 6);
+   visible = _config->FindI("Wildbob::instSizeColumnVisible", false);
    if (visible) {
       /* Installed size */
       renderer = gtk_cell_renderer_text_new();
@@ -195,8 +195,8 @@ void setupTreeView(GtkWidget *treeview)
       gtk_tree_view_column_set_sort_column_id(column, PKG_SIZE_COLUMN);
    }
 
-   pos = _config->FindI("Synaptic::downloadSizeColumnPos", 7);
-   visible = _config->FindI("Synaptic::downloadSizeColumnVisible", false);
+   pos = _config->FindI("Wildbob::downloadSizeColumnPos", 7);
+   visible = _config->FindI("Wildbob::downloadSizeColumnVisible", false);
    if (visible) {
       /* Download size */
       renderer = gtk_cell_renderer_text_new();
@@ -218,8 +218,8 @@ void setupTreeView(GtkWidget *treeview)
 
 
    /* Description */
-   pos = _config->FindI("Synaptic::descrColumnPos", 8);
-   visible = _config->FindI("Synaptic::descrColumnVisible", true);
+   pos = _config->FindI("Wildbob::descrColumnPos", 8);
+   visible = _config->FindI("Wildbob::descrColumnVisible", true);
    if (visible) {
       renderer = gtk_cell_renderer_text_new();
       gtk_cell_renderer_text_set_fixed_height_from_font(GTK_CELL_RENDERER_TEXT

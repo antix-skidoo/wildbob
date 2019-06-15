@@ -111,7 +111,7 @@ GtkCssProvider *RGMainWindow::_fastSearchCssProvider = NULL;
 
 void RGMainWindow::changeView(int view, string subView)
 {
-   if(_config->FindB("Debug::Synaptic::View",false))
+   if(_config->FindB("Debug::Wildbob::View",false))
       ioprintf(clog, "RGMainWindow::changeView(): view '%i' subView '%s'\n", 
 	       view, subView.size() > 0 ? subView.c_str() : "(empty)");
 
@@ -171,7 +171,7 @@ void RGMainWindow::changeView(int view, string subView)
 void RGMainWindow::refreshSubViewList()
 {
    string selected = selectedSubView();
-   if(_config->FindB("Debug::Synaptic::View",false))
+   if(_config->FindB("Debug::Wildbob::View",false))
       ioprintf(clog, "RGMainWindow::refreshSubViewList(): selectedView '%s'\n", 
 	       selected.size() > 0 ? selected.c_str() : "(empty)");
 
@@ -281,7 +281,7 @@ bool RGMainWindow::showErrors()
 
 void RGMainWindow::notifyChange(RPackage *pkg)
 {
-   if(_config->FindB("Debug::Synaptic::View",false))
+   if(_config->FindB("Debug::Wildbob::View",false))
       ioprintf(clog, "RGMainWindow::notifyChange(): '%s'\n",
 	       pkg != NULL ? pkg->name() : "(no pkg)");
 
@@ -304,14 +304,14 @@ void RGMainWindow::forgetNewPackages()
 
 void RGMainWindow::refreshTable(RPackage *selectedPkg, bool setAdjustment)
 {
-   if(_config->FindB("Debug::Synaptic::View",false))
+   if(_config->FindB("Debug::Wildbob::View",false))
       ioprintf(clog, "RGMainWindow::refreshTable(): pkg: '%s' adjust '%i'\n", 
 	       selectedPkg != NULL ? selectedPkg->name() : "(no pkg)", 
 	       setAdjustment);
 
    const gchar *str = gtk_entry_get_text(GTK_ENTRY(_entry_fast_search));
    if(str != NULL && strlen(str) > 1) {
-      if(_config->FindB("Debug::Synaptic::View",false))
+      if(_config->FindB("Debug::Wildbob::View",false))
 	 cerr << "RGMainWindow::refreshTable: rerun limitBySearch" << endl;
       _lister->limitBySearch(str);
    }
@@ -384,7 +384,6 @@ void RGMainWindow::updatePackageInfo(RPackage *pkg)
    gtk_widget_set_sensitive(_detailsM, FALSE);
    gtk_widget_set_sensitive(_propertiesB, FALSE);
    gtk_widget_set_sensitive(_overrideVersionM, FALSE);
-   gtk_widget_set_sensitive(_pinM, FALSE);
    gtk_widget_set_sensitive(_autoM, FALSE);
    gtk_text_buffer_set_text(_pkgCommonTextBuffer,
 			    _("No package is selected.\n"), -1);
@@ -408,7 +407,6 @@ void RGMainWindow::updatePackageInfo(RPackage *pkg)
    gtk_widget_set_sensitive(_propertiesB, TRUE);
    // activate for root only
    if(getuid() == 0) {
-       gtk_widget_set_sensitive(_pinM, TRUE);
        gtk_widget_set_sensitive(_autoM, TRUE);
    }    
 
@@ -421,18 +419,6 @@ void RGMainWindow::updatePackageInfo(RPackage *pkg)
 
    if(_pkgDetails != NULL)
       RGPkgDetailsWindow::fillInValues(_pkgDetails,pkg, true);
-
-   // Pin, if a pin is set, we skip all other checks and return
-   if( flags & RPackage::FPinned) {
-      _blockActions = TRUE;
-      gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(_pinM), true);
-      _blockActions = FALSE;
-      return;
-   } else {
-      _blockActions = TRUE;
-      gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(_pinM), false);
-      _blockActions = FALSE;
-   }
 
    // Auto-Flag
    _blockActions = true;
@@ -609,7 +595,7 @@ bool RGMainWindow::askStateChange(RPackageLister::pkgState state,
    vector<RPackage *> toRemove;
    vector<RPackage *> notAuthenticated;
 
-   bool ask = _config->FindB("Synaptic::AskRelated", true);
+   bool ask = _config->FindB("Wildbob::AskRelated", true);
 
    // ask if the user really want this changes
    bool changed = true;
@@ -648,7 +634,7 @@ void RGMainWindow::pkgAction(RGPkgAction action)
 
    // save pkg state
    RPackageLister::pkgState state;
-   bool ask = _config->FindB("Synaptic::AskRelated", true);
+   bool ask = _config->FindB("Wildbob::AskRelated", true);
 
    // we always save the state (for undo)
    _lister->saveState(state);
@@ -808,7 +794,7 @@ RGMainWindow::RGMainWindow(RPackageLister *packLister, string name)
 
    _lister->registerObserver(this);
 
-   _toolbarStyle = (GtkToolbarStyle) _config->FindI("Synaptic::ToolbarState",
+   _toolbarStyle = (GtkToolbarStyle) _config->FindI("Wildbob::ToolbarState",
                                                     (int)GTK_TOOLBAR_BOTH);
 
    // create all the interface stuff
@@ -841,8 +827,8 @@ RGMainWindow::RGMainWindow(RPackageLister *packLister, string name)
    g_object_get_property(G_OBJECT(gtk_settings_get_default()),
                          "gtk-font-name", &value);
    _config->Set("Volatile::orginalFontName", g_value_get_string(&value));
-   if (_config->FindB("Synaptic::useUserFont")) {
-      g_value_set_string(&value, _config->Find("Synaptic::FontName").c_str());
+   if (_config->FindB("Wildbob::useUserFont")) {
+      g_value_set_string(&value, _config->Find("Wildbob::FontName").c_str());
       g_object_set_property(G_OBJECT(gtk_settings_get_default()),
                             "gtk-font-name", &value);
    }
@@ -858,7 +844,7 @@ RGMainWindow::RGMainWindow(RPackageLister *packLister, string name)
 gboolean RGMainWindow::xapianDoIndexUpdate(void *data)
 {
    RGMainWindow *me = (RGMainWindow *) data;
-   if(_config->FindB("Debug::Synaptic::Xapian",false))
+   if(_config->FindB("Debug::Wildbob::Xapian",false))
       std::cerr << "xapianDoIndexUpdate()" << std::endl;
 
    // no need to update if we run non-interactive
@@ -881,7 +867,7 @@ gboolean RGMainWindow::xapianDoIndexUpdate(void *data)
       return false;
 
    // if we make it to this point, we need a xapian update
-   if(_config->FindB("Debug::Synaptic::Xapian",false))
+   if(_config->FindB("Debug::Wildbob::Xapian",false))
       std::cerr << "running update-apt-xapian-index" << std::endl;
    GPid pid;
    const char *argp[] = {"/usr/bin/nice",
@@ -909,7 +895,7 @@ gboolean RGMainWindow::xapianDoIndexUpdate(void *data)
 void RGMainWindow::xapianIndexUpdateFinished(GPid pid, gint status, void* data)
 {
    RGMainWindow *me = (RGMainWindow *) data;
-   if(_config->FindB("Debug::Synaptic::Xapian",false))
+   if(_config->FindB("Debug::Wildbob::Xapian",false))
       std::cerr << "xapianIndexUpdateFinished: "  
 		<< WEXITSTATUS(status) << std::endl;
 #ifdef WITH_EPT
@@ -959,16 +945,16 @@ void RGMainWindow::buildInterface()
    // here is a pointer to rgmainwindow for every widget that needs it
    g_object_set_data(G_OBJECT(_win), "me", this);
 
-   GdkPixbuf *icon = get_gdk_pixbuf( "synaptic" );
+   GdkPixbuf *icon = get_gdk_pixbuf( "wildbob" );
    gtk_window_set_icon(GTK_WINDOW(_win), icon);
 
    gtk_window_resize(GTK_WINDOW(_win),
-                     _config->FindI("Synaptic::windowWidth", 640),
-                     _config->FindI("Synaptic::windowHeight", 480));
+                     _config->FindI("Wildbob::windowWidth", 640),
+                     _config->FindI("Wildbob::windowHeight", 480));
    gtk_window_move(GTK_WINDOW(_win),
-                   _config->FindI("Synaptic::windowX", 100),
-                   _config->FindI("Synaptic::windowY", 100));
-   if(_config->FindB("Synaptic::Maximized",false))
+                   _config->FindI("Wildbob::windowX", 100),
+                   _config->FindI("Wildbob::windowY", 100));
+   if(_config->FindB("Wildbob::Maximized",false))
       gtk_window_maximize(GTK_WINDOW(_win));
    RGFlushInterface();
 
@@ -1021,7 +1007,7 @@ void RGMainWindow::buildInterface()
                     "activate",
                     G_CALLBACK(cbUpgradeClicked), this);
 
-   if (_config->FindB("Synaptic::NoUpgradeButtons", false) == true) {
+   if (_config->FindB("Wildbob::NoUpgradeButtons", false) == true) {
       gtk_widget_hide(_upgradeB);
       widget = GTK_WIDGET(gtk_builder_get_object(_builder, "alignment_upgrade"));
       gtk_widget_hide(widget);
@@ -1177,7 +1163,7 @@ void RGMainWindow::buildInterface()
                               (_builder, "separator_debian")));
 #endif
    
-   if(!FileExists(_config->Find("Synaptic::taskHelperProg","/usr/bin/tasksel")))
+   if(!FileExists(_config->Find("Wildbob::taskHelperProg","/usr/bin/tasksel")))
       gtk_widget_hide(GTK_WIDGET(gtk_builder_get_object(_builder, "menu_tasks")));
 
    button = GTK_WIDGET(gtk_builder_get_object(_builder, "button_update"));
@@ -1246,11 +1232,6 @@ void RGMainWindow::buildInterface()
                     "activate",
                     G_CALLBACK(cbPkgAction), GINT_TO_POINTER(PKG_PURGE));
 
-   _pinM = GTK_WIDGET(gtk_builder_get_object(_builder, "menu_hold"));
-   g_signal_connect(G_OBJECT(_pinM),
-                    "activate",
-                    G_CALLBACK(cbMenuPinClicked), this);
-
    _autoM = GTK_WIDGET(gtk_builder_get_object(_builder, "menu_auto_installed"));
    g_signal_connect(G_OBJECT(_autoM),
                     "activate",
@@ -1263,19 +1244,12 @@ void RGMainWindow::buildInterface()
                     "activate",
                     G_CALLBACK(cbInstallFromVersion), this);
 
-
-   // only if pkg help is enabled
-#ifndef SYNAPTIC_PKG_HOLD
-   gtk_widget_hide(_pinM);
-//    widget = GTK_WIDGET(gtk_builder_get_object(_builder, "separator_hold"));
-//    if (widget != NULL)
-//       gtk_widget_hide(widget);
-#endif
+   // PKG_HOLD functionality has been dropped
 
    // soc
    GtkWidget *notebook = GTK_WIDGET(gtk_builder_get_object
                                    (_builder, "notebook_pkginfo"));
-   if(_config->FindB("Synaptic::ShowAllPkgInfoInMain", false)) {
+   if(_config->FindB("Wildbob::ShowAllPkgInfoInMain", false)) {
       gtk_widget_set_margin_top(notebook, 6);
       gtk_notebook_set_show_tabs(GTK_NOTEBOOK(notebook), TRUE);
       gtk_widget_hide(GTK_WIDGET(gtk_builder_get_object(_builder, "button_details")));
@@ -1324,9 +1298,9 @@ void RGMainWindow::buildInterface()
       show();
    RGFlushInterface();
    gtk_paned_set_position(GTK_PANED(vpaned),
-                          _config->FindI("Synaptic::vpanedPos", 140));
+                          _config->FindI("Wildbob::vpanedPos", 140));
    gtk_paned_set_position(GTK_PANED(hpaned),
-                          _config->FindI("Synaptic::hpanedPos", 200));
+                          _config->FindI("Wildbob::hpanedPos", 200));
 
 
    // build the treeview
@@ -1456,11 +1430,6 @@ void RGMainWindow::buildInterface()
    gtk_menu_shell_append(GTK_MENU_SHELL(_popupMenu), menuitem);
 
    menuitem = gtk_separator_menu_item_new();
-   gtk_menu_shell_append(GTK_MENU_SHELL(_popupMenu), menuitem);
-
-   menuitem = gtk_check_menu_item_new_with_label(_("Hold Current Version"));
-   g_object_set_data(G_OBJECT(menuitem), "me", this);
-   g_signal_connect(menuitem, "activate", (GCallback) cbMenuPinClicked, this);
    gtk_menu_shell_append(GTK_MENU_SHELL(_popupMenu), menuitem);
 #endif
 
@@ -1601,8 +1570,6 @@ void RGMainWindow::buildInterface()
       gtk_widget_set_sensitive(menu, false);
       menu = GTK_WIDGET(gtk_builder_get_object(_builder, "add_cdrom"));
       gtk_widget_set_sensitive(menu, false);
-      menu = GTK_WIDGET(gtk_builder_get_object(_builder, "menu_hold"));
-      gtk_widget_set_sensitive(menu, false);
    }
 
 }
@@ -1711,24 +1678,24 @@ void RGMainWindow::saveState()
                                   (_builder, "vpaned_main"));
    GtkWidget *hpaned = GTK_WIDGET(gtk_builder_get_object
                                   (_builder, "hpaned_main"));
-   _config->Set("Synaptic::vpanedPos",
+   _config->Set("Wildbob::vpanedPos",
                 gtk_paned_get_position(GTK_PANED(vpaned)));
-   _config->Set("Synaptic::hpanedPos",
+   _config->Set("Wildbob::hpanedPos",
                 gtk_paned_get_position(GTK_PANED(hpaned)));
 
    GtkAllocation allocation;
    gtk_widget_get_allocation(_win, &allocation);
-   _config->Set("Synaptic::windowWidth", allocation.width);
-   _config->Set("Synaptic::windowHeight", allocation.height);
+   _config->Set("Wildbob::windowWidth", allocation.width);
+   _config->Set("Wildbob::windowHeight", allocation.height);
    gint x, y;
    gtk_window_get_position(GTK_WINDOW(_win), &x, &y);
-   _config->Set("Synaptic::windowX", x);
-   _config->Set("Synaptic::windowY", y);
-   _config->Set("Synaptic::ToolbarState", (int)_toolbarStyle);
+   _config->Set("Wildbob::windowX", x);
+   _config->Set("Wildbob::windowY", y);
+   _config->Set("Wildbob::ToolbarState", (int)_toolbarStyle);
    if(gdk_window_get_state(gtk_widget_get_window(_win)) & GDK_WINDOW_STATE_MAXIMIZED)
-      _config->Set("Synaptic::Maximized", true);
+      _config->Set("Wildbob::Maximized", true);
    else
-      _config->Set("Synaptic::Maximized", false);
+      _config->Set("Wildbob::Maximized", false);
 
    if (!RWriteConfigFile(*_config)) {
       _error->Error(_("An error occurred while saving configurations."));
@@ -1758,7 +1725,7 @@ bool RGMainWindow::restoreState()
    }
 
    if(!_config->FindB("Volatile::Upgrade-Mode",false)) {
-      int viewNr = _config->FindI("Synaptic::ViewMode", 0);
+      int viewNr = _config->FindI("Wildbob::ViewMode", 0);
       changeView(viewNr);
 
       // we auto set to "All" on startup when we have gtk2.4 (without
@@ -2173,11 +2140,11 @@ void RGMainWindow::cbShowSourcesWindow(GtkWidget *self, void *data)
 
    // FIXME: make this all go into the repository window
    bool Changed = false;
-   bool ForceReload = _config->FindB("Synaptic::UpdateAfterSrcChange",false);
+   bool ForceReload = _config->FindB("Wildbob::UpdateAfterSrcChange",false);
    
    if(!g_file_test("/usr/bin/software-properties-gtk", 
 		   G_FILE_TEST_IS_EXECUTABLE) 
-      || _config->FindB("Synaptic::dontUseGnomeSoftwareProperties", false)) 
+      || _config->FindB("Wildbob::dontUseGnomeSoftwareProperties", false)) 
    {
       RGRepositoryEditor w(me);
       Changed = w.Run();
@@ -2210,7 +2177,7 @@ void RGMainWindow::cbShowSourcesWindow(GtkWidget *self, void *data)
    if (Changed == true && ForceReload) {
       me->cbUpdateClicked(NULL, data);
    } else if(Changed == true && 
-	     _config->FindB("Synaptic::AskForUpdateAfterSrcChange",true)) {
+	     _config->FindB("Wildbob::AskForUpdateAfterSrcChange",true)) {
       // ask for update after repo change
       GtkWidget *cb, *dialog;
       dialog = gtk_message_dialog_new (GTK_WINDOW(me->window()),
@@ -2242,7 +2209,7 @@ void RGMainWindow::cbShowSourcesWindow(GtkWidget *self, void *data)
       gint response = gtk_dialog_run (GTK_DIALOG (dialog));
       gtk_widget_hide(dialog);
       if(gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(cb))) {
-	    _config->Set("Synaptic::AskForUpdateAfterSrcChange", false);
+	    _config->Set("Wildbob::AskForUpdateAfterSrcChange", false);
       }
       if (response == GTK_RESPONSE_ACCEPT) {
          me->cbUpdateClicked(NULL, data);
@@ -2361,20 +2328,20 @@ void RGMainWindow::cbHelpAction(GtkWidget *self, void *data)
    vector<const gchar*> cmd;
    if (is_binary_in_path("yelp")) {
       cmd.push_back("yelp");
-      cmd.push_back("ghelp:synaptic");
+      cmd.push_back("ghelp:wildbob");
    } else {
-      cmd = GetBrowserCommand(PACKAGE_DATA_DIR "/synaptic/html/index.html");
+      cmd = GetBrowserCommand(PACKAGE_DATA_DIR "/wildbob/html/index.html");
    }
 
    if (cmd.empty()) {
       me->_userDialog->error(_("No help viewer is installed!\n\n"
                                "You need either the GNOME help viewer 'yelp', "
                                "the 'konqueror' browser or the 'firefox' "
-                               "browser to view the synaptic manual.\n\n"
+                               "browser to view the wildbob manual.\n\n"
                                "Alternatively you can open the man page "
-                               "with 'man synaptic' from the "
+                               "with 'man wildbob' from the "
                                "command line or view the html version located "
-                               "in the 'synaptic/html' folder."));
+                               "in the 'wildbob/html' folder."));
       return;
    }
    RunAsSudoUserCommand(cmd);
@@ -2696,7 +2663,7 @@ void RGMainWindow::cbProceedClicked(GtkWidget *self, void *data)
    #endif // DPKG
 #endif // HAVE_RPM
    RGTermInstallProgress *term = NULL;
-   if (_config->FindB("Synaptic::UseTerminal", UseTerminal) == true)
+   if (_config->FindB("Wildbob::UseTerminal", UseTerminal) == true)
       iprogress = term = new RGTermInstallProgress(me);
    else
 #endif // HAVE_TERMINAL
@@ -2731,7 +2698,7 @@ void RGMainWindow::cbProceedClicked(GtkWidget *self, void *data)
    delete iprogress;
    me->_installProgress = NULL;
 
-   if (_config->FindB("Synaptic::IgnorePMOutput", false) == false) {
+   if (_config->FindB("Wildbob::IgnorePMOutput", false) == false) {
       me->showErrors();
    } else {
       _error->Discard();
@@ -2740,8 +2707,8 @@ void RGMainWindow::cbProceedClicked(GtkWidget *self, void *data)
       return;
    }
 
-   if (_config->FindB("Synaptic::AskQuitOnProceed", false) == true
-       && me->_userDialog->confirm(_("Do you want to quit Synaptic?"))) {
+   if (_config->FindB("Wildbob::AskQuitOnProceed", false) == true
+       && me->_userDialog->confirm(_("Do you want to quit Wildbob?"))) {
       _error->Discard();
       me->saveState();
       me->showErrors();
@@ -2782,7 +2749,7 @@ void RGMainWindow::cbShowWelcomeDialog(GtkWidget *self, void *data)
    GtkWidget *cb = GTK_WIDGET(gtk_builder_get_object
                               (dia.getGtkBuilder(), "checkbutton_show_again"));
    assert(cb);
-   _config->Set("Synaptic::showWelcomeDialog",
+   _config->Set("Wildbob::showWelcomeDialog",
                 gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(cb)));
 }
 
@@ -2876,7 +2843,7 @@ void RGMainWindow::cbUpdateClicked(GtkWidget *self, void *data)
       dia.run();
    } else {
       me->forgetNewPackages();
-      _config->Set("Synaptic::update::last",time(NULL));
+      _config->Set("Wildbob::update::last",time(NULL));
    }
    delete progress;
    me->_fetchProgress=NULL;
@@ -2943,7 +2910,7 @@ void RGMainWindow::cbUpgradeClicked(GtkWidget *self, void *data)
    }
    // check if we have saved upgrade type
    UpgradeType upgrade =
-      (UpgradeType) _config->FindI("Synaptic::UpgradeType", UPGRADE_DIST);
+      (UpgradeType) _config->FindI("Wildbob::UpgradeType", UPGRADE_DIST);
 
    // special case for non-interactive upgrades
    if(_config->FindB("Volatile::Non-Interactive", false)) 
@@ -2979,7 +2946,7 @@ void RGMainWindow::cbUpgradeClicked(GtkWidget *self, void *data)
       button = GTK_WIDGET(gtk_builder_get_object
                           (builder, "checkbutton_remember"));
       if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(button)))
-         _config->Set("Synaptic::upgradeType", dist_upgrade);
+         _config->Set("Wildbob::upgradeType", dist_upgrade);
    } else {
       // use the saved answer (don't ask)
       dist_upgrade = upgrade;
@@ -3210,7 +3177,7 @@ void RGMainWindow::cbTreeviewPopupMenu(GtkWidget *treeview,
    }
 
    if (event->button == 1 && oneclickitem != NULL &&
-       _config->FindB("Synaptic::OneClickOnStatusActions", false) == true) {
+       _config->FindB("Wildbob::OneClickOnStatusActions", false) == true) {
       gtk_menu_item_activate(GTK_MENU_ITEM(oneclickitem));
    } else {
       gtk_menu_popup(GTK_MENU(me->_popupMenu), NULL, NULL, NULL, NULL,

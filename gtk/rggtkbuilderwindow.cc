@@ -58,7 +58,7 @@ RGGtkBuilderWindow::RGGtkBuilderWindow(RGWindow *parent, string name, string mai
    } else {
       g_free(filename);
       filename =
-         g_strdup_printf(SYNAPTIC_GTKBUILDERDIR "window_%s.ui", name.c_str());
+         g_strdup_printf(WILDBOB_GTKBUILDERDIR "window_%s.ui", name.c_str());
       if (!gtk_builder_add_from_file (_builder, filename, &error)) {
          g_warning ("Couldn't load builder file: %s", error->message);
          g_error_free (error);
@@ -73,7 +73,7 @@ RGGtkBuilderWindow::RGGtkBuilderWindow(RGWindow *parent, string name, string mai
 
    gtk_window_set_position(GTK_WINDOW(_win),
 			   GTK_WIN_POS_CENTER_ON_PARENT);
-   GdkPixbuf *icon = get_gdk_pixbuf( "synaptic" );
+   GdkPixbuf *icon = get_gdk_pixbuf( "wildbob" );
    gtk_window_set_icon(GTK_WINDOW(_win), icon);
 
    g_free(filename);

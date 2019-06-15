@@ -5,7 +5,7 @@
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="border_width">6</property>
-    <property name="title" translatable="yes">Add Repository...</property>
+    <property name="title" translatable="no">Add Repository...</property>
     <property name="resizable">False</property>
     <property name="type_hint">normal</property>
     <child internal-child="vbox">
@@ -21,7 +21,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button1">
-                <property name="label" translatable="yes">_Cancel</property>
+                <property name="label" translatable="no">_Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -36,7 +36,7 @@
             </child>
             <child>
               <object class="GtkButton" id="button2">
-                <property name="label" translatable="yes">_Back</property>
+                <property name="label" translatable="no">_Back</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -51,7 +51,7 @@
             </child>
             <child>
               <object class="GtkButton" id="button3">
-                <property name="label" translatable="yes">_Forward</property>
+                <property name="label" translatable="no">_Forward</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -85,7 +85,7 @@
                 <property name="can_focus">False</property>
                 <property name="xalign">0</property>
                 <property name="yalign">0</property>
-                <property name="pixbuf">synaptic_48x48.png</property>
+                <property name="pixbuf">wildbob_48x48.png</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -109,7 +109,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Type of repository&lt;/b&gt;&lt;/big&gt;</property>
+                        <property name="label" translatable="no">&lt;big&gt;&lt;b&gt;Type of repository&lt;/b&gt;&lt;/big&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -127,7 +127,7 @@
                           <object class="GtkLabel" id="label23">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">    </property>
+                            <property name="label" translatable="no">    </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -154,7 +154,7 @@
                                     <property name="spacing">6</property>
                                     <child>
                                       <object class="GtkRadioButton" id="radiobutton1">
-                                        <property name="label" translatable="yes">Debian Mirror</property>
+                                        <property name="label" translatable="no">Debian Mirror</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -170,7 +170,7 @@
                                     </child>
                                     <child>
                                       <object class="GtkRadioButton" id="radiobutton2">
-                                        <property name="label" translatable="yes">CD-ROM</property>
+                                        <property name="label" translatable="no">CD-ROM</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -187,7 +187,7 @@
                                     </child>
                                     <child>
                                       <object class="GtkRadioButton" id="radiobutton3">
-                                        <property name="label" translatable="yes">Local hard disk</property>
+                                        <property name="label" translatable="no">Local hard disk</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -204,7 +204,7 @@
                                     </child>
                                     <child>
                                       <object class="GtkRadioButton" id="radiobutton4">
-                                        <property name="label" translatable="yes">Custom</property>
+                                        <property name="label" translatable="no">Custom</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -238,7 +238,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="xalign">0</property>
-                                <property name="label" translatable="yes">&lt;i&gt;Select the kind of repository that you wish to install packages from.&lt;/i&gt;</property>
+                                <property name="label" translatable="no">&lt;i&gt;Select the kind of repository that you wish to install packages from.&lt;/i&gt;</property>
                                 <property name="use_markup">True</property>
                                 <property name="wrap">True</property>
                               </object>
@@ -268,7 +268,7 @@
                   <object class="GtkLabel" id="label1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">TYPE</property>
+                    <property name="label" translatable="no">TYPE</property>
                   </object>
                   <packing>
                     <property name="tab_fill">False</property>
@@ -285,7 +285,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Debian Mirror&lt;/b&gt;&lt;/big&gt;</property>
+                        <property name="label" translatable="no">&lt;big&gt;&lt;b&gt;Debian Mirror&lt;/b&gt;&lt;/big&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -303,7 +303,7 @@
                           <object class="GtkLabel" id="label24">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">    </property>
+                            <property name="label" translatable="no">    </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -336,7 +336,7 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
                                         <property name="xalign">0</property>
-                                        <property name="label" translatable="yes">Country:</property>
+                                        <property name="label" translatable="no">Country:</property>
                                       </object>
                                       <packing>
                                         <property name="x_options">GTK_FILL</property>
@@ -348,7 +348,7 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
                                         <property name="xalign">0</property>
-                                        <property name="label" translatable="yes">Mirror:</property>
+                                        <property name="label" translatable="no">Mirror:</property>
                                       </object>
                                       <packing>
                                         <property name="top_attach">1</property>
@@ -372,9 +372,9 @@
                                             <property name="editable">False</property>
                                             <property name="visibility">True</property>
                                             <property name="max_length">0</property>
-                                            <property name="text" translatable="yes"/>
+                                            <property name="text" translatable="no"/>
                                             <property name="has_frame">True</property>
-                                            <property name="invisible_char" translatable="yes">*</property>
+                                            <property name="invisible_char" translatable="no">*</property>
                                             <property name="activates_default">False</property>
                                           </object>
                                         </child>
@@ -406,9 +406,9 @@
                                             <property name="editable">False</property>
                                             <property name="visibility">True</property>
                                             <property name="max_length">0</property>
-                                            <property name="text" translatable="yes"/>
+                                            <property name="text" translatable="no"/>
                                             <property name="has_frame">True</property>
-                                            <property name="invisible_char" translatable="yes">*</property>
+                                            <property name="invisible_char" translatable="no">*</property>
                                             <property name="activates_default">False</property>
                                           </object>
                                         </child>
@@ -439,7 +439,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">&lt;i&gt;Choose the mirror that is located next to you.&lt;/i&gt;</property>
+                                    <property name="label" translatable="no">&lt;i&gt;Choose the mirror that is located next to you.&lt;/i&gt;</property>
                                     <property name="use_markup">True</property>
                                   </object>
                                   <packing>
@@ -469,7 +469,7 @@
                                     <property name="spacing">6</property>
                                     <child>
                                       <object class="GtkCheckButton" id="checkbutton1">
-                                        <property name="label" translatable="yes">Include non-free software</property>
+                                        <property name="label" translatable="no">Include non-free software</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -490,7 +490,7 @@
                                         <property name="can_focus">False</property>
                                         <child>
                                           <object class="GtkCheckButton" id="checkbutton2">
-                                            <property name="label" translatable="yes">Include software depending on non free (contrib)</property>
+                                            <property name="label" translatable="no">Include software depending on non free (contrib)</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -523,7 +523,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">&lt;i&gt;Choose if you also want to install non free software or software depending on non-free software.&lt;/i&gt;</property>
+                                    <property name="label" translatable="no">&lt;i&gt;Choose if you also want to install non free software or software depending on non-free software.&lt;/i&gt;</property>
                                     <property name="use_markup">True</property>
                                     <property name="wrap">True</property>
                                   </object>
@@ -548,7 +548,7 @@
                                 <property name="spacing">6</property>
                                 <child>
                                   <object class="GtkCheckButton" id="checkbutton5">
-                                    <property name="label" translatable="yes">Include sources</property>
+                                    <property name="label" translatable="no">Include sources</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
@@ -567,7 +567,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">&lt;i&gt;Choose if you want to add just the sources and no install ready binary packages.&lt;/i&gt;</property>
+                                    <property name="label" translatable="no">&lt;i&gt;Choose if you want to add just the sources and no install ready binary packages.&lt;/i&gt;</property>
                                     <property name="use_markup">True</property>
                                     <property name="wrap">True</property>
                                   </object>
@@ -607,7 +607,7 @@
                   <object class="GtkLabel" id="label2">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">DEBIAN MIRROR</property>
+                    <property name="label" translatable="no">DEBIAN MIRROR</property>
                   </object>
                   <packing>
                     <property name="position">1</property>
@@ -625,7 +625,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;CD-Rom&lt;/b&gt;&lt;/big&gt;</property>
+                        <property name="label" translatable="no">&lt;big&gt;&lt;b&gt;CD-Rom&lt;/b&gt;&lt;/big&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -643,7 +643,7 @@
                           <object class="GtkLabel" id="label33">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">    </property>
+                            <property name="label" translatable="no">    </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -662,7 +662,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="yalign">1</property>
-                                <property name="label" translatable="yes">&lt;b&gt;Insert the CD-Rom&lt;/b&gt;</property>
+                                <property name="label" translatable="no">&lt;b&gt;Insert the CD-Rom&lt;/b&gt;</property>
                                 <property name="use_markup">True</property>
                               </object>
                               <packing>
@@ -676,7 +676,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="yalign">0</property>
-                                <property name="label" translatable="yes">&lt;i&gt;The assistant will examine the CD-Rom and search for repositories on it.&lt;/i&gt;</property>
+                                <property name="label" translatable="no">&lt;i&gt;The assistant will examine the CD-Rom and search for repositories on it.&lt;/i&gt;</property>
                                 <property name="use_markup">True</property>
                                 <property name="wrap">True</property>
                               </object>
@@ -709,7 +709,7 @@
                   <object class="GtkLabel" id="label3">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">CD-ROM - 1</property>
+                    <property name="label" translatable="no">CD-ROM - 1</property>
                   </object>
                   <packing>
                     <property name="position">2</property>
@@ -727,7 +727,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;CD-Rom&lt;/b&gt;&lt;/big&gt;</property>
+                        <property name="label" translatable="no">&lt;big&gt;&lt;b&gt;CD-Rom&lt;/b&gt;&lt;/big&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -745,7 +745,7 @@
                           <object class="GtkLabel" id="label37">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">     </property>
+                            <property name="label" translatable="no">     </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -770,7 +770,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">Available repositories:</property>
+                                    <property name="label" translatable="no">Available repositories:</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -813,7 +813,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="xalign">0</property>
-                                <property name="label" translatable="yes">&lt;i&gt;Choose the repository from the list of found ones to be used.&lt;/i&gt;</property>
+                                <property name="label" translatable="no">&lt;i&gt;Choose the repository from the list of found ones to be used.&lt;/i&gt;</property>
                                 <property name="use_markup">True</property>
                                 <property name="wrap">True</property>
                               </object>
@@ -846,7 +846,7 @@
                   <object class="GtkLabel" id="label17">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">CDROM - 2</property>
+                    <property name="label" translatable="no">CDROM - 2</property>
                   </object>
                   <packing>
                     <property name="position">3</property>
@@ -864,7 +864,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Local Repository&lt;/b&gt;&lt;/big&gt;</property>
+                        <property name="label" translatable="no">&lt;big&gt;&lt;b&gt;Local Repository&lt;/b&gt;&lt;/big&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -882,7 +882,7 @@
                           <object class="GtkLabel" id="label26">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">     </property>
+                            <property name="label" translatable="no">     </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -912,7 +912,7 @@
                                       <object class="GtkLabel" id="label16">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="label" translatable="yes">Path:</property>
+                                        <property name="label" translatable="no">Path:</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -939,7 +939,7 @@
                                         </child>
                                         <child>
                                           <object class="GtkButton" id="button10">
-                                            <property name="label" translatable="yes">Browse</property>
+                                            <property name="label" translatable="no">Browse</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -970,7 +970,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">&lt;i&gt;Specify the path where the packages are stored.&lt;/i&gt;</property>
+                                    <property name="label" translatable="no">&lt;i&gt;Specify the path where the packages are stored.&lt;/i&gt;</property>
                                     <property name="use_markup">True</property>
                                   </object>
                                   <packing>
@@ -994,7 +994,7 @@
                                 <property name="spacing">6</property>
                                 <child>
                                   <object class="GtkCheckButton" id="checkbutton6">
-                                    <property name="label" translatable="yes">Source repositroy</property>
+                                    <property name="label" translatable="no">Source repositroy</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
@@ -1013,7 +1013,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">&lt;i&gt;Choose if the repository contains source packages and not binaries.&lt;/i&gt;</property>
+                                    <property name="label" translatable="no">&lt;i&gt;Choose if the repository contains source packages and not binaries.&lt;/i&gt;</property>
                                     <property name="use_markup">True</property>
                                   </object>
                                   <packing>
@@ -1037,7 +1037,7 @@
                                 <property name="spacing">6</property>
                                 <child>
                                   <object class="GtkCheckButton" id="checkbutton4">
-                                    <property name="label" translatable="yes">Recreate repository</property>
+                                    <property name="label" translatable="no">Recreate repository</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
@@ -1056,7 +1056,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">&lt;i&gt;Choose if the repository should be made apt-getable&lt;/i&gt;</property>
+                                    <property name="label" translatable="no">&lt;i&gt;Choose if the repository should be made apt-getable&lt;/i&gt;</property>
                                     <property name="use_markup">True</property>
                                   </object>
                                   <packing>
@@ -1095,7 +1095,7 @@
                   <object class="GtkLabel" id="label4">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">LOCAL</property>
+                    <property name="label" translatable="no">LOCAL</property>
                   </object>
                   <packing>
                     <property name="position">4</property>
@@ -1113,7 +1113,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Custom Repository&lt;/b&gt;&lt;/big&gt;</property>
+                        <property name="label" translatable="no">&lt;big&gt;&lt;b&gt;Custom Repository&lt;/b&gt;&lt;/big&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -1131,7 +1131,7 @@
                           <object class="GtkLabel" id="label41">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">     </property>
+                            <property name="label" translatable="no">     </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -1156,7 +1156,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">Apt line:</property>
+                                    <property name="label" translatable="no">Apt line:</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -1187,7 +1187,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="xalign">0</property>
-                                <property name="label" translatable="yes">&lt;i&gt;Enter the whole apt line for the new repository. The apt line consists of the following elements: 
+                                <property name="label" translatable="no">&lt;i&gt;Enter the whole apt line for the new repository. The apt line consists of the following elements: 
 type (deb, rpm, deb-src, rpm-src), url, dist, section&lt;/i&gt;</property>
                                 <property name="use_markup">True</property>
                                 <property name="wrap">True</property>
@@ -1203,7 +1203,7 @@ type (deb, rpm, deb-src, rpm-src), url, dist, section&lt;/i&gt;</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="xalign">0</property>
-                                <property name="label" translatable="yes">&lt;i&gt;An example would be:
+                                <property name="label" translatable="no">&lt;i&gt;An example would be:
 deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                 <property name="use_markup">True</property>
                                 <property name="wrap">True</property>
@@ -1237,7 +1237,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                   <object class="GtkLabel" id="label5">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">CUSTOM</property>
+                    <property name="label" translatable="no">CUSTOM</property>
                   </object>
                   <packing>
                     <property name="position">5</property>
@@ -1255,7 +1255,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Custom Repository&lt;/b&gt;&lt;/big&gt;</property>
+                        <property name="label" translatable="no">&lt;big&gt;&lt;b&gt;Custom Repository&lt;/b&gt;&lt;/big&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -1273,7 +1273,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                           <object class="GtkLabel" id="label45">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">    </property>
+                            <property name="label" translatable="no">    </property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -1303,7 +1303,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                       <object class="GtkLabel" id="label47">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="label" translatable="yes">Type:</property>
+                                        <property name="label" translatable="no">Type:</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1321,7 +1321,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                             <child>
                                               <object class="GtkMenuItem" id="deb1">
                                                 <property name="visible">True</property>
-                                                <property name="label" translatable="yes">deb</property>
+                                                <property name="label" translatable="no">deb</property>
                                                 <property name="use_underline">True</property>
                                                 <signal handler="on_deb1_activate" last_modification_time="Mon, 12 Jan 2004 08:41:46 GMT" name="activate"/>
                                               </object>
@@ -1329,7 +1329,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                             <child>
                                               <object class="GtkMenuItem" id="deb-src1">
                                                 <property name="visible">True</property>
-                                                <property name="label" translatable="yes">deb-src</property>
+                                                <property name="label" translatable="no">deb-src</property>
                                                 <property name="use_underline">True</property>
                                                 <signal handler="on_deb-src1_activate" last_modification_time="Mon, 12 Jan 2004 08:41:46 GMT" name="activate"/>
                                               </object>
@@ -1337,7 +1337,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                             <child>
                                               <object class="GtkMenuItem" id="rpm1">
                                                 <property name="visible">True</property>
-                                                <property name="label" translatable="yes">rpm</property>
+                                                <property name="label" translatable="no">rpm</property>
                                                 <property name="use_underline">True</property>
                                                 <signal handler="on_rpm1_activate" last_modification_time="Mon, 12 Jan 2004 08:41:46 GMT" name="activate"/>
                                               </object>
@@ -1345,7 +1345,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                             <child>
                                               <object class="GtkMenuItem" id="rpm-src1">
                                                 <property name="visible">True</property>
-                                                <property name="label" translatable="yes">rpm-src</property>
+                                                <property name="label" translatable="no">rpm-src</property>
                                                 <property name="use_underline">True</property>
                                                 <signal handler="on_rpm-src1_activate" last_modification_time="Mon, 12 Jan 2004 08:41:46 GMT" name="activate"/>
                                               </object>
@@ -1371,7 +1371,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">&lt;i&gt;The type of repository.&lt;/i&gt;</property>
+                                    <property name="label" translatable="no">&lt;i&gt;The type of repository.&lt;/i&gt;</property>
                                     <property name="use_markup">True</property>
                                     <property name="wrap">True</property>
                                   </object>
@@ -1404,7 +1404,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                       <object class="GtkLabel" id="label48">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="label" translatable="yes">URL:</property>
+                                        <property name="label" translatable="no">URL:</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1435,7 +1435,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">&lt;i&gt;Specify the path or url to the root of the repository, e.g. "http://ftp.de.debian.org/debian"&lt;/i&gt;</property>
+                                    <property name="label" translatable="no">&lt;i&gt;Specify the path or url to the root of the repository, e.g. "http://ftp.de.debian.org/debian"&lt;/i&gt;</property>
                                     <property name="use_markup">True</property>
                                     <property name="wrap">True</property>
                                   </object>
@@ -1468,7 +1468,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                       <object class="GtkLabel" id="label50">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="label" translatable="yes">Release:</property>
+                                        <property name="label" translatable="no">Release:</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1491,9 +1491,9 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                             <property name="editable">True</property>
                                             <property name="visibility">True</property>
                                             <property name="max_length">0</property>
-                                            <property name="text" translatable="yes"/>
+                                            <property name="text" translatable="no"/>
                                             <property name="has_frame">True</property>
-                                            <property name="invisible_char" translatable="yes">*</property>
+                                            <property name="invisible_char" translatable="no">*</property>
                                             <property name="activates_default">False</property>
                                           </object>
                                         </child>
@@ -1505,21 +1505,21 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                               <object class="GtkListItem" id="listitem11">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
-                                                <property name="label" translatable="yes">woody</property>
+                                                <property name="label" translatable="no">woody</property>
                                               </object>
                                             </child>
                                             <child>
                                               <object class="GtkListItem" id="listitem12">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
-                                                <property name="label" translatable="yes">sarge</property>
+                                                <property name="label" translatable="no">sarge</property>
                                               </object>
                                             </child>
                                             <child>
                                               <object class="GtkListItem" id="listitem13">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
-                                                <property name="label" translatable="yes">sid</property>
+                                                <property name="label" translatable="no">sid</property>
                                               </object>
                                             </child>
                                           </object>
@@ -1543,7 +1543,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">&lt;i&gt;The os version that the repository is for.&lt;/i&gt;</property>
+                                    <property name="label" translatable="no">&lt;i&gt;The os version that the repository is for.&lt;/i&gt;</property>
                                     <property name="use_markup">True</property>
                                     <property name="wrap">True</property>
                                   </object>
@@ -1576,7 +1576,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                       <object class="GtkLabel" id="label52">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="label" translatable="yes">Section:</property>
+                                        <property name="label" translatable="no">Section:</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1599,9 +1599,9 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                             <property name="editable">True</property>
                                             <property name="visibility">True</property>
                                             <property name="max_length">0</property>
-                                            <property name="text" translatable="yes"/>
+                                            <property name="text" translatable="no"/>
                                             <property name="has_frame">True</property>
-                                            <property name="invisible_char" translatable="yes">*</property>
+                                            <property name="invisible_char" translatable="no">*</property>
                                             <property name="activates_default">False</property>
                                           </object>
                                         </child>
@@ -1630,7 +1630,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
-                                    <property name="label" translatable="yes">&lt;i&gt;Mostly the repository is structured in different sections, like main, non-free or contrib.&lt;/i&gt;</property>
+                                    <property name="label" translatable="no">&lt;i&gt;Mostly the repository is structured in different sections, like main, non-free or contrib.&lt;/i&gt;</property>
                                     <property name="use_markup">True</property>
                                     <property name="wrap">True</property>
                                   </object>
@@ -1670,7 +1670,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                   <object class="GtkLabel" id="label25">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">COSTUM2</property>
+                    <property name="label" translatable="no">COSTUM2</property>
                   </object>
                   <packing>
                     <property name="position">6</property>
@@ -1693,7 +1693,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
-                            <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Complete&lt;/b&gt;&lt;/big&gt;</property>
+                            <property name="label" translatable="no">&lt;big&gt;&lt;b&gt;Complete&lt;/b&gt;&lt;/big&gt;</property>
                             <property name="use_markup">True</property>
                           </object>
                           <packing>
@@ -1711,7 +1711,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                               <object class="GtkLabel" id="label55">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">     </property>
+                                <property name="label" translatable="no">     </property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -1736,7 +1736,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
                                         <property name="xalign">0</property>
-                                        <property name="label" translatable="yes">The following repository has been added to your sources list:</property>
+                                        <property name="label" translatable="no">The following repository has been added to your sources list:</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1771,7 +1771,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                                 </child>
                                 <child>
                                   <object class="GtkCheckButton" id="checkbutton7">
-                                    <property name="label" translatable="yes">Add another repository</property>
+                                    <property name="label" translatable="no">Add another repository</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
@@ -1815,7 +1815,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                   <object class="GtkLabel" id="label18">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">REPORT</property>
+                    <property name="label" translatable="no">REPORT</property>
                   </object>
                   <packing>
                     <property name="position">7</property>
@@ -1826,7 +1826,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                   <object class="GtkLabel" id="label57">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">ERROR</property>
+                    <property name="label" translatable="no">ERROR</property>
                   </object>
                   <packing>
                     <property name="position">8</property>
@@ -1836,7 +1836,7 @@ deb http://ftp.de.debian.org woody main&lt;/i&gt;</property>
                   <object class="GtkLabel" id="label21">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">ERROR</property>
+                    <property name="label" translatable="no">ERROR</property>
                   </object>
                   <packing>
                     <property name="position">8</property>

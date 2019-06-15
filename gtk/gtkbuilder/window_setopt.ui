@@ -5,7 +5,7 @@
   <object class="GtkDialog" id="window_setopt">
     <property name="border_width">6</property>
     <property name="visible">False</property>
-    <property name="title" translatable="yes"/>
+    <property name="title" translatable="no"/>
     <property name="type">GTK_WINDOW_TOPLEVEL</property>
     <property name="window_position">GTK_WIN_POS_NONE</property>
     <property name="modal">False</property>
@@ -36,7 +36,7 @@
                 <property name="can_default">True</property>
                 <property name="has_default">True</property>
                 <property name="can_focus">True</property>
-                <property name="label" translatable="yes">_Close</property>
+                <property name="label" translatable="no">_Close</property>
                 <property name="use_underline">True</property>
                 <property name="relief">GTK_RELIEF_NORMAL</property>
                 <property name="focus_on_click">True</property>
@@ -48,7 +48,7 @@
                 <property name="visible">True</property>
                 <property name="can_default">True</property>
                 <property name="can_focus">True</property>
-                <property name="label" translatable="yes">_Apply</property>
+                <property name="label" translatable="no">_Apply</property>
                 <property name="use_underline">True</property>
                 <property name="relief">GTK_RELIEF_NORMAL</property>
                 <property name="focus_on_click">True</property>
@@ -95,7 +95,7 @@
                 <child>
                   <object class="GtkLabel" id="label66">
                     <property name="visible">True</property>
-                    <property name="label" translatable="yes">&lt;span size="large" weight="bold"&gt;Set an internal option&lt;/span&gt;</property>
+                    <property name="label" translatable="no">&lt;span size="large" weight="bold"&gt;Set an internal option&lt;/span&gt;</property>
                     <property name="use_underline">False</property>
                     <property name="use_markup">True</property>
                     <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -119,7 +119,7 @@
                 <child>
                   <object class="GtkLabel" id="">
                     <property name="visible">True</property>
-                    <property name="label" translatable="yes">Only experts should use this.</property>
+                    <property name="label" translatable="no">Only experts should use this.</property>
                     <property name="use_underline">False</property>
                     <property name="use_markup">False</property>
                     <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -155,7 +155,7 @@
                         <property name="editable">True</property>
                         <property name="visibility">True</property>
                         <property name="max_length">0</property>
-                        <property name="text" translatable="yes"/>
+                        <property name="text" translatable="no"/>
                         <property name="has_frame">True</property>
                         <property name="invisible_char">*</property>
                         <property name="activates_default">False</property>
@@ -175,7 +175,7 @@
                         <property name="editable">True</property>
                         <property name="visibility">True</property>
                         <property name="max_length">0</property>
-                        <property name="text" translatable="yes"/>
+                        <property name="text" translatable="no"/>
                         <property name="has_frame">True</property>
                         <property name="invisible_char">*</property>
                         <property name="activates_default">False</property>
@@ -191,7 +191,7 @@
                     <child>
                       <object class="GtkLabel" id="label65">
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">Value:</property>
+                        <property name="label" translatable="no">Value:</property>
                         <property name="use_underline">False</property>
                         <property name="use_markup">False</property>
                         <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -218,7 +218,7 @@
                     <child>
                       <object class="GtkLabel" id="label64">
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">Variable:</property>
+                        <property name="label" translatable="no">Variable:</property>
                         <property name="use_underline">False</property>
                         <property name="use_markup">False</property>
                         <property name="justify">GTK_JUSTIFY_LEFT</property>

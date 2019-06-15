@@ -6,7 +6,7 @@
     <property name="visible">False</property>
     <property name="can_focus">False</property>
     <property name="border_width">6</property>
-    <property name="title" translatable="yes">Repositories</property>
+    <property name="title" translatable="no">Repositories</property>
     <property name="type_hint">normal</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox2">
@@ -21,7 +21,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="cancelbutton2">
-                <property name="label" translatable="yes">_Cancel</property>
+                <property name="label" translatable="no">_Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -36,7 +36,7 @@
             </child>
             <child>
               <object class="GtkButton" id="okbutton2">
-                <property name="label" translatable="yes">_OK</property>
+                <property name="label" translatable="no">_OK</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -93,7 +93,7 @@
                 <property name="spacing">6</property>
                 <child>
                   <object class="GtkButton" id="button2">
-                    <property name="label" translatable="yes">_New</property>
+                    <property name="label" translatable="no">_New</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
@@ -107,7 +107,7 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="button3">
-                    <property name="label" translatable="yes">_Remove</property>
+                    <property name="label" translatable="no">_Remove</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
@@ -151,7 +151,7 @@
                               <object class="GtkLabel" id="label7">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">Edit...</property>
+                                <property name="label" translatable="no">Edit...</property>
                                 <property name="use_underline">True</property>
                               </object>
                               <packing>
@@ -196,7 +196,7 @@
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="border_width">6</property>
-    <property name="title" translatable="yes">Edit Repository...</property>
+    <property name="title" translatable="no">Edit Repository...</property>
     <property name="resizable">False</property>
     <property name="type_hint">normal</property>
     <child internal-child="vbox">
@@ -212,7 +212,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="cancelbutton1">
-                <property name="label" translatable="yes">_Cancel</property>
+                <property name="label" translatable="no">_Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -227,7 +227,7 @@
             </child>
             <child>
               <object class="GtkButton" id="okbutton1">
-                <property name="label" translatable="yes">_OK</property>
+                <property name="label" translatable="no">_OK</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -258,7 +258,7 @@
               <object class="GtkLabel" id="label6">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;b&gt;Name:&lt;/b&gt;</property>
+                <property name="label" translatable="no">&lt;b&gt;Name:&lt;/b&gt;</property>
                 <property name="use_markup">True</property>
                 <property name="xalign">1</property>
               </object>
@@ -271,7 +271,7 @@
               <object class="GtkEntry" id="entry1">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="text" translatable="yes">New Repository</property>
+                <property name="text" translatable="no">New Repository</property>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -282,7 +282,7 @@
               <object class="GtkLabel" id="label5">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;b&gt;Sections:&lt;/b&gt;</property>
+                <property name="label" translatable="no">&lt;b&gt;Sections:&lt;/b&gt;</property>
                 <property name="use_markup">True</property>
                 <property name="xalign">1</property>
               </object>
@@ -305,7 +305,7 @@
               <object class="GtkLabel" id="label4">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;b&gt;Distribution:&lt;/b&gt;</property>
+                <property name="label" translatable="no">&lt;b&gt;Distribution:&lt;/b&gt;</property>
                 <property name="use_markup">True</property>
                 <property name="xalign">1</property>
               </object>
@@ -338,7 +338,7 @@
               <object class="GtkLabel" id="label3">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;b&gt;URI:&lt;/b&gt;</property>
+                <property name="label" translatable="no">&lt;b&gt;URI:&lt;/b&gt;</property>
                 <property name="use_markup">True</property>
                 <property name="xalign">1</property>
               </object>
@@ -351,7 +351,7 @@
               <object class="GtkLabel" id="label2">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;b&gt;Vendor:&lt;/b&gt;</property>
+                <property name="label" translatable="no">&lt;b&gt;Vendor:&lt;/b&gt;</property>
                 <property name="use_markup">True</property>
                 <property name="xalign">1</property>
               </object>
@@ -364,7 +364,7 @@
               <object class="GtkLabel" id="label1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;b&gt;Type:&lt;/b&gt;</property>
+                <property name="label" translatable="no">&lt;b&gt;Type:&lt;/b&gt;</property>
                 <property name="use_markup">True</property>
                 <property name="xalign">1</property>
               </object>

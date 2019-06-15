@@ -24,7 +24,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button2">
-                <property name="label" translatable="yes">_Close</property>
+                <property name="label" translatable="no">_Close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -74,7 +74,7 @@
                   <object class="GtkLabel" id="label_message">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">&lt;span weight="bold" size="larger"&gt;Could not mark all packages for installation or upgrade&lt;/span&gt;
+                    <property name="label" translatable="no">&lt;span weight="bold" size="larger"&gt;Could not mark all packages for installation or upgrade&lt;/span&gt;
 
 The following packages have unresolvable dependencies. Make sure that all required repositories are added and enabled in the preferences.</property>
                     <property name="use_markup">True</property>

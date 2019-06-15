@@ -35,7 +35,7 @@
 #include "gtk3compat.h"
 
 #include "rgmainwindow.h"
-#include "gsynaptic.h"
+#include "gwildbob.h"
 
 #include "rgdebinstallprogress.h"
 #include "rguserdialog.h"
@@ -142,7 +142,7 @@ read_fd(int fd, void *ptr, size_t nbytes, int *recvfd)
 }
 /* end read_fd */
 
-#define UNIXSTR_PATH "/var/run/synaptic.socket"
+#define UNIXSTR_PATH "/var/run/wildbob.socket"
 
 int ipc_send_fd(int fd)
 {
@@ -349,7 +349,7 @@ RGDebInstallProgress::RGDebInstallProgress(RGMainWindow *main,
 {
    // timeout in sec until the expander is expanded 
    // (bigger nowdays because of the gconf stuff)
-   _terminalTimeout=_config->FindI("Synaptic::TerminalTimeout",120);
+   _terminalTimeout=_config->FindI("Wildbob::TerminalTimeout",120);
 
    prepare(lister);
    setTitle(_("Applying Changes"));
@@ -368,7 +368,7 @@ RGDebInstallProgress::RGDebInstallProgress(RGMainWindow *main,
    if(_config->FindB("Volatile::Non-Interactive", false))
       gtk_widget_hide(_autoClose);
    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(_autoClose), 
-				_config->FindB("Synaptic::closeZvt", false));
+				_config->FindB("Wildbob::closeZvt", false));
    //_image = GTK_WIDGET(gtk_builder_get_object(_builder, "image"));
 
    // work around for kdesudo blocking our SIGCHLD (LP: #156041) 
@@ -385,8 +385,8 @@ RGDebInstallProgress::RGDebInstallProgress(RGMainWindow *main,
    vte_terminal_set_scrollback_lines(VTE_TERMINAL(_term), 10000);
 
    const char *s;
-   if(_config->FindB("Synaptic::useUserTerminalFont")) {
-      s = _config->Find("Synaptic::TerminalFontName").c_str();
+   if(_config->FindB("Wildbob::useUserTerminalFont")) {
+      s = _config->Find("Wildbob::TerminalFontName").c_str();
    } else {
       s = "monospace 8";
    }
@@ -773,7 +773,7 @@ void RGDebInstallProgress::finishUpdate()
    switch(res) {
    case 0: // success
       gtk_image_set_from_icon_name(GTK_IMAGE(img),
-			      "synaptic", GTK_ICON_SIZE_DIALOG);
+			      "wildbob", GTK_ICON_SIZE_DIALOG);
       break;
    case 1: // error
       gtk_image_set_from_icon_name(GTK_IMAGE(img), "dialog-error",
@@ -807,7 +807,7 @@ void RGDebInstallProgress::finishUpdate()
    }
       
    // set the value again, it may have changed
-   _config->Set("Synaptic::closeZvt", autoClose	? "true" : "false");
+   _config->Set("Wildbob::closeZvt", autoClose	? "true" : "false");
 
    // hide and finish
    if(_sock != NULL) {

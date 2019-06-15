@@ -4,7 +4,7 @@
   <object class="GtkWindow" id="window_repositories">
     <property name="can_focus">False</property>
     <property name="border_width">6</property>
-    <property name="title" translatable="yes">Repositories</property>
+    <property name="title" translatable="no">Repositories</property>
     <child>
       <object class="GtkBox" id="vbox1">
         <property name="orientation">vertical</property>
@@ -56,7 +56,7 @@
                     <property name="layout_style">spread</property>
                     <child>
                       <object class="GtkButton" id="button_up">
-                        <property name="label" translatable="yes">_Up</property>
+                        <property name="label" translatable="no">_Up</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="can_default">True</property>
@@ -72,7 +72,7 @@
                     </child>
                     <child>
                       <object class="GtkButton" id="button_down">
-                        <property name="label" translatable="yes">_Down</property>
+                        <property name="label" translatable="no">_Down</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="can_default">True</property>
@@ -113,7 +113,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">URI:</property>
+                    <property name="label" translatable="no">URI:</property>
                   </object>
                   <packing>
                     <property name="top_attach">1</property>
@@ -128,7 +128,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">Distribution:</property>
+                    <property name="label" translatable="no">Distribution:</property>
                   </object>
                   <packing>
                     <property name="top_attach">2</property>
@@ -143,7 +143,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">Section(s):</property>
+                    <property name="label" translatable="no">Section(s):</property>
                   </object>
                   <packing>
                     <property name="top_attach">3</property>
@@ -215,7 +215,7 @@
                                   <object class="GtkLabel" id="label4">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="label" translatable="yes">Vendors...</property>
+                                    <property name="label" translatable="no">Vendors...</property>
                                     <property name="use_underline">True</property>
                                   </object>
                                   <packing>
@@ -330,7 +330,7 @@
                 <property name="layout_style">start</property>
                 <child>
                   <object class="GtkButton" id="button_add">
-                    <property name="label" translatable="yes">_New</property>
+                    <property name="label" translatable="no">_New</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="can_default">True</property>
@@ -347,7 +347,7 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="button_remove">
-                    <property name="label" translatable="yes">_Delete</property>
+                    <property name="label" translatable="no">_Delete</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="can_default">True</property>
@@ -377,7 +377,7 @@
                 <property name="layout_style">end</property>
                 <child>
                   <object class="GtkButton" id="button_cancel">
-                    <property name="label" translatable="yes">_Cancel</property>
+                    <property name="label" translatable="no">_Cancel</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="can_default">True</property>
@@ -394,7 +394,7 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="button_ok">
-                    <property name="label" translatable="yes">_OK</property>
+                    <property name="label" translatable="no">_OK</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="can_default">True</property>

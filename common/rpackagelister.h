@@ -1,10 +1,7 @@
 /* rpackagelister.h - package cache and list manipulation
  *
  * Copyright (c) 2000, 2001 Conectiva S/A
- *               2002 Michael Vogt <mvo@debian.org>
- *
- * Author: Alfredo K. Kojima <kojima@conectiva.com.br>
- *         Michael Vogt <mvo@debian.org>
+ * Author: Alfredo K. Kojima 
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -212,7 +209,7 @@ class RPackageLister {
    // limit what the current view displays
    bool limitBySearch(string searchString);
 
-   // clean files older than "Synaptic::delHistory"
+   // clean files older than "Wildbob::delHistory"
    void cleanCommitLog();
 
    void sortPackages(listSortMode mode) {

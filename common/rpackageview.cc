@@ -80,7 +80,7 @@ void RPackageView::clearSelection()
 
 void RPackageView::refresh()
 {
-   if(_config->FindB("Debug::Synaptic::View",false))
+   if(_config->FindB("Debug::Wildbob::View",false))
       ioprintf(clog, "RPackageView::refresh(): '%s'\n",
 	       getName().c_str());
 
@@ -100,9 +100,9 @@ void RPackageViewSections::addPackage(RPackage *package)
 RPackageViewStatus::RPackageViewStatus(vector<RPackage *> &allPkgs)
    : RPackageView(allPkgs), markUnsupported(false)
 {
-   if(_config->FindB("Synaptic::mark-unsupported",false)) {
+   if(_config->FindB("Wildbob::mark-unsupported",false)) {
       markUnsupported = true;
-      string components = _config->Find("Synaptic::supported-components", "main updates/main");
+      string components = _config->Find("Wildbob::supported-components", "main updates/main");
 
       stringstream sstream(components);
       string s;

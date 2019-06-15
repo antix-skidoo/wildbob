@@ -27,7 +27,7 @@
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/strutl.h>
 #include "gtktagtree.h"
-#include "gsynaptic.h"
+#include "gwildbob.h"
 
 
 //#define DEBUG_TREE

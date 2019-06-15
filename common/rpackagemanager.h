@@ -1,10 +1,7 @@
 /* rpackagemanager.h
  *
  * Copyright (c) 2000, 2001 Conectiva S/A
- *                     2002 Michael Vogt
- *
- * Author: Alfredo K. Kojima <kojima@conectiva.com.br>
- *         Michael Vogt <mvo@debian.org>
+ * Author: Alfredo K. Kojima
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -25,7 +22,7 @@
 // We need a different package manager, since we need to do the
 // DoInstall() process in two steps when forking. Without that,
 // the forked package manager would be updated with the new
-// information, and the original Synaptic process wouldn't be
+// information, and the original Wildbob process wouldn't be
 // aware about it.
 //
 // Very unfortunately, we *do* need to access stuff which is

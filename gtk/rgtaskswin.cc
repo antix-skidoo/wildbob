@@ -56,7 +56,7 @@ void RGTasksWin::cbButtonOkClicked(GtkWidget *self, void *data)
    gboolean marked = FALSE;
    gboolean activatable = FALSE;
    gchar *taskname = NULL;
-   string cmd = _config->Find("Synaptic::taskHelperProg", "/usr/bin/tasksel");
+   string cmd = _config->Find("Wildbob::taskHelperProg", "/usr/bin/tasksel");
    do {
       gtk_tree_model_get(model, &iter, 
 			 TASK_CHECKBOX_COLUMN, &marked, 
@@ -126,7 +126,7 @@ void RGTasksWin::cbButtonDetailsClicked(GtkWidget *self, void *data)
 		      TASK_NAME_COLUMN, &str, -1);
 
    // ask tasksel about the selected task
-   string cmd = _config->Find("Synaptic::taskHelperProg", "/usr/bin/tasksel") + " --task-desc " + string(str);
+   string cmd = _config->Find("Wildbob::taskHelperProg", "/usr/bin/tasksel") + " --task-desc " + string(str);
    string taskDescr;
    char buf[255];
    FILE *f=popen(cmd.c_str(), "r");
@@ -222,7 +222,7 @@ RGTasksWin::RGTasksWin(RGWindow *parent)
    // fiel in tasks
    char buf[255];
    gchar **strArray;
-   string cmd = _config->Find("Synaptic::taskHelperProg", "/usr/bin/tasksel") + " --list-tasks";
+   string cmd = _config->Find("Wildbob::taskHelperProg", "/usr/bin/tasksel") + " --list-tasks";
    FILE *f = popen(cmd.c_str(),"r");
 
    while(fgets(buf,254,f) != NULL) {
@@ -238,7 +238,7 @@ RGTasksWin::RGTasksWin(RGWindow *parent)
 
       GtkTreeIter iter;
       gtk_list_store_append (store, &iter);
-      // you can't uninstall a task for now from synaptic, we make
+      // you can't uninstall a task for now from wildbob, we make
       // tasks that are already installed insensitive
       gtk_list_store_set (store, &iter,
 			  TASK_CHECKBOX_COLUMN, installed,

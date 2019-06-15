@@ -31,7 +31,7 @@
 #include "rpackage.h"
 #include "rpackagelister.h"
 
-// TagcollConsumer that builds a tagged collection for synaptic
+// TagcollConsumer that builds a tagged collection for wildbob
 class RTagcollBuilder:public TagcollConsumer<std::string> {
  protected:
    HandleMaker<RPackage *> &handleMaker;

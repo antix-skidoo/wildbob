@@ -1,11 +1,11 @@
-Task support for synaptic
+Task support for synap tic
 -------------------------
 
 
-Synaptic works on quite a few distributions. To make support for the
-various task systems easy synaptic needs a helper application called
+synap tic works on quite a few distributions. To make support for the
+various task systems easy synap tic needs a helper application called
 "tasksel" (or any other helper that can be speficified with 
-"-o Synaptic::taskHelperProg=prog"). It has to support the following
+"-o synap tic::taskHelperProg=prog"). It has to support the following
 commands:
 
 --list-tasks: returns a list of the format

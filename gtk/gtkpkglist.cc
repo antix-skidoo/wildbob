@@ -447,7 +447,7 @@ gtk_pkg_list_get_value(GtkTreeModel *tree_model,
          break;
       case COLOR_COLUMN:
        {
-	  if(_config->FindB("Synaptic::UseStatusColors", TRUE) == FALSE) 
+	  if(_config->FindB("Wildbob::UseStatusColors", TRUE) == FALSE) 
 	     return;
           GdkRGBA *bg;
           bg = RGPackageStatus::pkgStatus.getBgColor(pkg);

@@ -52,7 +52,7 @@ void RGPackageStatus::initColors()
 
    gchar *config_string;
    for (int i = 0; i < N_STATUS_COUNT; i++) {
-      config_string = g_strdup_printf("Synaptic::color-%s",
+      config_string = g_strdup_printf("Wildbob::color-%s",
                                       PackageStatusShortString[i]);
       gtk_get_color_from_string(_config->
                                 Find(config_string,
@@ -110,7 +110,7 @@ void RGPackageStatus::saveColors()
    gchar *color_string, *config_string;
    for (int i = 0; i < N_STATUS_COUNT; i++) {
       color_string = gtk_get_string_from_color(StatusColors[i]);
-      config_string = g_strdup_printf("Synaptic::color-%s",
+      config_string = g_strdup_printf("Wildbob::color-%s",
                                       PackageStatusShortString[i]);
 
       _config->Set(config_string, color_string);

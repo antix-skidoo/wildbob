@@ -153,7 +153,7 @@ void RGPkgDetailsWindow::cbShowScreenshot(GtkWidget *button, void *data)
 {
    struct screenshot_info *si = (struct screenshot_info*)data;
 
-   if(_config->FindB("Synaptic::InlineScreenshots") == false)
+   if(_config->FindB("Wildbob::InlineScreenshots") == false)
    {
       doShowBigScreenshot(si->pkg);
       return;

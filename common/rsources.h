@@ -1,11 +1,8 @@
 /* rsource.h - access the sources.list file
  *
- * Copyright (c) 1999 Patrick Cole <z@amused.net>
- *           (c) 2002 Synaptic development team
+ * Copyright (c) 1999 Patrick Cole
  *
- * Author: Patrick Cole <z@amused.net>
- *         Michael Vogt <mvo@debian.org>
- *         Gustavo Niemeyer <niemeyer@conectiva.com>
+ * Author: Patrick Cole
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as

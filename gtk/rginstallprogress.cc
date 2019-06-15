@@ -23,7 +23,7 @@
 #include "config.h"
 
 #include "rgmainwindow.h"
-#include "gsynaptic.h"
+#include "gwildbob.h"
 
 #include "rginstallprogress.h"
 
@@ -149,7 +149,7 @@ void RGInstallProgress::finishUpdate()
    }
 
    if (_msgs.empty() == false &&
-       _config->FindB("Synaptic::IgnorePMOutput", false) == false)
+       _config->FindB("Wildbob::IgnorePMOutput", false) == false)
       _msgs.run();
 
    RGFlushInterface();
@@ -296,7 +296,7 @@ RGInstallProgress::RGInstallProgress(RGMainWindow *main,
 
    _startCounting = false;
 
-   string GeoStr = _config->Find("Synaptic::Geometry::InstProg", "");
+   string GeoStr = _config->Find("Wildbob::Geometry::InstProg", "");
    GeometryParser Geo(GeoStr);
    if (Geo.HasSize())
       gtk_widget_set_size_request(GTK_WIDGET(_win), Geo.Width(), Geo.Height());
@@ -310,7 +310,7 @@ RGInstallProgress::RGInstallProgress(RGMainWindow *main,
    _pbarTotal = GTK_WIDGET(gtk_builder_get_object(_builder, "progress_total"));
    _image = GTK_WIDGET(gtk_builder_get_object(_builder, "image"));
 
-   string ssDir = _config->Find("Synaptic::SlideShow", "");
+   string ssDir = _config->Find("Wildbob::SlideShow", "");
    if (!ssDir.empty()) {
       _ss = new RGSlideShow(GTK_IMAGE(_image), ssDir);
       _ss->refresh();

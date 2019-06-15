@@ -79,7 +79,7 @@ void RGFindWindow::doClose(GtkWindow *widget, void *data)
    //cout << "void RGFindWindow::doClose()" << endl;  
    RGFindWindow *me = (RGFindWindow *) data;
 
-   _config->Set("Synaptic::LastSearchType",
+   _config->Set("Wildbob::LastSearchType",
 		gtk_combo_box_get_active(GTK_COMBO_BOX(me->_comboSearchType)));
 
    me->hide();
@@ -134,7 +134,7 @@ RGFindWindow::RGFindWindow(RGWindow *win)
    gtk_cell_layout_add_attribute(GTK_CELL_LAYOUT(_comboSearchType),
                                           crt, "text", 0);
    gtk_combo_box_set_active(GTK_COMBO_BOX(_comboSearchType),
-			       _config->FindI("Synaptic::LastSearchType",1));
+			       _config->FindI("Wildbob::LastSearchType",1));
 
    _findB = GTK_WIDGET(gtk_builder_get_object(_builder, "button_find"));
    assert(_findB);

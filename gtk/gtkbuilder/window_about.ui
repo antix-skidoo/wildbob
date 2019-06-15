@@ -4,7 +4,7 @@
   <object class="GtkDialog" id="window_about">
     <property name="can_focus">False</property>
     <property name="border_width">6</property>
-    <property name="title" translatable="yes">About Synaptic</property>
+    <property name="title" translatable="no">About wildbob</property>
     <property name="resizable">False</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
@@ -19,7 +19,7 @@
             <property name="can_focus">False</property>
             <child>
               <object class="GtkButton" id="button_credits">
-                <property name="label" translatable="yes">Credits</property>
+                <property name="label" translatable="no">Credits</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -36,7 +36,7 @@
             </child>
             <child>
               <object class="GtkButton" id="about_okbutton">
-                <property name="label" translatable="yes">_Close</property>
+                <property name="label" translatable="no">_Close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -124,7 +124,7 @@
               <object class="GtkLabel" id="label_version">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;span size="xx-large" weight="bold"&gt;Synaptic version&lt;/span&gt;</property>
+                <property name="label" translatable="no">&lt;span size="xx-large" weight="bold"&gt;wildbob version&lt;/span&gt;</property>
                 <property name="use_markup">True</property>
               </object>
               <packing>
@@ -137,7 +137,7 @@
               <object class="GtkLabel" id="label69">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Package management software using apt.</property>
+                <property name="label" translatable="no">Package management software using apt.</property>
                 <property name="use_markup">True</property>
                 <property name="justify">center</property>
                 <property name="wrap">True</property>
@@ -151,7 +151,7 @@
             <child>
               <object class="GtkLabel" id="label_debtag">
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Debtag support is enabled.</property>
+                <property name="label" translatable="no">Debtag support is enabled.</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -160,27 +160,11 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label70">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="label" translatable="yes">Visit the home page at 
-http://www.nongnu.org/synaptic/</property>
-                <property name="justify">center</property>
-                <property name="wrap">True</property>
-                <property name="selectable">True</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">False</property>
-                <property name="position">4</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkLabel" id="label63">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="xpad">5</property>
-                <property name="label" translatable="yes">This software is licensed under the terms of the GNU General Public License, Version 2</property>
+                <property name="label" translatable="no">This software is licensed under the terms of the GNU General Public License, Version 2</property>
                 <property name="justify">center</property>
                 <property name="wrap">True</property>
               </object>
@@ -194,7 +178,7 @@ http://www.nongnu.org/synaptic/</property>
               <object class="GtkLabel" id="label65">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;span size="small"&gt;Copyright (c) 2001-2004 Connectiva S/A 
+                <property name="label" translatable="no">&lt;span size="small"&gt;Copyright (c) 2001-2004 Connectiva S/A 
 Copyright (c) 2002-2012 Michael Vogt&lt;/span&gt;</property>
                 <property name="use_markup">True</property>
                 <property name="justify">center</property>
@@ -224,7 +208,7 @@ Copyright (c) 2002-2012 Michael Vogt&lt;/span&gt;</property>
     <property name="height_request">400</property>
     <property name="can_focus">False</property>
     <property name="border_width">6</property>
-    <property name="title" translatable="yes">Credits</property>
+    <property name="title" translatable="no">Credits</property>
     <property name="resizable">False</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
@@ -240,7 +224,7 @@ Copyright (c) 2002-2012 Michael Vogt&lt;/span&gt;</property>
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="credits_closebutton">
-                <property name="label" translatable="yes">_Close</property>
+                <property name="label" translatable="no">_Close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -285,7 +269,7 @@ Copyright (c) 2002-2012 Michael Vogt&lt;/span&gt;</property>
                         <property name="can_focus">True</property>
                         <property name="xalign">0</property>
                         <property name="yalign">0</property>
-                        <property name="label" translatable="yes">Original author:
+                        <property name="label" translatable="no">Original author:
 Alfredo K. Kojima &lt;kojima@windowmaker.org&gt;
 
 Maintainers:
@@ -308,7 +292,7 @@ Sviatoslav Sviridov &lt;svd@lintec.minsk.by&gt;</property>
               <object class="GtkLabel" id="label66">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Written by</property>
+                <property name="label" translatable="no">Written by</property>
               </object>
               <packing>
                 <property name="tab_fill">False</property>
@@ -322,7 +306,7 @@ Sviatoslav Sviridov &lt;svd@lintec.minsk.by&gt;</property>
                 <property name="yalign">0</property>
                 <property name="xpad">12</property>
                 <property name="ypad">12</property>
-                <property name="label" translatable="yes">translators-credits</property>
+                <property name="label" translatable="no">translators-credits</property>
               </object>
               <packing>
                 <property name="position">1</property>
@@ -332,7 +316,7 @@ Sviatoslav Sviridov &lt;svd@lintec.minsk.by&gt;</property>
               <object class="GtkLabel" id="label67">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Translated by</property>
+                <property name="label" translatable="no">Translated by</property>
               </object>
               <packing>
                 <property name="position">1</property>
@@ -357,7 +341,7 @@ Sviatoslav Sviridov &lt;svd@lintec.minsk.by&gt;</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
                         <property name="yalign">0</property>
-                        <property name="label" translatable="yes">Man page:
+                        <property name="label" translatable="no">Man page:
 Wybo Dekker &lt;wybo@servalys.nl&gt;
 Michael Vogt &lt;mvo@debian.org&gt;
 Sebastian Heinlein &lt;sebastian.heinlein@web.de&gt;
@@ -377,7 +361,7 @@ Sebastian Heinlein &lt;sebastian.heinlein@web.de&gt;</property>
               <object class="GtkLabel" id="label71">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Documented by</property>
+                <property name="label" translatable="no">Documented by</property>
               </object>
               <packing>
                 <property name="position">2</property>

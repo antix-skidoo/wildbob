@@ -87,7 +87,7 @@ RGAboutPanel::RGAboutPanel(RGWindow *parent)
 
    //skipTaskbar(true);
 
-   setTitle(_("About Synaptic"));
+   setTitle(_("About Wildbob"));
    GtkWidget *w = GTK_WIDGET(gtk_builder_get_object(_builder, "label_version"));
    assert(w);
 

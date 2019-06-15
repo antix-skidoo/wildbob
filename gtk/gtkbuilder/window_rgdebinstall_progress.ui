@@ -93,7 +93,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">&lt;i&gt;Preparing packages...&lt;/i&gt;</property>
+                    <property name="label" translatable="no">&lt;i&gt;Preparing packages...&lt;/i&gt;</property>
                     <property name="use_markup">True</property>
                     <property name="wrap">True</property>
                     <property name="ellipsize">end</property>
@@ -113,7 +113,7 @@
             </child>
             <child>
               <object class="GtkCheckButton" id="checkbutton_auto_close">
-                <property name="label" translatable="yes">Automatically close after the changes have been successfully applied</property>
+                <property name="label" translatable="no">Automatically close after the changes have been successfully applied</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">False</property>
@@ -151,7 +151,7 @@
                   <object class="GtkLabel" id="label2">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Details</property>
+                    <property name="label" translatable="no">Details</property>
                   </object>
                 </child>
               </object>
@@ -176,7 +176,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_cancel">
-                <property name="label" translatable="yes">_Cancel</property>
+                <property name="label" translatable="no">_Cancel</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
                 <property name="receives_default">False</property>
@@ -191,7 +191,7 @@
             </child>
             <child>
               <object class="GtkButton" id="button_close">
-                <property name="label" translatable="yes">_Close</property>
+                <property name="label" translatable="no">_Close</property>
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
                 <property name="can_focus">True</property>

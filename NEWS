@@ -232,7 +232,7 @@
  - reworked search dialog, it's possible to search for 
    "name, version, description, maintainer" now
  - better checking if a pkg is not installable 
- - location of the synaptic.desktop file has changed to better integrate  
+ - location of the synap tic.desktop file has changed to better integrate  
    with the desktop enviroment
 
 0.38 
@@ -269,14 +269,14 @@
  - dialog to auto install recommended/suggested packages
 
 0.35
- - Synaptic uses a tree view now. Users may select from
+ - synap tic uses a tree view now. Users may select from
    "Section tree", "Alphabetic tree", "Status tree", or
    "Raw list" views.
  - "What will change" dialog, informing how the current selection
    will change, if the user try to do some action in a package
    that would require further changes in the current selection.
  - Now it's possible to include APT-enabled CDROMs in the database
-   using synaptic (apt-cdrom like).
+   using synap tic (apt-cdrom like).
  - Undo/Redo implemented, allowing one to rollback changes in the
    selection.
  - Filter and button for debconf packages (debian only).
@@ -310,7 +310,7 @@
  - fixed a bug for rpm users (thanks to Sviatoslav Sviridou)
  - added turkish translation (thanks to Rail Aliev)
  - added handleBox for the main button bar
- - added synaptic desktop file for gnome (needs xsu to work)
+ - added synap tic desktop file for gnome (needs xsu to work)
  - added wm icon
 
 0.27:
@@ -327,11 +327,11 @@
 0.25:
  - cleanups for the "new" packages filter
  - added command line arguments (see README for details)
- - removed some warning if no synaptic files can be found in ~/.synaptic
+ - removed some warning if no synap tic files can be found in ~/.synap tic
  - multiple selection of packages is possible now (use SHIFT/CTRL)
  - some internal code cleanups
- - SWIG support for synaptic! a python module with the interface described 
-   in gtk/synapticinterface.h is generated and can be used to script synaptic
+ - SWIG support for synap tic! a python module with the interface described 
+   in gtk/synap ticinterface.h is generated and can be used to script synap tic
    with python (see README.scripting for details)
 
 0.24:
@@ -340,9 +340,9 @@
    (enable this with "--with-pkg-hold" in configure)
  - "New Packages" filter improvments (now persistent to a certain extend)
  - bugfixes and a fix for a nasty memory leak
- - WINGs version no longer build by default and renamed to wsynaptic
+ - WINGs version no longer build by default and renamed to wsynap tic
    (enable it with "--with-wings")
- - GTK version now called "synaptic"
+ - GTK version now called "synap tic"
  - Implemented vendors.list edition support
  - Reworked sources.list edition dialog.
 

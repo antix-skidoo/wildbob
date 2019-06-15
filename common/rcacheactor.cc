@@ -140,7 +140,7 @@ void RCacheActorRecommends::setLanguageCache()
 
 void RCacheActorRecommends::notifyCachePostChange()
 {
-   if (_config->FindB("Synaptic::UseRecommends", true) == true)
+   if (_config->FindB("Wildbob::UseRecommends", true) == true)
       RCacheActor::notifyCachePostChange();
 }
 

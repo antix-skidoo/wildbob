@@ -1,10 +1,7 @@
 /* rpackageview.h - Package sectioning system
  *
  * Copyright (c) 2004 Conectiva S/A
- *               2004 Michael Vogt <mvo@debian.org>
- *
  * Author: Gustavo Niemeyer
- *         Michael Vogt <mvo@debian.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as

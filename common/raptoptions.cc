@@ -2,7 +2,7 @@
  * 
  * Copyright (c) 2000, 2001 Conectiva S/A 
  * 
- * Author: Alfredo K. Kojima <kojima@conectiva.com.br>
+ * Author: Alfredo K. Kojima
  *
  * This program is free software; you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
@@ -93,7 +93,7 @@ bool RAPTOptions::restore()
       _packageOptions[pkg] = o;
    }
 
-   // upgrade code for older synaptic versions, can go away in the future
+   // upgrade code for older wildbob versions, can go away in the future
    if(FileExists(RConfDir()+"/preferences"))
       rename(string(RConfDir()+"/preferences").c_str(),
 	     string(RStateDir()+"/preferences").c_str());

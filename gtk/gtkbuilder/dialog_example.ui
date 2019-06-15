@@ -22,7 +22,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button1">
-                <property name="label" translatable="yes">button1</property>
+                <property name="label" translatable="no">button1</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -37,7 +37,7 @@
             </child>
             <child>
               <object class="GtkButton" id="button2">
-                <property name="label" translatable="yes">button2</property>
+                <property name="label" translatable="no">button2</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -88,7 +88,7 @@
                   <object class="GtkLabel" id="label_message">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">&lt;span weight="bold" size="larger"&gt;Primary Text&lt;/span&gt;
+                    <property name="label" translatable="no">&lt;span weight="bold" size="larger"&gt;Primary Text&lt;/span&gt;
 
 Secondary Text</property>
                     <property name="use_markup">True</property>

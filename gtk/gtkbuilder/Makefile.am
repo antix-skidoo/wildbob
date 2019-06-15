@@ -1,4 +1,4 @@
-gtkbuilderdir = $(datadir)/synaptic/gtkbuilder/
+gtkbuilderdir = $(datadir)/wildbob/gtkbuilder/
 
 gtkbuilder_DATA = *.ui
 

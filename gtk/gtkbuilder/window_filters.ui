@@ -43,7 +43,7 @@
     <property name="visible">False</property>
     <property name="can_focus">False</property>
     <property name="border_width">6</property>
-    <property name="title" translatable="yes">Filters</property>
+    <property name="title" translatable="no">Filters</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
     <property name="default_width">640</property>
@@ -61,7 +61,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_cancel">
-                <property name="label" translatable="yes">_Cancel</property>
+                <property name="label" translatable="no">_Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -77,7 +77,7 @@
             </child>
             <child>
               <object class="GtkButton" id="button_ok">
-                <property name="label" translatable="yes">_OK</property>
+                <property name="label" translatable="no">_OK</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -116,7 +116,7 @@
                   <object class="GtkEntry" id="entry_filters">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="text" translatable="yes"> </property>
+                    <property name="text" translatable="no"> </property>
                     <signal name="changed" handler="on_entry_filters_changed" swapped="no"/>
                   </object>
                   <packing>
@@ -164,7 +164,7 @@
                         <property name="layout_style">start</property>
                         <child>
                           <object class="GtkButton" id="button_filters_add">
-                            <property name="label" translatable="yes">_New</property>
+                            <property name="label" translatable="no">_New</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="can_default">True</property>
@@ -179,7 +179,7 @@
                         </child>
                         <child>
                           <object class="GtkButton" id="button_filters_remove">
-                            <property name="label" translatable="yes">_Delete</property>
+                            <property name="label" translatable="no">_Delete</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="can_default">True</property>
@@ -257,7 +257,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes" comments="TRANSLATORS: this is a label embedded in the &quot;Status&quot; notebook tab, so it describes the &quot;Current [status]&quot;">&lt;b&gt;Current&lt;/b&gt;</property>
+                                            <property name="label" translatable="no" comments="TRANSLATORS: this is a label embedded in the &quot;Status&quot; notebook tab, so it describes the &quot;Current [status]&quot;">&lt;b&gt;Current&lt;/b&gt;</property>
                                             <property name="use_markup">True</property>
                                           </object>
                                           <packing>
@@ -275,7 +275,7 @@
                                               <object class="GtkLabel" id="label24">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="label" translatable="yes">    </property>
+                                                <property name="label" translatable="no">    </property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -290,11 +290,11 @@
                                                 <property name="can_focus">False</property>
                                                 <child>
                                                   <object class="GtkCheckButton" id="checkbutton_status3">
-                                                    <property name="label" translatable="yes">Installed</property>
+                                                    <property name="label" translatable="no">Installed</property>
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">True</property>
                                                     <property name="receives_default">False</property>
-                                                    <property name="tooltip_text" translatable="yes">Installed packages that are up-to-date</property>
+                                                    <property name="tooltip_text" translatable="no">Installed packages that are up-to-date</property>
                                                     <property name="use_underline">True</property>
                                                     <property name="xalign">0.5</property>
                                                     <property name="draw_indicator">True</property>
@@ -307,11 +307,11 @@
                                                 </child>
                                                 <child>
                                                   <object class="GtkCheckButton" id="checkbutton_status2">
-                                                    <property name="label" translatable="yes">Upgradable</property>
+                                                    <property name="label" translatable="no">Upgradable</property>
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">True</property>
                                                     <property name="receives_default">False</property>
-                                                    <property name="tooltip_text" translatable="yes">Installed packages that are upgradable</property>
+                                                    <property name="tooltip_text" translatable="no">Installed packages that are upgradable</property>
                                                     <property name="use_underline">True</property>
                                                     <property name="xalign">0.5</property>
                                                     <property name="draw_indicator">True</property>
@@ -324,11 +324,11 @@
                                                 </child>
                                                 <child>
                                                   <object class="GtkCheckButton" id="checkbutton_status13">
-                                                    <property name="label" translatable="yes">Upgradable (upstream)</property>
+                                                    <property name="label" translatable="no">Upgradable (upstream)</property>
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">True</property>
                                                     <property name="receives_default">False</property>
-                                                    <property name="tooltip_text" translatable="yes">Installed packages that are upgradable to a later upstream version</property>
+                                                    <property name="tooltip_text" translatable="no">Installed packages that are upgradable to a later upstream version</property>
                                                     <property name="use_underline">True</property>
                                                     <property name="xalign">0.5</property>
                                                     <property name="draw_indicator">True</property>
@@ -341,11 +341,11 @@
                                                 </child>
                                                 <child>
                                                   <object class="GtkCheckButton" id="checkbutton_status11">
-                                                    <property name="label" translatable="yes">Residual config</property>
+                                                    <property name="label" translatable="no">Residual config</property>
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">True</property>
                                                     <property name="receives_default">False</property>
-                                                    <property name="tooltip_text" translatable="yes">Removed packages that have left configuration files on the system</property>
+                                                    <property name="tooltip_text" translatable="no">Removed packages that have left configuration files on the system</property>
                                                     <property name="use_underline">True</property>
                                                     <property name="xalign">0.5</property>
                                                     <property name="draw_indicator">True</property>
@@ -358,11 +358,11 @@
                                                 </child>
                                                 <child>
                                                   <object class="GtkCheckButton" id="checkbutton_status1">
-                                                    <property name="label" translatable="yes">Not installed</property>
+                                                    <property name="label" translatable="no">Not installed</property>
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">True</property>
                                                     <property name="receives_default">False</property>
-                                                    <property name="tooltip_text" translatable="yes">Not installed packages</property>
+                                                    <property name="tooltip_text" translatable="no">Not installed packages</property>
                                                     <property name="use_underline">True</property>
                                                     <property name="xalign">0.5</property>
                                                     <property name="draw_indicator">True</property>
@@ -405,7 +405,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="xalign">0</property>
-                                            <property name="label" translatable="yes" comments="TRANSLATORS: this is a label embedded in the &quot;Status&quot; notebook tab, so it describes the &quot;Marked [status]&quot;">&lt;b&gt;Marked&lt;/b&gt;</property>
+                                            <property name="label" translatable="no" comments="TRANSLATORS: this is a label embedded in the &quot;Status&quot; notebook tab, so it describes the &quot;Marked [status]&quot;">&lt;b&gt;Marked&lt;/b&gt;</property>
                                             <property name="use_markup">True</property>
                                           </object>
                                           <packing>
@@ -423,7 +423,7 @@
                                               <object class="GtkLabel" id="label23">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="label" translatable="yes">    </property>
+                                                <property name="label" translatable="no">    </property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -438,11 +438,11 @@
                                                 <property name="can_focus">False</property>
                                                 <child>
                                                   <object class="GtkCheckButton" id="checkbutton_status4">
-                                                    <property name="label" translatable="yes">Not marked</property>
+                                                    <property name="label" translatable="no">Not marked</property>
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">True</property>
                                                     <property name="receives_default">False</property>
-                                                    <property name="tooltip_text" translatable="yes">Packages that won't be changed</property>
+                                                    <property name="tooltip_text" translatable="no">Packages that won't be changed</property>
                                                     <property name="use_underline">True</property>
                                                     <property name="xalign">0.5</property>
                                                     <property name="draw_indicator">True</property>
@@ -455,11 +455,11 @@
                                                 </child>
                                                 <child>
                                                   <object class="GtkCheckButton" id="checkbutton_status5">
-                                                    <property name="label" translatable="yes">For installation or upgrade</property>
+                                                    <property name="label" translatable="no">For installation or upgrade</property>
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">True</property>
                                                     <property name="receives_default">False</property>
-                                                    <property name="tooltip_text" translatable="yes">Packages that will be installed or upgraded</property>
+                                                    <property name="tooltip_text" translatable="no">Packages that will be installed or upgraded</property>
                                                     <property name="use_underline">True</property>
                                                     <property name="xalign">0.5</property>
                                                     <property name="draw_indicator">True</property>
@@ -472,11 +472,11 @@
                                                 </child>
                                                 <child>
                                                   <object class="GtkCheckButton" id="checkbutton_status6">
-                                                    <property name="label" translatable="yes">For removal</property>
+                                                    <property name="label" translatable="no">For removal</property>
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">True</property>
                                                     <property name="receives_default">False</property>
-                                                    <property name="tooltip_text" translatable="yes">Packages that will be removed</property>
+                                                    <property name="tooltip_text" translatable="no">Packages that will be removed</property>
                                                     <property name="use_underline">True</property>
                                                     <property name="xalign">0.5</property>
                                                     <property name="draw_indicator">True</property>
@@ -526,7 +526,7 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
                                         <property name="xalign">0</property>
-                                        <property name="label" translatable="yes" comments="TRANSLATORS: this is a label embedded in the &quot;Status&quot; notebook tab, so it describes the &quot;Other [status]&quot;">&lt;b&gt;Other&lt;/b&gt;</property>
+                                        <property name="label" translatable="no" comments="TRANSLATORS: this is a label embedded in the &quot;Status&quot; notebook tab, so it describes the &quot;Other [status]&quot;">&lt;b&gt;Other&lt;/b&gt;</property>
                                         <property name="use_markup">True</property>
                                       </object>
                                       <packing>
@@ -544,7 +544,7 @@
                                           <object class="GtkLabel" id="label27">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">    </property>
+                                            <property name="label" translatable="no">    </property>
                                           </object>
                                           <packing>
                                             <property name="expand">False</property>
@@ -559,11 +559,11 @@
                                             <property name="can_focus">False</property>
                                             <child>
                                               <object class="GtkCheckButton" id="checkbutton_status8">
-                                                <property name="label" translatable="yes">New in repository</property>
+                                                <property name="label" translatable="no">New in repository</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="receives_default">False</property>
-                                                <property name="tooltip_text" translatable="yes">Packages that are new in the repository since that last "Reload"</property>
+                                                <property name="tooltip_text" translatable="no">Packages that are new in the repository since that last "Reload"</property>
                                                 <property name="use_underline">True</property>
                                                 <property name="xalign">0.5</property>
                                                 <property name="draw_indicator">True</property>
@@ -576,11 +576,11 @@
                                             </child>
                                             <child>
                                               <object class="GtkCheckButton" id="checkbutton_status9">
-                                                <property name="label" translatable="yes">Pinned</property>
+                                                <property name="label" translatable="no">Pinned</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="receives_default">False</property>
-                                                <property name="tooltip_text" translatable="yes">Packages that will never be upgraded</property>
+                                                <property name="tooltip_text" translatable="no">Packages that will never be upgraded</property>
                                                 <property name="use_underline">True</property>
                                                 <property name="xalign">0.5</property>
                                                 <property name="draw_indicator">True</property>
@@ -593,11 +593,11 @@
                                             </child>
                                             <child>
                                               <object class="GtkCheckButton" id="checkbutton_status10">
-                                                <property name="label" translatable="yes">Orphaned</property>
+                                                <property name="label" translatable="no">Orphaned</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="receives_default">False</property>
-                                                <property name="tooltip_text" translatable="yes">Library packages that are no longer needed (deborphan is required)</property>
+                                                <property name="tooltip_text" translatable="no">Library packages that are no longer needed (deborphan is required)</property>
                                                 <property name="use_underline">True</property>
                                                 <property name="xalign">0.5</property>
                                                 <property name="draw_indicator">True</property>
@@ -610,11 +610,11 @@
                                             </child>
                                             <child>
                                               <object class="GtkCheckButton" id="checkbutton_status12">
-                                                <property name="label" translatable="yes">Not installable</property>
+                                                <property name="label" translatable="no">Not installable</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="receives_default">False</property>
-                                                <property name="tooltip_text" translatable="yes">Packages that are not available in any repository</property>
+                                                <property name="tooltip_text" translatable="no">Packages that are not available in any repository</property>
                                                 <property name="use_underline">True</property>
                                                 <property name="xalign">0.5</property>
                                                 <property name="draw_indicator">True</property>
@@ -627,11 +627,11 @@
                                             </child>
                                             <child>
                                               <object class="GtkCheckButton" id="checkbutton_status7">
-                                                <property name="label" translatable="yes">Broken</property>
+                                                <property name="label" translatable="no">Broken</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="receives_default">False</property>
-                                                <property name="tooltip_text" translatable="yes">Packages with broken dependencies</property>
+                                                <property name="tooltip_text" translatable="no">Packages with broken dependencies</property>
                                                 <property name="use_underline">True</property>
                                                 <property name="xalign">0.5</property>
                                                 <property name="draw_indicator">True</property>
@@ -644,11 +644,11 @@
                                             </child>
                                             <child>
                                               <object class="GtkCheckButton" id="checkbutton_status14">
-                                                <property name="label" translatable="yes">Automatic install</property>
+                                                <property name="label" translatable="no">Automatic install</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="receives_default">False</property>
-                                                <property name="tooltip_text" translatable="yes">Packages installed automatically as part of a dependency</property>
+                                                <property name="tooltip_text" translatable="no">Packages installed automatically as part of a dependency</property>
                                                 <property name="use_underline">True</property>
                                                 <property name="xalign">0.5</property>
                                                 <property name="draw_indicator">True</property>
@@ -661,11 +661,11 @@
                                             </child>
                                             <child>
                                               <object class="GtkCheckButton" id="checkbutton_status15">
-                                                <property name="label" translatable="yes">Automatic removable</property>
+                                                <property name="label" translatable="no">Automatic removable</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="receives_default">False</property>
-                                                <property name="tooltip_text" translatable="yes">Packages installed automatically but no longer required by any other package</property>
+                                                <property name="tooltip_text" translatable="no">Packages installed automatically but no longer required by any other package</property>
                                                 <property name="use_underline">True</property>
                                                 <property name="xalign">0.5</property>
                                                 <property name="draw_indicator">True</property>
@@ -678,11 +678,11 @@
                                             </child>
                                             <child>
                                               <object class="GtkCheckButton" id="checkbutton_status16">
-                                                <property name="label" translatable="yes">Policy broken</property>
+                                                <property name="label" translatable="no">Policy broken</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="receives_default">False</property>
-                                                <property name="tooltip_text" translatable="yes">Currently in broken policy state</property>
+                                                <property name="tooltip_text" translatable="no">Currently in broken policy state</property>
                                                 <property name="use_underline">True</property>
                                                 <property name="xalign">0.5</property>
                                                 <property name="draw_indicator">True</property>
@@ -695,11 +695,11 @@
                                             </child>
                                             <child>
                                               <object class="GtkCheckButton" id="checkbutton_status17">
-                                                <property name="label" translatable="yes">Manual installed</property>
+                                                <property name="label" translatable="no">Manual installed</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="receives_default">False</property>
-                                                <property name="tooltip_text" translatable="yes">Packages installed manually (not as a dependency of something else)</property>
+                                                <property name="tooltip_text" translatable="no">Packages installed manually (not as a dependency of something else)</property>
                                                 <property name="use_underline">True</property>
                                                 <property name="xalign">0.5</property>
                                                 <property name="draw_indicator">True</property>
@@ -754,7 +754,7 @@
                             <property name="layout_style">end</property>
                             <child>
                               <object class="GtkButton" id="button_status_select_all">
-                                <property name="label" translatable="yes">_Select All</property>
+                                <property name="label" translatable="no">_Select All</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="can_default">True</property>
@@ -770,7 +770,7 @@
                             </child>
                             <child>
                               <object class="GtkButton" id="button_status_select_none">
-                                <property name="label" translatable="yes">_Deselect All</property>
+                                <property name="label" translatable="no">_Deselect All</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="can_default">True</property>
@@ -786,7 +786,7 @@
                             </child>
                             <child>
                               <object class="GtkButton" id="button_status_invert">
-                                <property name="label" translatable="yes">_Invert All</property>
+                                <property name="label" translatable="no">_Invert All</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="can_default">True</property>
@@ -813,7 +813,7 @@
                       <object class="GtkLabel" id="label5">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Status</property>
+                        <property name="label" translatable="no">Status</property>
                       </object>
                       <packing>
                         <property name="tab_fill">False</property>
@@ -856,7 +856,7 @@
                             <property name="can_focus">False</property>
                             <child>
                               <object class="GtkRadioButton" id="radiobutton_incl">
-                                <property name="label" translatable="yes">Include selected sections only</property>
+                                <property name="label" translatable="no">Include selected sections only</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -872,7 +872,7 @@
                             </child>
                             <child>
                               <object class="GtkRadioButton" id="radiobutton_excl">
-                                <property name="label" translatable="yes">Exclude selected sections</property>
+                                <property name="label" translatable="no">Exclude selected sections</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -903,7 +903,7 @@
                       <object class="GtkLabel" id="label3">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Section</property>
+                        <property name="label" translatable="no">Section</property>
                       </object>
                       <packing>
                         <property name="position">1</property>
@@ -1002,7 +1002,7 @@
                               <object class="GtkLabel" id="label28">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">Boolean operator between property criterias:</property>
+                                <property name="label" translatable="no">Boolean operator between property criterias:</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -1012,7 +1012,7 @@
                             </child>
                             <child>
                               <object class="GtkRadioButton" id="radiobutton_properties_and">
-                                <property name="label" translatable="yes">AND</property>
+                                <property name="label" translatable="no">AND</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -1028,7 +1028,7 @@
                             </child>
                             <child>
                               <object class="GtkRadioButton" id="radiobutton_properties_or">
-                                <property name="label" translatable="yes">OR</property>
+                                <property name="label" translatable="no">OR</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
@@ -1059,7 +1059,7 @@
                             <property name="layout_style">end</property>
                             <child>
                               <object class="GtkButton" id="button_pattern_new">
-                                <property name="label" translatable="yes">_New</property>
+                                <property name="label" translatable="no">_New</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="can_default">True</property>
@@ -1075,7 +1075,7 @@
                             </child>
                             <child>
                               <object class="GtkButton" id="button_pattern_delete">
-                                <property name="label" translatable="yes">_Delete</property>
+                                <property name="label" translatable="no">_Delete</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="can_default">True</property>
@@ -1105,7 +1105,7 @@
                       <object class="GtkLabel" id="label6">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Properties</property>
+                        <property name="label" translatable="no">Properties</property>
                       </object>
                       <packing>
                         <property name="position">2</property>
@@ -1207,7 +1207,7 @@
                                                   <object class="GtkLabel" id="label15">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
-                                                    <property name="label" translatable="yes">Include</property>
+                                                    <property name="label" translatable="no">Include</property>
                                                     <property name="use_underline">True</property>
                                                   </object>
                                                   <packing>
@@ -1262,7 +1262,7 @@
                                                   <object class="GtkLabel" id="label14">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
-                                                    <property name="label" translatable="yes">Exclude</property>
+                                                    <property name="label" translatable="no">Exclude</property>
                                                     <property name="use_underline">True</property>
                                                   </object>
                                                   <packing>
@@ -1364,7 +1364,7 @@
                       <object class="GtkLabel" id="label11">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Tags</property>
+                        <property name="label" translatable="no">Tags</property>
                       </object>
                       <packing>
                         <property name="position">3</property>

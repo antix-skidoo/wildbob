@@ -79,7 +79,7 @@ class RGMainWindow : public RGGtkBuilderWindow, public RPackageObserver {
 
 
    bool _unsavedChanges;
-   bool _blockActions;        // block signals from the action and hold buttons
+   bool _blockActions;        // block signals from the action buttons
    int _interfaceLocked;      
 
    // the central class that has all the package information
@@ -100,7 +100,6 @@ class RGMainWindow : public RGGtkBuilderWindow, public RPackageObserver {
    GtkWidget *_remove_w_depsM, *_purgeM;
    GtkWidget *_dl_changelogM, *_detailsM;
 
-   GtkWidget *_pinM;
    GtkWidget *_autoM;
    GtkWidget *_overrideVersionM;
    GtkWidget *_pkgHelpM;

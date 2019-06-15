@@ -6,7 +6,7 @@
     <property name="visible">False</property>
     <property name="can_focus">False</property>
     <property name="border_width">6</property>
-    <property name="title" translatable="yes">Columns</property>
+    <property name="title" translatable="no">Columns</property>
     <property name="type_hint">normal</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
@@ -20,7 +20,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button_apply">
-                <property name="label" translatable="yes">_Apply</property>
+                <property name="label" translatable="no">_Apply</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -35,7 +35,7 @@
             </child>
             <child>
               <object class="GtkButton" id="button_cancel">
-                <property name="label" translatable="yes">_Cancel</property>
+                <property name="label" translatable="no">_Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -50,7 +50,7 @@
             </child>
             <child>
               <object class="GtkButton" id="button_ok">
-                <property name="label" translatable="yes">_OK</property>
+                <property name="label" translatable="no">_OK</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -137,7 +137,7 @@
                               <object class="GtkLabel" id="label3">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">Show Column</property>
+                                <property name="label" translatable="no">Show Column</property>
                                 <property name="use_underline">True</property>
                               </object>
                               <packing>
@@ -189,7 +189,7 @@
                               <object class="GtkLabel" id="label4">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">Hide Column</property>
+                                <property name="label" translatable="no">Hide Column</property>
                                 <property name="use_underline">True</property>
                               </object>
                               <packing>
@@ -241,7 +241,7 @@
                               <object class="GtkLabel" id="label2">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">Move Up</property>
+                                <property name="label" translatable="no">Move Up</property>
                                 <property name="use_underline">True</property>
                               </object>
                               <packing>
@@ -293,7 +293,7 @@
                               <object class="GtkLabel" id="label1">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">Move Down</property>
+                                <property name="label" translatable="no">Move Down</property>
                                 <property name="use_underline">True</property>
                               </object>
                               <packing>

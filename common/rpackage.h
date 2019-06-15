@@ -1,10 +1,7 @@
 /* rpackage.h - wrapper for accessing package information
  *
  * Copyright (c) 2000, 2001 Conectiva S/A
- *               2002 Michael Vogt <mvo@debian.org>
- *
- * Author: Alfredo K. Kojima <kojima@conectiva.com.br>
- *         Michael Vogt <mvo@debian.org>
+ * Author: Alfredo K. Kojima 
  *
  * Portions Taken from Gnome APT
  *   Copyright (C) 1998 Havoc Pennington <hp@pobox.com>

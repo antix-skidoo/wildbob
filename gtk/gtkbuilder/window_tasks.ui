@@ -54,7 +54,7 @@
                         <property name="can_focus">True</property>
                         <property name="xalign">0</property>
                         <property name="yalign">0.4699999988079071</property>
-                        <property name="label" translatable="yes">&lt;span size="large" weight="bold"&gt;Which tasks should be performed by your computer?&lt;/span&gt;
+                        <property name="label" translatable="no">&lt;span size="large" weight="bold"&gt;Which tasks should be performed by your computer?&lt;/span&gt;
 
 These are preselected groups of packages to perform each task. If you select a task, the corresponding packages will be marked for installation.</property>
                         <property name="use_markup">True</property>
@@ -124,7 +124,7 @@ These are preselected groups of packages to perform each task. If you select a t
                 <property name="layout_style">end</property>
                 <child>
                   <object class="GtkButton" id="button_details">
-                    <property name="label" translatable="yes">_Description</property>
+                    <property name="label" translatable="no">_Description</property>
                     <property name="visible">True</property>
                     <property name="sensitive">False</property>
                     <property name="can_focus">True</property>
@@ -141,7 +141,7 @@ These are preselected groups of packages to perform each task. If you select a t
                 </child>
                 <child>
                   <object class="GtkButton" id="button_cancel">
-                    <property name="label" translatable="yes">_Cancel</property>
+                    <property name="label" translatable="no">_Cancel</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="can_default">True</property>
@@ -157,7 +157,7 @@ These are preselected groups of packages to perform each task. If you select a t
                 </child>
                 <child>
                   <object class="GtkButton" id="button_ok">
-                    <property name="label" translatable="yes">_OK</property>
+                    <property name="label" translatable="no">_OK</property>
                     <property name="visible">True</property>
                     <property name="sensitive">False</property>
                     <property name="can_focus">True</property>

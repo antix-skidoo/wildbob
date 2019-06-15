@@ -1,4 +1,4 @@
-/* gsynaptic.cc - main() 
+/* gwildbob.cc - main() 
  * 
  * Copyright (c) 2001-2003 Alfredo K. Kojima
  * 
@@ -67,10 +67,10 @@ bool ShowHelp(CommandLine & CmdL)
 #ifndef HAVE_RPM
       PACKAGE " for Debian " VERSION
 #else
-      _config->Find("Synaptic::MyName", PACKAGE) + " " VERSION
+      _config->Find("Wildbob::MyName", PACKAGE) + " " VERSION
 #endif
       "\n\n" <<
-      _("Usage: synaptic [options]\n") <<
+      _("Usage: wildbob [options]\n") <<
       _("-h   This help text\n") <<
       _("-r   Open in the repository screen\n") <<
       _("-f=? Give an alternative filter file\n") <<
@@ -139,8 +139,8 @@ CommandLine::Args Args[] = {
 static void SetLanguages()
 {
    string LangList;
-   if (_config->FindB("Synaptic::DynamicLanguages", true) == false) {
-      LangList = _config->Find("Synaptic::Languages", "");
+   if (_config->FindB("Wildbob::DynamicLanguages", true) == false) {
+      LangList = _config->Find("Wildbob::Languages", "");
    } else {
       char *lang = getenv("LANG");
       if (lang == NULL) {
@@ -159,14 +159,14 @@ static void SetLanguages()
 void welcome_dialog(RGMainWindow *mainWindow)
 {
       // show welcome dialog
-      if (_config->FindB("Synaptic::showWelcomeDialog", true) &&
+      if (_config->FindB("Wildbob::showWelcomeDialog", true) &&
 	  !_config->FindB("Volatile::Upgrade-Mode",false)) {
          RGGtkBuilderUserDialog dia(mainWindow);
          dia.run("welcome");
          GtkWidget *cb = GTK_WIDGET(gtk_builder_get_object(dia.getGtkBuilder(),
                                               "checkbutton_show_again"));
          assert(cb);
-         _config->Set("Synaptic::showWelcomeDialog",
+         _config->Set("Wildbob::showWelcomeDialog",
                       gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(cb)));
       }
 }
@@ -177,11 +177,11 @@ void update_check(RGMainWindow *mainWindow, RPackageLister *lister)
 
    // check when the last update happend updates
    UpdateType update =
-      (UpdateType) _config->FindI("Synaptic::update::type", UPDATE_ASK);
+      (UpdateType) _config->FindI("Wildbob::update::type", UPDATE_ASK);
    if(update != UPDATE_CLOSE) {
       // check when last update happend
-      int lastUpdate = _config->FindI("Synaptic::update::last",0);
-      int minimal= _config->FindI("Synaptic::update::minimalIntervall", 48);
+      int lastUpdate = _config->FindI("Wildbob::update::last",0);
+      int minimal= _config->FindI("Wildbob::update::minimalIntervall", 48);
 
       // check for the mtime of the various package lists
       vector<string> filenames = lister->getPolicyArchives(true);
@@ -211,9 +211,9 @@ void update_check(RGMainWindow *mainWindow, RPackageLister *lister)
 	    assert(cb);
 	    if(gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(cb))) {
 	       if(res == GTK_RESPONSE_CANCEL)
-		  _config->Set("Synaptic::update::type", UPDATE_CLOSE);
+		  _config->Set("Wildbob::update::type", UPDATE_CLOSE);
 	       if(res == GTK_RESPONSE_OK)
-		  _config->Set("Synaptic::update::type", UPDATE_AUTO);
+		  _config->Set("Wildbob::update::type", UPDATE_AUTO);
 	    }
 	    if(res == GTK_RESPONSE_OK)
 	       mainWindow->cbUpdateClicked(NULL, mainWindow);
@@ -301,9 +301,9 @@ pid_t TestLock(string File)
 }
 
 // check if we can get a lock, must be done after we read the configuration
-// if a lock is found and the app is synaptic send it a "come to foreground"
-// signal (USR1) or if not synaptic display a error and exit
-// 1. check if there is another synaptic running
+// if a lock is found and the app is wildbob send it a "come to foreground"
+// signal (USR1) or if not wildbob display a error and exit
+// 1. check if there is another wildbob running
 //    a) if so, check if it runs interactive and we are not running interactive
 //       *) if so, send signal and show message
 //       *) if not, send signal
@@ -319,28 +319,28 @@ void check_and_aquire_lock()
    pid_t LockedApp, runsNonInteractive;
    bool weNonInteractive;
 
-   string SynapticLock = RConfDir()+"/lock";
-   string SynapticNonInteractiveLock = RConfDir()+"/lock.non-interactive";
+   string WildbobLock = RConfDir()+"/lock";
+   string WildbobNonInteractiveLock = RConfDir()+"/lock.non-interactive";
    weNonInteractive = _config->FindB("Volatile::Non-Interactive", false);
 
-   // 1. test for another synaptic
-   LockedApp = TestLock(SynapticLock);
+   // 1. test for another wildbob
+   LockedApp = TestLock(WildbobLock);
    if(LockedApp > 0) {
-      runsNonInteractive = TestLock(SynapticNonInteractiveLock);
+      runsNonInteractive = TestLock(WildbobNonInteractiveLock);
       //cout << "runsNonIteractive: " << runsNonInteractive << endl;
       //cout << "weNonIteractive: " << weNonInteractive << endl;
       if(weNonInteractive && runsNonInteractive <= 0) {
 	 // message that we can't turn a non-interactive into a interactive
 	 // one
 	 msg = g_strdup_printf("<big><b>%s</b></big>\n\n%s",
-			       _("Another synaptic is running"),
-			       _("There is another synaptic running in "
+			       _("Another wildbob is running"),
+			       _("There is another wildbob running in "
 				 "interactive mode. Please close it first. "
 				 ));
       } else if(runsNonInteractive > 0) {
 	 msg = g_strdup_printf("<big><b>%s</b></big>\n\n%s",
-			       _("Another synaptic is running"),
-			       _("There is another synaptic running in "
+			       _("Another wildbob is running"),
+			       _("There is another wildbob running in "
 				 "non-interactive mode. Please wait for it "
 				 "to finish first."
 				 ));
@@ -358,7 +358,7 @@ void check_and_aquire_lock()
       }
       g_free(msg);
 
-      cout << "Another synaptic is running. Trying to bring it to the foreground" << endl;
+      cout << "Another wildbob is running. Trying to bring it to the foreground" << endl;
       kill(LockedApp, SIGUSR1);
       exit(0);
    }
@@ -386,12 +386,12 @@ void check_and_aquire_lock()
    }
    
    // we can't get a lock?!?
-   if(GetLock(SynapticLock, true) < 0) {
+   if(GetLock(WildbobLock, true) < 0) {
       _error->DumpErrors();
       exit(1);
    }
    // if we run nonInteracitvely, get a seond lock
-   if(weNonInteractive && GetLock(SynapticNonInteractiveLock, true) < 0) {
+   if(weNonInteractive && GetLock(WildbobNonInteractiveLock, true) < 0) {
       _error->DumpErrors();
       exit(1);
    }
@@ -413,8 +413,8 @@ int main(int argc, char **argv)
       std::cout <<
          _("Failed to initialize GTK.\n") <<
          "\n" <<
-         _("Probably you're running Synaptic on Wayland with root permission.\n") <<
-         _("Please restart your session without Wayland, or run Synaptic without root permission\n");
+         _("Probably you're running Wildbob on Wayland with root permission.\n") <<
+         _("Please restart your session without Wayland, or run Wildbob without root permission\n");
       exit(1);
    };
    //XSynchronize(dpy, 1);
@@ -434,7 +434,7 @@ int main(int argc, char **argv)
    if (getuid() != 0) {
       RGUserDialog userDialog;
       userDialog.warning(g_strdup_printf("<b><big>%s</big></b>\n\n%s",
-                                         _("Starting \"Synaptic Package Manager\" without "
+                                         _("Starting \"Wildbob Package Manager\" without "
                                            "administrative privileges"),
 				         _("You will not be able to apply "
 				           "any changes, but you can still "
@@ -443,7 +443,7 @@ int main(int argc, char **argv)
 					   "for them.")));
    }
 
-   if (!RInitConfiguration("synaptic.conf")) {
+   if (!RInitConfiguration("wildbob.conf")) {
       RGUserDialog userDialog;
       userDialog.showErrors();
       exit(1);
@@ -486,16 +486,16 @@ int main(int argc, char **argv)
    // -------------------------------------------------------------
 
    // read which default distro to use
-   string s = _config->Find("Synaptic::DefaultDistro", "");
+   string s = _config->Find("Wildbob::DefaultDistro", "");
    if (s != "")
       _config->Set("APT::Default-Release", s);
 
 #ifndef HAVE_RPM
-   mainWindow->setTitle(_("Synaptic Package Manager "));
+   mainWindow->setTitle(_("Wildbob Package Manager "));
 #else
-   mainWindow->setTitle(_config->Find("Synaptic::MyName", "Synaptic"));
+   mainWindow->setTitle(_config->Find("Wildbob::MyName", "Wildbob"));
 #endif
-   // this is for stuff like "synaptic -t `uname -n`"
+   // this is for stuff like "wildbob -t `uname -n`"
    s = _config->Find("Volatile::MyName","");
    if(s.size() > 0)
       mainWindow->setTitle(s);
@@ -571,7 +571,7 @@ int main(int argc, char **argv)
    if(_config->FindB("Volatile::TestMeHarder", false))
    {
       _config->Set("Volatile::Non-Interactive","true");
-      _config->Set("Synaptic::closeZvt","true");
+      _config->Set("Wildbob::closeZvt","true");
 
       while(true)
       {

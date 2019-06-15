@@ -1,6 +1,6 @@
-Synaptic supports some debug helpers.
+wildbob supports some debug helpers.
 Run them like this
-# synaptic -o Debug::Synaptic::View=true
+# wildbob -o Debug::Wildbob::View=true
 
 Currently the following are supported:
-Debug::Synaptic::View - Debug switching/updating the package views
+Debug::Wildbob::View - Debug switching/updating the package views
